@@ -5,15 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Vector2 moveInput;
+    private float accelerationInput;
+    private float rotationInput;
 
-    void Update()
+    void OnAccelerate(InputValue value)
     {
-        Debug.Log(moveInput);
+        accelerationInput = value.Get<float>();
+        Debug.Log("Accelerating: " + accelerationInput);
     }
 
-    void OnMove(InputValue value)
+    void OnTurn(InputValue value)
     {
-        moveInput = value.Get<Vector2>();
+        rotationInput = value.Get<float>();
+        Debug.Log("Rotating: " + rotationInput);
     }
 }
