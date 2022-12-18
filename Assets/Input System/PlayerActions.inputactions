@@ -72,7 +72,7 @@
                 {
                     "name": "positive",
                     "id": "0a446b02-770b-4226-99a6-b1cda96b77ef",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -83,7 +83,7 @@
                 {
                     "name": "negative",
                     "id": "eb6f314e-6e6f-433f-8abe-db6d14831a75",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
