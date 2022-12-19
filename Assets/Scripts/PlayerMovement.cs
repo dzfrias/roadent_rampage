@@ -6,8 +6,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement Variables")]
     [SerializeField] private float speed;
     [SerializeField] private float rotateAmount;
+
+    [Header("Ground Check Variables")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private float groundCheckRadius = 0.4f;
 
     private Rigidbody rb;
 
@@ -22,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        bool isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask);
+        if (!isGrounded) { return; }
+
         Vector3 move = transform.forward * speed * 10f;
         rb.AddForce(accelerationInput * move * Time.fixedDeltaTime, ForceMode.Acceleration);
 
@@ -31,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
             rotate = 1f;
         }
         Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotateAmount * rotationInput, 0) * Time.fixedDeltaTime * rotate);
-        rb.MoveRotation(rb.rotation * deltaRotation);
+        rb.MoveRotation(rb.rotation * deltaRotation); 
     }
 
     void OnAccelerate(InputValue value)
