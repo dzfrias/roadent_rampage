@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotateAmount;
 
     [Header("Ground Check Variables")]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundMask;
     [SerializeField] private float groundCheckRadius = 0.4f;
+    private LayerMask groundMask;
+    private Transform groundCheck;
 
     private Rigidbody rb;
 
@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        groundCheck = transform.Find("GroundCheck");
+        groundMask = LayerMask.GetMask("Ground");
     }
 
     void FixedUpdate()
