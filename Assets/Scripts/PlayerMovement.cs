@@ -23,11 +23,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Speed")]
     [SerializeField] private float topSpeed;
 
-    [Header("Ground Check")]
-    [SerializeField] private float groundCheckRadius = 0.4f;
-    private LayerMask groundMask;
-    private Transform groundCheck;
-
     private Rigidbody rb;
 
     // Inputs
@@ -37,8 +32,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        groundCheck = transform.Find("GroundCheck");
-        groundMask = LayerMask.GetMask("Ground");
     }
 
     void FixedUpdate()
@@ -93,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         {
             float carSpeed = Vector3.Dot(transform.forward, rb.velocity);
             float normalSpeed = Mathf.Clamp01(Mathf.Abs(carSpeed) / topSpeed);
+            // TODO: Fix torque
             float torque = 10f;
             rb.AddForceAtPosition(accelDir * torque, wheel.position);
         }
