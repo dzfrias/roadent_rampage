@@ -163,6 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 363861227}
+  - component: {fileID: 363861228}
   m_Layer: 0
   m_Name: BackLeft
   m_TagString: Untagged
@@ -185,6 +186,23 @@ Transform:
   m_Father: {fileID: 1373511714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363861228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363861226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restLength: 0.2
+  springTravel: 0.1
+  springStiffness: 90000
+  damperStiffness: 1400
+  wheelRadius: 0.3
 --- !u!1 &747439345
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 747439346}
+  - component: {fileID: 747439347}
   m_Layer: 0
   m_Name: FrontRight
   m_TagString: Untagged
@@ -216,6 +235,23 @@ Transform:
   m_Father: {fileID: 1373511714}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &747439347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747439345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restLength: 0.2
+  springTravel: 0.1
+  springStiffness: 90000
+  damperStiffness: 1400
+  wheelRadius: 0.3
 --- !u!1 &984407045
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 984407048}
   - component: {fileID: 984407047}
-  - component: {fileID: 984407046}
   - component: {fileID: 984407049}
   m_Layer: 0
   m_Name: Player
@@ -235,32 +270,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &984407046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984407045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f15007807d124704aec7998e4729709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 140
-  rotateAmount: 2
-  wheels:
-  - {fileID: 747439346}
-  - {fileID: 1271612048}
-  - {fileID: 363861227}
-  - {fileID: 1936672575}
-  suspensionRest: 0.8
-  springStrength: 100
-  springDamper: 10
-  wheelGrip: 1
-  wheelMass: 2
-  topSpeed: 0
-  groundCheckRadius: 0.4
 --- !u!114 &984407047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984407045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -318,9 +327,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984407045}
   serializedVersion: 2
-  m_Mass: 15
+  m_Mass: 1100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -447,6 +456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1271612048}
+  - component: {fileID: 1271612049}
   m_Layer: 0
   m_Name: FrontLeft
   m_TagString: Untagged
@@ -469,6 +479,23 @@ Transform:
   m_Father: {fileID: 1373511714}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271612049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271612047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restLength: 0.2
+  springTravel: 0.1
+  springStiffness: 90000
+  damperStiffness: 1400
+  wheelRadius: 0.3
 --- !u!1 &1373511713
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936672575}
+  - component: {fileID: 1936672576}
   m_Layer: 0
   m_Name: BackRight
   m_TagString: Untagged
@@ -726,6 +754,23 @@ Transform:
   m_Father: {fileID: 1373511714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936672576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936672574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restLength: 0.2
+  springTravel: 0.1
+  springStiffness: 90000
+  damperStiffness: 1400
+  wheelRadius: 0.3
 --- !u!1 &2080644503
 GameObject:
   m_ObjectHideFlags: 0
