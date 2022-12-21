@@ -202,7 +202,7 @@ MonoBehaviour:
   springTravel: 0.1
   springStiffness: 90000
   damperStiffness: 1400
-  wheelRadius: 0.3
+  radius: 0.3
 --- !u!1 &747439345
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   springTravel: 0.1
   springStiffness: 90000
   damperStiffness: 1400
-  wheelRadius: 0.3
+  radius: 0.3
 --- !u!1 &984407045
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   springTravel: 0.1
   springStiffness: 90000
   damperStiffness: 1400
-  wheelRadius: 0.3
+  radius: 0.3
 --- !u!1 &1373511713
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +770,7 @@ MonoBehaviour:
   springTravel: 0.1
   springStiffness: 90000
   damperStiffness: 1400
-  wheelRadius: 0.3
+  radius: 0.3
 --- !u!1 &2080644503
 GameObject:
   m_ObjectHideFlags: 0
