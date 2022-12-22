@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private float rotationInput;
     private float accelerationInput;
 
+    // Other
+    private bool canFlip;
+
     void Update()
     {
         float angleLeft;
@@ -48,6 +51,32 @@ public class PlayerMovement : MonoBehaviour
                 wheel.steerAngle = angleRight;
             }
             wheel.accelerationInput = accelerationInput;
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Collision with ground
+        if (collision.gameObject.layer == 3)
+        {
+            canFlip = true;
+        }
+    }
+
+    void OnFlip(InputValue _value)
+    {
+        if (canFlip)
+        {
+            transform.rotation = Quaternion.identity;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        // Collision with ground
+        if (collision.gameObject.layer == 3)
+        {
+            canFlip = false;
         }
     }
 
