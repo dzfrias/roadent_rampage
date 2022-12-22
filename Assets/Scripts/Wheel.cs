@@ -54,9 +54,7 @@ public class Wheel : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
-            // TODO: Proper acceleration force
-            carRb.AddForceAtPosition(transform.forward * accelerationInput * car.speed, transform.position);
-
+            carRb.AddForceAtPosition(Vector3.MoveTowards(transform.forward, transform.forward * car.speed, Mathf.Infinity) * accelerationInput, transform.position);
             ApplySpring(hit);
             ApplySlip();
         }
@@ -69,10 +67,6 @@ public class Wheel : MonoBehaviour
         float offset = restLength - hit.distance;
         float vel = Vector3.Dot(springDir, tireVel);
         float force = (offset * springStiffness) - (vel * damperStiffness);
-
-        /* Vector3 wheelVelocity = transform.InverseTransformDirection(carRb.GetPointVelocity(hit.point)); */
-        /* float fx = accelerationInput * force; */
-        /* float fy = wheelVelocity.x  * force; */
 
         carRb.AddForceAtPosition(springDir * force, transform.position);
     }
