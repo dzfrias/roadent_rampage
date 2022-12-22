@@ -3,55 +3,90 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement Variables")]
-    [SerializeField] private float speed;
-    [SerializeField] private float rotateAmount;
+    [SerializeField] private List<Wheel> wheels;
 
-    [Header("Ground Check Variables")]
-    [SerializeField] private float groundCheckRadius = 0.4f;
-    private LayerMask groundMask;
-    private Transform groundCheck;
-
-    private Rigidbody rb;
+    [Header("Specs")]
+    public float speed;
+    [SerializeField] private float wheelBase;
+    [SerializeField] private float rearTrack;
+    [Tooltip("Higher turnRadius means less sharp turns")]
+    [SerializeField]
+    private float turnRadius;
 
     // Inputs
-    private float accelerationInput;
     private float rotationInput;
+    private float accelerationInput;
 
-    void Start()
+    // Other
+    private bool canFlip;
+
+    void Update()
     {
-        rb = GetComponent<Rigidbody>();
-        groundCheck = transform.Find("GroundCheck");
-        groundMask = LayerMask.GetMask("Ground");
-    }
-
-    void FixedUpdate()
-    {
-        bool isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask);
-        if (!isGrounded) { return; }
-
-        Vector3 move = transform.forward * speed * 10f;
-        rb.AddForce(accelerationInput * move * Time.fixedDeltaTime, ForceMode.Acceleration);
-
-        var rotate = rb.velocity.magnitude / 5;
-        if (rotate > 1f)
+        float angleLeft;
+        float angleRight;
+        if (rotationInput > 0)
         {
-            rotate = 1f;
+            angleLeft  = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * rotationInput;
+            angleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * rotationInput;
+        } else if (rotationInput < 0)
+        {
+            angleLeft  = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * rotationInput;
+            angleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * rotationInput;
+        } else
+        {
+            angleLeft  = 0;
+            angleRight = 0;
         }
-        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, rotateAmount * rotationInput, 0) * Time.fixedDeltaTime * rotate);
-        rb.MoveRotation(rb.rotation * deltaRotation); 
+
+        foreach (Wheel wheel in wheels)
+        {
+            if (wheel.corner == Corner.FrontLeft)
+            {
+                wheel.steerAngle = angleLeft;
+            }
+            if (wheel.corner == Corner.FrontRight)
+            {
+                wheel.steerAngle = angleRight;
+            }
+            wheel.accelerationInput = accelerationInput;
+        }
     }
 
-    void OnAccelerate(InputValue value)
+    void OnCollisionEnter(Collision collision)
     {
-        accelerationInput = value.Get<float>();
+        // Collision with ground
+        if (collision.gameObject.layer == 3)
+        {
+            canFlip = true;
+        }
+    }
+
+    void OnFlip(InputValue _value)
+    {
+        if (canFlip)
+        {
+            transform.rotation = Quaternion.identity;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        // Collision with ground
+        if (collision.gameObject.layer == 3)
+        {
+            canFlip = false;
+        }
     }
 
     void OnTurn(InputValue value)
     {
         rotationInput = value.Get<float>();
+    }
+
+    void OnAccelerate(InputValue value)
+    {
+        accelerationInput = value.Get<float>();
     }
 }
