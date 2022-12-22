@@ -511,6 +511,7 @@ MonoBehaviour:
   wheelBase: 2.55
   rearTrack: 1.525
   turnRadius: 9
+  centerOfMass: {x: 0, y: -0.4, z: 0}
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0

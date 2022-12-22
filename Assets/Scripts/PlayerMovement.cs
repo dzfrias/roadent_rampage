@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Higher turnRadius means less sharp turns")]
     [SerializeField]
     private float turnRadius;
+    [SerializeField] private Vector3 centerOfMass;
 
     // Inputs
     private float rotationInput;
@@ -21,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
     // Other
     private bool canFlip;
+
+    void Start()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = centerOfMass;
+    }
 
     void Update()
     {
