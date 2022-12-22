@@ -11,17 +11,17 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     [SerializeField] private float wheelBase;
     [SerializeField] private float rearTrack;
+    // Higher turnRadius means less sharp turns
     [SerializeField] private float turnRadius;
 
     // Inputs
     private float rotationInput;
     private float accelerationInput;
 
-    private float angleLeft;
-    private float angleRight;
-
     void Update()
     {
+        float angleLeft;
+        float angleRight;
         if (rotationInput > 0)
         {
             angleLeft  = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * rotationInput;
