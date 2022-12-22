@@ -201,8 +201,8 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  corner: 2
   radius: 0.8
+  corner: 2
   grip: 0.4
   mass: 20
   steerTime: 9
@@ -253,8 +253,8 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  corner: 1
   radius: 0.8
+  corner: 1
   grip: 0.4
   mass: 20
   steerTime: 9
@@ -521,8 +521,8 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  corner: 0
   radius: 0.8
+  corner: 0
   grip: 0.4
   mass: 20
   steerTime: 9
@@ -799,8 +799,8 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  corner: 3
   radius: 0.8
+  corner: 3
   grip: 0.4
   mass: 20
   steerTime: 9

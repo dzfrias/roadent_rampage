@@ -16,21 +16,29 @@ public class Wheel : MonoBehaviour
     private Rigidbody carRb;
 
     [Header("Suspension")]
-    // Higher restLength means higher above the ground
-    [SerializeField] private float restLength;
-    // Higher springStiffness means more dramatic springs
-    [SerializeField] private float springStiffness;
-    // Higher damperStiffness means more of a damper on the spring
-    [SerializeField] private float damperStiffness;
+
+    [Tooltip("Higher restLength means higher above the ground")]
+    [SerializeField]
+    private float restLength;
+
+    [Tooltip("Higher springStiffness means more dramatic springs")]
+    [SerializeField]
+    private float springStiffness;
+
+    [Tooltip("Higher damperStiffness means less springiness")]
+    [SerializeField]
+    private float damperStiffness;
+
+    [SerializeField] private float radius;
 
     [Header("Wheel")]
     public Corner corner;
-    [SerializeField] private float radius;
-    // This value should be between 0 and 1. Higher grip means less sideways slip.
+    [Range(0, 1)]
+    [Tooltip("Higher grip means less sideways slip.")]
     [SerializeField] private float grip;
     [SerializeField] private float mass;
 
-    // Higher steerTime means a slower time to turn the wheels of the car
+    [Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
     [SerializeField] private float steerTime;
     [System.NonSerialized] public float steerAngle;
     private float wheelAngle;

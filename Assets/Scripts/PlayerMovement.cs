@@ -11,8 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     [SerializeField] private float wheelBase;
     [SerializeField] private float rearTrack;
-    // Higher turnRadius means less sharp turns
-    [SerializeField] private float turnRadius;
+    [Tooltip("Higher turnRadius means less sharp turns")]
+    [SerializeField]
+    private float turnRadius;
 
     // Inputs
     private float rotationInput;
