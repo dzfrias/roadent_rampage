@@ -64,8 +64,10 @@ public class Wheel : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
             carRb.AddForceAtPosition(Vector3.MoveTowards(transform.forward, transform.forward * car.speed, Mathf.Infinity) * accelerationInput, transform.position);
-            // TODO: Maybe incorporate max speed into this, so its not always constantly pushing car backwards
-            carRb.AddForceAtPosition(-carRb.GetPointVelocity(transform.position) * forwardsGrip, transform.position);
+            if (accelerationInput == 0) 
+            {
+                carRb.AddForceAtPosition(-carRb.GetPointVelocity(transform.position) * forwardsGrip, transform.position);
+            }
             ApplySpring(hit);
             ApplySlip();
         }
