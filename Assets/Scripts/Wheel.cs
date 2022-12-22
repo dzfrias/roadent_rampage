@@ -12,7 +12,8 @@ public enum Corner
 
 public class Wheel : MonoBehaviour
 {
-    private Rigidbody rb;
+    private PlayerMovement car;
+    private Rigidbody carRb;
 
     [Header("Suspension")]
     [SerializeField] private float restLength;
@@ -22,6 +23,8 @@ public class Wheel : MonoBehaviour
     [Header("Wheel")]
     public Corner corner;
     [SerializeField] private float radius;
+    [SerializeField] private float grip;
+    [SerializeField] private float mass;
 
     [SerializeField] private float steerTime;
     [System.NonSerialized] public float steerAngle;
@@ -31,7 +34,8 @@ public class Wheel : MonoBehaviour
 
     void Start()
     {
-        rb = transform.root.GetComponent<Rigidbody>();
+        car = transform.root.GetComponent<PlayerMovement>();
+        carRb = transform.root.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -45,17 +49,36 @@ public class Wheel : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
-            Vector3 springDir = transform.up;
-            Vector3 tireVel = rb.GetPointVelocity(transform.position);
-            float offset = restLength - hit.distance;
-            float vel = Vector3.Dot(springDir, tireVel);
-            float force = (offset * springStiffness) - (vel * damperStiffness);
+            // TODO: Proper acceleration force
+            carRb.AddForceAtPosition(transform.forward * accelerationInput * car.speed, transform.position);
 
-            Vector3 wheelVelocity = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
-            float fx = accelerationInput * force;
-            float fy = wheelVelocity.x  * force;
-
-            rb.AddForceAtPosition((springDir * force) + (fx * transform.forward) + (fy * -transform.right), transform.position);
+            ApplySpring(hit);
+            ApplySlip();
         }
+    }
+
+    void ApplySpring(RaycastHit hit)
+    {
+        Vector3 springDir = transform.up;
+        Vector3 tireVel = carRb.GetPointVelocity(transform.position);
+        float offset = restLength - hit.distance;
+        float vel = Vector3.Dot(springDir, tireVel);
+        float force = (offset * springStiffness) - (vel * damperStiffness);
+
+        /* Vector3 wheelVelocity = transform.InverseTransformDirection(carRb.GetPointVelocity(hit.point)); */
+        /* float fx = accelerationInput * force; */
+        /* float fy = wheelVelocity.x  * force; */
+
+        carRb.AddForceAtPosition(springDir * force, transform.position);
+    }
+
+    void ApplySlip()
+    {
+        Vector3 steeringDir = transform.right;
+        Vector3 tireVel = carRb.GetPointVelocity(transform.position);
+        float steerVel = Vector3.Dot(steeringDir, tireVel);
+        float velChange = -steerVel * grip;
+        float accelChange = velChange / Time.fixedDeltaTime;
+        carRb.AddForceAtPosition(steeringDir * mass * accelChange, transform.position);
     }
 }

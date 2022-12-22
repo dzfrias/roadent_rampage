@@ -203,6 +203,8 @@ MonoBehaviour:
   damperStiffness: 3000
   corner: 2
   radius: 0.8
+  grip: 0.4
+  mass: 20
   steerTime: 9
 --- !u!1 &747439345
 GameObject:
@@ -253,6 +255,8 @@ MonoBehaviour:
   damperStiffness: 3000
   corner: 1
   radius: 0.8
+  grip: 0.4
+  mass: 20
   steerTime: 9
 --- !u!1 &984407045
 GameObject:
@@ -311,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984407045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -354,9 +358,10 @@ MonoBehaviour:
   - {fileID: 1936672576}
   - {fileID: 1271612049}
   - {fileID: 747439347}
+  speed: 3000
   wheelBase: 2.55
   rearTrack: 1.525
-  turnRadius: 4
+  turnRadius: 9
 --- !u!1 &1099084378
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +523,8 @@ MonoBehaviour:
   damperStiffness: 3000
   corner: 0
   radius: 0.8
+  grip: 0.4
+  mass: 20
   steerTime: 9
 --- !u!1 &1373511713
 GameObject:
@@ -794,6 +801,8 @@ MonoBehaviour:
   damperStiffness: 3000
   corner: 3
   radius: 0.8
+  grip: 0.4
+  mass: 20
   steerTime: 9
 --- !u!1 &2080644503
 GameObject:

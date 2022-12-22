@@ -5,12 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public List<Wheel> wheels;
+    [SerializeField] private List<Wheel> wheels;
 
     [Header("Specs")]
-    public float wheelBase;
-    public float rearTrack;
-    public float turnRadius;
+    public float speed;
+    [SerializeField] private float wheelBase;
+    [SerializeField] private float rearTrack;
+    [SerializeField] private float turnRadius;
 
     // Inputs
     private float rotationInput;
