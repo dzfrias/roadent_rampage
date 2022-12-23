@@ -674,6 +674,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
+      propertyPath: newSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
+      propertyPath: sizeAdd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
+      propertyPath: resizeMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
+      propertyPath: dampingRatio
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
+      propertyPath: velocityDivide
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
+      propertyPath: angularFrequency
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7703858453345709757, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
       propertyPath: m_Name
       value: Obstacle
