@@ -7,7 +7,6 @@ TagManager:
   - PlayerBody
   - Enemy
   - Camera
-  - Terrain
   layers:
   - Default
   - TransparentFX
