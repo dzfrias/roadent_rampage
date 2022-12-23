@@ -14,13 +14,25 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Higher turnRadius means less sharp turns")]
     [SerializeField]
     private float turnRadius;
+    [SerializeField] private Vector3 centerOfMass;
+
+    [Header("Mechanics")]
+    [Tooltip("Time needed to be flipped for player to be able to unflip")]
+    [SerializeField] private float unflipTime;
 
     // Inputs
     private float rotationInput;
     private float accelerationInput;
 
     // Other
-    private bool canFlip;
+    private bool flipped;
+    private float flippedTimer;
+
+    void Start()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = centerOfMass;
+    }
 
     void Update()
     {
@@ -52,20 +64,26 @@ public class PlayerMovement : MonoBehaviour
             }
             wheel.accelerationInput = accelerationInput;
         }
+
+        if (flipped)
+        {
+            flippedTimer += Time.deltaTime;
+        }
     }
+
 
     void OnCollisionEnter(Collision collision)
     {
         // Collision with ground
         if (collision.gameObject.layer == 3)
         {
-            canFlip = true;
+            flipped = true;
         }
     }
 
     void OnFlip(InputValue _value)
     {
-        if (canFlip)
+        if (flippedTimer > unflipTime)
         {
             transform.rotation = Quaternion.identity;
         }
@@ -76,7 +94,8 @@ public class PlayerMovement : MonoBehaviour
         // Collision with ground
         if (collision.gameObject.layer == 3)
         {
-            canFlip = false;
+            flipped = false;
+            flippedTimer = 0f;
         }
     }
 

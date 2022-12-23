@@ -433,7 +433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602739623024861862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 116.69, y: 1, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -511,6 +511,8 @@ MonoBehaviour:
   wheelBase: 2.55
   rearTrack: 1.525
   turnRadius: 9
+  centerOfMass: {x: 0, y: -0.4, z: 0}
+  unflipTime: 2
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0
