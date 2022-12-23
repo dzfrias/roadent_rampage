@@ -31,26 +31,28 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (target == Target.RearView)
+        if (target == Target.RearView && rotation == 0)
         {
-            // Make angle between -180 and 180
-            float angle = player.rotation.eulerAngles.y;
-            angle %= 360; 
-            angle = (angle + 360) % 360;  
-            if (angle > 180)  
-            {
-                angle -= 360;
-            }
+            StartCoroutine(Rotate());
+        }
+    }
 
+    private IEnumerator Rotate()
+    {
+        while (target == Target.RearView)
+        {
             float deltaTime = Time.deltaTime;
             SpringMotion.CalcDampedSimpleHarmonicMotion(ref rotation,
                     ref velocity,
-                    angle + 180,
+                    180f,
                     deltaTime,
                     angularFrequency,
                     dampingRatio);
-            transform.rotation = Quaternion.Euler(rotation / 12, rotation, 0);
+            transform.rotation = player.rotation * Quaternion.AngleAxis(rotation, Vector3.up);
+            yield return null;
         }
+        rotation = 0;
+        velocity = 0;
     }
 
     public void ChangeTarget()
