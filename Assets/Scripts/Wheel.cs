@@ -12,7 +12,7 @@ public enum Corner
 
 public class Wheel : MonoBehaviour
 {
-    private PlayerMovement car;
+    private PlayerController car;
     private Rigidbody carRb;
 
     [Header("Suspension")]
@@ -48,7 +48,7 @@ public class Wheel : MonoBehaviour
 
     void Start()
     {
-        car = transform.root.GetComponent<PlayerMovement>();
+        car = transform.root.GetComponent<PlayerController>();
         carRb = transform.root.GetComponent<Rigidbody>();
     }
 
