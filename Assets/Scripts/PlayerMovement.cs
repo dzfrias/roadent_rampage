@@ -24,14 +24,18 @@ public class PlayerMovement : MonoBehaviour
     private float rotationInput;
     private float accelerationInput;
 
-    // Other
+    // Flipped logic
     private bool flipped;
     private float flippedTimer;
+
+    // Camera
+    private new CameraController camera;
 
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centerOfMass;
+        camera = GameObject.FindWithTag("Camera").GetComponent<CameraController>();
     }
 
     void Update()
@@ -72,20 +76,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    void OnCameraChange(InputValue _value)
+    {
+        camera.ChangeTarget();
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         // Collision with ground
         if (collision.gameObject.layer == 3)
         {
             flipped = true;
-        }
-    }
-
-    void OnFlip(InputValue _value)
-    {
-        if (flippedTimer > unflipTime)
-        {
-            transform.rotation = Quaternion.identity;
         }
     }
 
@@ -96,6 +97,14 @@ public class PlayerMovement : MonoBehaviour
         {
             flipped = false;
             flippedTimer = 0f;
+        }
+    }
+
+    void OnFlip(InputValue _value)
+    {
+        if (flippedTimer > unflipTime)
+        {
+            transform.rotation = Quaternion.identity;
         }
     }
 
