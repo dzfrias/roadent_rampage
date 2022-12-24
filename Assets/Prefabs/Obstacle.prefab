@@ -113,6 +113,6 @@ MonoBehaviour:
   angularFrequency: 15
   dampingRatio: 0.3
   resizeEpsilon: 0.005
-  velocityDivide: 25
-  resizeMin: 0.5
-  velocityMin: 30
+  velocityDivide: 45
+  resizeMin: 0
+  velocityMin: 0
