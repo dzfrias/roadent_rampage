@@ -13,6 +13,7 @@ public class CameraSnap : MonoBehaviour
     private CinemachineVirtualCamera vcam;
     private int startPriority;
     private float startBlendTime;
+    private bool colliding;
 
     void Start()
     {
@@ -24,15 +25,20 @@ public class CameraSnap : MonoBehaviour
 
     void Update()
     {
-        if (detectionCollider.isColliding)
+        if (!colliding)
+        {
+            brain.m_DefaultBlend.m_Time = startBlendTime;
+        }
+        if (detectionCollider.isColliding && !colliding)
         {
             brain.m_DefaultBlend.m_Time = blendTime;
             vcam.Priority = setPriority;
+            colliding = true;
         }
-        else
+        else if (!detectionCollider.isColliding)
         {
             vcam.Priority = startPriority;
-            brain.m_DefaultBlend.m_Time = startBlendTime;
+            colliding = false;
         }
     }
 }
