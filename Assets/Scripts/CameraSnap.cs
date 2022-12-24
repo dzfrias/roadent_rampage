@@ -7,15 +7,16 @@ using Cinemachine;
 public class CameraSnap : MonoBehaviour
 {
     [SerializeField] private PlayerTrigger detectionCollider;
+    [SerializeField] private float blendTime = 0.5f;
     [SerializeField] private int setPriority = 100;
+    private CinemachineBrain brain;
     private CinemachineVirtualCamera vcam;
-    private Transform player;
     private int startPriority;
 
     void Start()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
-        player = GameObject.FindWithTag("Player").transform;
+        brain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
         startPriority = vcam.Priority;
     }
 
@@ -23,11 +24,13 @@ public class CameraSnap : MonoBehaviour
     {
         if (detectionCollider.isColliding)
         {
+            brain.m_DefaultBlend.m_Time = blendTime;
             vcam.Priority = setPriority;
         }
         else
         {
             vcam.Priority = startPriority;
+            brain.m_DefaultBlend.m_Time = 0.5f;
         }
     }
 }

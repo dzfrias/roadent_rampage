@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionCollider: {fileID: 2527171545745012308}
+  blendTime: 0.5
   setPriority: 100
 --- !u!1 &2527171547186612604
 GameObject:
