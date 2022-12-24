@@ -9,10 +9,12 @@ public class CameraSnap : MonoBehaviour
     [SerializeField] private PlayerTrigger detectionCollider;
     [SerializeField] private int setPriority = 100;
     private CinemachineVirtualCamera vcam;
+    private int startPriority;
 
     void Start()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
+        startPriority = vcam.Priority;
     }
 
     void Update()
