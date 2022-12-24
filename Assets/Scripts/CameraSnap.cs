@@ -12,12 +12,14 @@ public class CameraSnap : MonoBehaviour
     private CinemachineBrain brain;
     private CinemachineVirtualCamera vcam;
     private int startPriority;
+    private float startBlendTime;
 
     void Start()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
         brain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
         startPriority = vcam.Priority;
+        startBlendTime = brain.m_DefaultBlend.m_Time;
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class CameraSnap : MonoBehaviour
         else
         {
             vcam.Priority = startPriority;
-            brain.m_DefaultBlend.m_Time = 0.5f;
+            brain.m_DefaultBlend.m_Time = startBlendTime;
         }
     }
 }
