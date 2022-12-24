@@ -17,6 +17,7 @@ public class SpringCollision : MonoBehaviour
     [Header("Velocity Resizing")]
     [SerializeField] private float velocityDivide;
     [SerializeField] private float resizeMin;
+    [SerializeField] private float velocityMin;
 
     void Start()
     {
@@ -45,6 +46,11 @@ public class SpringCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log(collision.relativeVelocity.magnitude);
+            if (collision.relativeVelocity.magnitude < velocityMin)
+            {
+                return;
+            }
             targetSize = resizeMin + (collision.relativeVelocity.magnitude / velocityDivide);
             velocity = resizeEpsilon;
         }
