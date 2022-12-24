@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2527171545745012330}
   - component: {fileID: 2527171545745012331}
   - component: {fileID: 2527171545745012308}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Camera Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -46,7 +46,6 @@ public class SpringCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log(collision.relativeVelocity.magnitude);
             if (collision.relativeVelocity.magnitude < velocityMin)
             {
                 return;

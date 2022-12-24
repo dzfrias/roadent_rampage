@@ -9,7 +9,7 @@ public class PlayerTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("PlayerBody"))
+        if (collider.CompareTag("Player"))
         {
             isColliding = true;
         }
@@ -17,7 +17,7 @@ public class PlayerTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        if (collider.CompareTag("PlayerBody"))
+        if (collider.CompareTag("Player"))
         {
             isColliding = false;
         }
