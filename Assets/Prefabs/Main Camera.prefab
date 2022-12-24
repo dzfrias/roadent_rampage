@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8950282360797311880}
-  m_LocalRotation: {x: 0.15790743, y: 1.7483735e-25, z: -2.7958888e-26, w: 0.98745394}
+  m_LocalRotation: {x: 0.15790817, y: 0, z: 0, w: 0.9874538}
   m_LocalPosition: {x: 116.69, y: 3.14, z: 8.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.19, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.171, y: 0, z: 0}
 --- !u!20 &8950282360797311878
 Camera:
   m_ObjectHideFlags: 0
@@ -108,11 +108,83 @@ MonoBehaviour:
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.0006875992
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.42297876
+        value: 0.187531
+        inSlope: 1.4275845
+        outSlope: 1.4275845
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.63862866
+        value: 0.759604
+        inSlope: 4.4597583
+        outSlope: 4.4597583
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.69433767
+        value: 0.9529996
+        inSlope: 0.7993438
+        outSlope: 0.7993438
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7827672
+        value: 0.8341333
+        inSlope: 0.2568959
+        outSlope: 0.2568959
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8610037
+        value: 0.98059523
+        inSlope: 0.61696094
+        outSlope: 0.61696094
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9410979
+        value: 0.92696434
+        inSlope: 0.039866704
+        outSlope: 0.039866704
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.024345769
+        outSlope: 0.024345769
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.3875
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
+  m_CustomBlends: {fileID: 11400000, guid: 02041ddbd6ef2455db4ed09dee2dc068, type: 2}
   m_CameraCutEvent:
     m_PersistentCalls:
       m_Calls: []
