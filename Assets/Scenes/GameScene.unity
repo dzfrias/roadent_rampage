@@ -332,10 +332,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 602739622366507136, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 602739623024861862, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: m_Name
       value: Player
@@ -661,18 +657,6 @@ PrefabInstance:
     - target: {fileID: 1887008141506619059, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
-      propertyPath: resizeMin
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
-      propertyPath: velocityMin
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2468593014512624840, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
-      propertyPath: velocityDivide
-      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7703858453345709757, guid: 104f07b86ea2343a5b70092f5d44a459, type: 3}
       propertyPath: m_Name
