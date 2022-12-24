@@ -46,6 +46,7 @@ public class SpringCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             targetSize = resizeMin + (collision.relativeVelocity.magnitude / velocityDivide);
+            velocity = resizeEpsilon;
         }
     }
 }
