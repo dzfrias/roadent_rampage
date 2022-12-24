@@ -12,6 +12,7 @@ public class SpringCollision : MonoBehaviour
     [Header("Spring Motion")]
     [SerializeField] private float angularFrequency;
     [SerializeField] private float dampingRatio;
+    [SerializeField] private float resizeEpsilon = 0.0001f;
 
     [Header("Velocity Resizing")]
     [SerializeField] private float velocityDivide;
@@ -25,7 +26,7 @@ public class SpringCollision : MonoBehaviour
     void Update()
     {
         // Finished swelling up
-        if (velocity > 0 && velocity < 0.0001)
+        if (velocity > 0 && velocity < resizeEpsilon)
         {
             targetSize = 0;
         }
@@ -42,6 +43,9 @@ public class SpringCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        targetSize = resizeMin + (collision.relativeVelocity.magnitude / velocityDivide);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            targetSize = resizeMin + (collision.relativeVelocity.magnitude / velocityDivide);
+        }
     }
 }

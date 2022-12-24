@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad724e384f634e7aa35d255056fb509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularFrequency: 10
+  angularFrequency: 15
   dampingRatio: 0.3
+  resizeEpsilon: 0.005
   velocityDivide: 35
   resizeMin: 1
