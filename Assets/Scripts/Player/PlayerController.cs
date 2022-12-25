@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody rb;
+
     [SerializeField] private List<Wheel> wheels;
 
     [Header("Specs")]
@@ -13,13 +15,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float wheelBase;
     [SerializeField] private float rearTrack;
     [Tooltip("Higher turnRadius means less sharp turns")]
-    [SerializeField]
-    private float turnRadius;
+    [SerializeField] private float turnRadius;
     [SerializeField] private Vector3 centerOfMass;
 
     [Header("Mechanics")]
     [Tooltip("Time needed to be flipped for player to be able to unflip")]
     [SerializeField] private float unflipTime;
+    [SerializeField] float airSteer;
+    [SerializeField] float airSteerMax;
 
     // Inputs
     private float rotationInput;
@@ -33,9 +36,12 @@ public class PlayerController : MonoBehaviour
     private CameraController cameraController;
     private CinemachineTilt cameraTilt;
 
+    // Ground logic
+    private bool onGround;
+
     void Start()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centerOfMass;
         GameObject cam = GameObject.FindWithTag("Camera");
         cameraController = cam.GetComponent<CameraController>();
@@ -44,18 +50,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        TiltCamera();
-        Steer();
-
-        if (flipped)
-        {
-            flippedTimer += Time.deltaTime;
-        }
-    }
-
-    void TiltCamera()
-    {
-        bool onGround = false;
+        bool lastOnGround = onGround;
+        onGround = false;
         foreach (Wheel wheel in wheels)
         {
             if (wheel.onGround)
@@ -64,6 +60,32 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
+        if (lastOnGround != onGround)
+        {
+            /* rb.angularVelocity = Vector3.zero; */
+        }
+        TiltCamera();
+        if (onGround)
+        {
+            Steer();
+        }
+
+        if (flipped)
+        {
+            flippedTimer += Time.deltaTime;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (!onGround)
+        {
+            AirSteer();
+        }
+    }
+
+    void TiltCamera()
+    {
         if (onGround)
         {
             cameraTilt.SetTilt((CinemachineTiltDirection)accelerationInput);
@@ -71,6 +93,13 @@ public class PlayerController : MonoBehaviour
         {
             cameraTilt.SetTilt(CinemachineTiltDirection.Rest);
         }
+    }
+
+    void AirSteer()
+    {
+        rb.AddTorque(transform.right * accelerationInput * airSteer, ForceMode.VelocityChange);
+        rb.AddTorque(transform.up * rotationInput * airSteer, ForceMode.VelocityChange);
+        rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, airSteerMax);
     }
 
     void Steer()
