@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BouncyCollide : MonoBehaviour
 {
-    [SerializeField] private float upFactor = 1000f;
-    [SerializeField] private float collideFactor = 1000f;
+    [SerializeField] private float force;
+    [SerializeField] private float upForce;
 
     private Rigidbody playerRb;
-    private Vector3 collide;
+    private Collision collide;
 
     void Start()
     {
@@ -17,10 +17,10 @@ public class BouncyCollide : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (collide.magnitude > 0)
+        if (collide != null)
         {
-            playerRb.AddForce((-collide * collideFactor) + (Vector3.up * playerRb.mass * upFactor));
-            collide = new Vector3(0, 0, 0);
+            playerRb.AddExplosionForce(collide.relativeVelocity.magnitude * force * playerRb.mass, collide.GetContact(0).point, 10f, upForce);
+            collide = null;
         }
     }
 
@@ -28,7 +28,7 @@ public class BouncyCollide : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collide = collision.relativeVelocity;
+            collide = collision;
         }
     }
 }
