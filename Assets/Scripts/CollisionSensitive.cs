@@ -6,10 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class CollisionSensitive : MonoBehaviour
 {
-    [SerializeField] private float upFactor = 1000f;
+    [SerializeField] private float force;
+    [SerializeField] private float upForce;
 
     private Rigidbody rb;
-    private Vector3 collide;
+    private Collision collide;
 
     void Start()
     {
@@ -18,10 +19,10 @@ public class CollisionSensitive : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (collide.magnitude > 0)
+        if (collide != null)
         {
-            rb.AddForce(Vector3.up * rb.mass * upFactor + collide);
-            collide = new Vector3(0, 0, 0);
+            rb.AddExplosionForce(collide.relativeVelocity.magnitude * force, collide.GetContact(0).point, 10f, upForce);
+            collide = null;
         }
     }
 
@@ -29,7 +30,7 @@ public class CollisionSensitive : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collide = collision.relativeVelocity;
+            collide = collision;
         }
     }
 }
