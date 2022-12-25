@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
     {
         if (flippedTimer > unflipTime)
         {
-            transform.rotation = Quaternion.identity;
+            transform.rotation = transform.rotation * Quaternion.AngleAxis(180, Vector3.forward);
         }
     }
 
