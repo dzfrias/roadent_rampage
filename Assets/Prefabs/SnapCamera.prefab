@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 2527171546771026182}
   - component: {fileID: 2527171546771026183}
   m_Layer: 0
-  m_Name: Snap Camera
+  m_Name: SnapCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

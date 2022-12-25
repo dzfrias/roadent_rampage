@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 1852433310}
   - component: {fileID: 1852433309}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: DirectionalLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,7 +552,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1596788334239994165, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_Name
-      value: Main VCam
+      value: MainVCam
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994165, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_TagString
@@ -751,7 +751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2527171546771026176, guid: 536e1ea0f766e40cfa623c8ba6d8dc2d, type: 3}
       propertyPath: m_Name
-      value: Snap Camera
+      value: SnapCamera
       objectReference: {fileID: 0}
     - target: {fileID: 2527171546771026181, guid: 536e1ea0f766e40cfa623c8ba6d8dc2d, type: 3}
       propertyPath: m_RootOrder
@@ -808,7 +808,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5683779247493700184, guid: b08039d450e1a4ec5a7db6fcd866dfa5, type: 3}
       propertyPath: m_Name
-      value: Small Obstacle
+      value: SmallObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5683779247493700189, guid: b08039d450e1a4ec5a7db6fcd866dfa5, type: 3}
       propertyPath: m_RootOrder
@@ -1120,7 +1120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311880, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_Name
-      value: Main Camera
+      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
