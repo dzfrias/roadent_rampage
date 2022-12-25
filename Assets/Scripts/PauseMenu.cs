@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    private Canvas canvas;
+    [SerializeField] private GameObject ui;
     private bool paused;
-
-    void Start()
-    {
-        canvas = GetComponent<Canvas>();
-    }
 
     public void Resume()
     {
-        canvas.enabled = false;
+        ui.SetActive(false);
         Time.timeScale = 1f;
         paused = false;
     }
@@ -27,7 +22,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
-            canvas.enabled = true;
+            ui.SetActive(true);
             Time.timeScale = 0f;
             paused = true;
         }

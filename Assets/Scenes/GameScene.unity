@@ -169,6 +169,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1075709538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8254630321895418509, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
+  m_PrefabInstance: {fileID: 6373664090853122398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331419615
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,8 +954,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6373664090109493214, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
       propertyPath: m_Name
-      value: PauseMenu
+      value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6373664090109493215, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1075709538}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
 --- !u!1001 &6830483990834284525
