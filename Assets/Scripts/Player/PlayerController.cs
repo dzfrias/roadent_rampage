@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,16 +30,50 @@ public class PlayerController : MonoBehaviour
     private float flippedTimer;
 
     // Camera
-    private new CameraController camera;
+    private CameraController cameraController;
+    private CinemachineTilt cameraTilt;
 
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centerOfMass;
-        camera = GameObject.FindWithTag("Camera").GetComponent<CameraController>();
+        GameObject cam = GameObject.FindWithTag("Camera");
+        cameraController = cam.GetComponent<CameraController>();
+        cameraTilt = cam.GetComponent<CinemachineTilt>();
     }
 
     void Update()
+    {
+        TiltCamera();
+        Steer();
+
+        if (flipped)
+        {
+            flippedTimer += Time.deltaTime;
+        }
+    }
+
+    void TiltCamera()
+    {
+        bool onGround = false;
+        foreach (Wheel wheel in wheels)
+        {
+            if (wheel.onGround)
+            {
+                onGround = true;
+                break;
+            }
+        }
+        if (onGround)
+        {
+            cameraTilt.SetTilt((CinemachineTiltDirection)accelerationInput);
+        } else
+        {
+            cameraTilt.SetTilt(CinemachineTiltDirection.Rest);
+        }
+    }
+
+    void Steer()
     {
         float angleLeft;
         float angleRight;
@@ -68,17 +103,11 @@ public class PlayerController : MonoBehaviour
             }
             wheel.accelerationInput = accelerationInput;
         }
-
-        if (flipped)
-        {
-            flippedTimer += Time.deltaTime;
-        }
     }
-
 
     void OnCameraChange(InputValue _value)
     {
-        camera.ChangeTarget();
+        cameraController.ChangeTarget();
     }
 
     void OnCollisionEnter(Collision collision)

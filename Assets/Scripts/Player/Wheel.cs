@@ -45,6 +45,7 @@ public class Wheel : MonoBehaviour
     private float wheelAngle;
 
     [System.NonSerialized] public float accelerationInput;
+    [System.NonSerialized] public bool onGround;
 
     void Start()
     {
@@ -63,6 +64,7 @@ public class Wheel : MonoBehaviour
 
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
+            onGround = true;
             carRb.AddForceAtPosition(Vector3.MoveTowards(transform.forward, transform.forward * car.speed, Mathf.Infinity) * accelerationInput, transform.position);
             if (accelerationInput == 0) 
             {
@@ -70,6 +72,10 @@ public class Wheel : MonoBehaviour
             }
             ApplySpring(hit);
             ApplySlip();
+        }
+        else
+        {
+            onGround = false;
         }
     }
 
