@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CinemachineBlends
   m_EditorClassIdentifier: 
   m_CustomBlends:
-  - m_From: Main VCam
-    m_To: Snap Camera
+  - m_From: MainVCam
+    m_To: SnapCamera
     m_Blend:
       m_Style: 7
       m_Time: 0.75
@@ -78,8 +78,8 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
-  - m_From: Snap Camera
-    m_To: Main VCam
+  - m_From: SnapCamera
+    m_To: MainVCam
     m_Blend:
       m_Style: 1
       m_Time: 0.5
