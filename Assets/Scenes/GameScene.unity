@@ -485,6 +485,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5836621905092602648, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
+      propertyPath: maxSpeed
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836621905092602648, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: cameraTilt
       value: 
       objectReference: {fileID: 1605618679}

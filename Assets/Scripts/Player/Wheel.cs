@@ -65,7 +65,7 @@ public class Wheel : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
             onGround = true;
-            carRb.AddForceAtPosition(Vector3.MoveTowards(transform.forward, transform.forward * car.speed, Mathf.Infinity) * accelerationInput, transform.position);
+            carRb.AddForceAtPosition(transform.forward * car.speed * accelerationInput, transform.position);
             if (accelerationInput == 0) 
             {
                 carRb.AddForceAtPosition(-carRb.GetPointVelocity(transform.position) * forwardsGrip, transform.position);

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Specs")]
     public float speed;
+    public float maxSpeed;
     [SerializeField] private float wheelBase;
     [SerializeField] private float rearTrack;
     [Tooltip("Higher turnRadius means less sharp turns")]
@@ -60,6 +61,10 @@ public class PlayerController : MonoBehaviour
         if (!onGround)
         {
             AirSteer();
+        }
+        else
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
     }
 
