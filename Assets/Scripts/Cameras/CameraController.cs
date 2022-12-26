@@ -15,8 +15,8 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private float angularFrequency;
     [SerializeField] private float dampingRatio;
-    [SerializeField] private Transform target;
 
+    private Transform target;
     private CinemachineVirtualCamera vcam;
     private Target currentTarget;
     private float velocity;
@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
         currentTarget = Target.Main;
+        target = vcam.LookAt;
     }
 
     void Update()
