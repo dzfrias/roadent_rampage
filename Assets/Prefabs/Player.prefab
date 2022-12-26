@@ -383,6 +383,7 @@ MonoBehaviour:
   - {fileID: 602739621693275186}
   - {fileID: 602739623324744272}
   speed: 3000
+  maxSpeed: 45
   wheelBase: 2.55
   rearTrack: 1.525
   turnRadius: 9
