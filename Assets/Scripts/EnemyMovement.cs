@@ -19,8 +19,6 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         minSpeed = agent.speed;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
-        // Run every 0.2 seconds
-        InvokeRepeating("SetDestination", 0f, 0.2f);
     }
 
     Vector3 ClosestPoint()
@@ -31,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         return hit.position;
     }
 
-    void SetDestination()
+    void Update()
     {
         if (Vector3.Distance(transform.position, target.position) > maxDistance)
         {
