@@ -484,10 +484,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3855200378252065192, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
-      propertyPath: upsideDownThreshold
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 5836621905092602648, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: cameraTilt
       value: 
