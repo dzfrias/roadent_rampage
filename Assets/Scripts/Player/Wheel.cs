@@ -41,11 +41,11 @@ public class Wheel : MonoBehaviour
 
     [Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
     [SerializeField] private float steerTime;
-    [System.NonSerialized] public float steerAngle;
+    [HideInInspector] public float steerAngle;
     private float wheelAngle;
 
-    [System.NonSerialized] public float accelerationInput;
-    [System.NonSerialized] public bool onGround;
+    [HideInInspector] public float accelerationInput;
+    [HideInInspector] public bool onGround { get; private set; }
 
     void Start()
     {

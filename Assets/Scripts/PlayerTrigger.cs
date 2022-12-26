@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class PlayerTrigger : MonoBehaviour
 {
-    [System.NonSerialized] public bool isColliding;
+    [HideInInspector] public bool isColliding { get; private set; }
 
     void OnTriggerEnter(Collider collider)
     {
