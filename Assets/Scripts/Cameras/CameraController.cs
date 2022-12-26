@@ -6,32 +6,31 @@ using Cinemachine;
 
 enum Target
 {
-    Player,
+    Main,
     RearView,
 }
 
 [RequireComponent(typeof(CinemachineVirtualCamera))]
 public class CameraController : MonoBehaviour
 {
-    private CinemachineVirtualCamera vcam;
-    private Target target;
-    private Transform player;
-    private float velocity;
-    private float rotation;
-
     [SerializeField] private float angularFrequency;
     [SerializeField] private float dampingRatio;
+    [SerializeField] private Transform target;
+
+    private CinemachineVirtualCamera vcam;
+    private Target currentTarget;
+    private float velocity;
+    private float rotation;
 
     void Start()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
-        target = Target.Player;
-        player = GameObject.FindWithTag("Player").transform;
+        currentTarget = Target.Main;
     }
 
     void Update()
     {
-        if (target == Target.RearView && rotation == 0)
+        if (currentTarget == Target.RearView && rotation == 0)
         {
             StartCoroutine(Rotate());
         }
@@ -39,7 +38,7 @@ public class CameraController : MonoBehaviour
 
     private IEnumerator Rotate()
     {
-        while (target == Target.RearView)
+        while (currentTarget == Target.RearView)
         {
             float deltaTime = Time.deltaTime;
             SpringMotion.CalcDampedSimpleHarmonicMotion(ref rotation,
@@ -48,7 +47,7 @@ public class CameraController : MonoBehaviour
                     deltaTime,
                     angularFrequency,
                     dampingRatio);
-            transform.rotation = player.rotation * Quaternion.AngleAxis(rotation, Vector3.up);
+            transform.rotation = target.rotation * Quaternion.AngleAxis(rotation, Vector3.up);
             yield return null;
         }
         rotation = 0;
@@ -57,18 +56,18 @@ public class CameraController : MonoBehaviour
 
     public void ChangeTarget()
     {
-        if (target == Target.Player)
+        if (currentTarget == Target.Main)
         {
             vcam.LookAt = null;
             vcam.m_Lens.Dutch = 6;
             vcam.m_Lens.FieldOfView = 90;
-            target = Target.RearView;
+            currentTarget = Target.RearView;
         } else
         {
-            vcam.LookAt = player;
+            vcam.LookAt = target;
             vcam.m_Lens.Dutch = 0;
             vcam.m_Lens.FieldOfView = 60;
-            target = Target.Player;
+            currentTarget = Target.Main;
             rotation = 0f;
             velocity = 0f;
         }
