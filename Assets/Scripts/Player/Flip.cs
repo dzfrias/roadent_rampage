@@ -6,6 +6,8 @@ using UnityEngine;
 public class Flip : MonoBehaviour
 {
     [SerializeField] private float unflipTime;
+    [SerializeField] private float upsideDownEpsilon = 0.01f;
+    [SerializeField] private float rightSideEpsilon = 0.01f;
     private float flippedTime;
     private bool flipped;
 
@@ -38,7 +40,14 @@ public class Flip : MonoBehaviour
     {
         if (flippedTime >= unflipTime)
         {
-            transform.rotation = transform.rotation * Quaternion.AngleAxis(180, Vector3.forward);
+            if (transform.up.y < -1 + upsideDownEpsilon)
+            {
+                transform.rotation = transform.rotation * Quaternion.AngleAxis(180, Vector3.forward);
+            }
+            else if (transform.up.y > 0 - rightSideEpsilon && transform.up.y < 0 + rightSideEpsilon)
+            {
+                transform.rotation = transform.rotation * Quaternion.AngleAxis(-90, Vector3.forward);
+            }
         }
     }
 }
