@@ -388,6 +388,7 @@ MonoBehaviour:
   turnRadius: 9
   centerOfMass: {x: 0, y: -0.4, z: 0}
   airSteer: 0.06
+  cameraTilt: {fileID: 0}
 --- !u!65 &2141510636
 BoxCollider:
   m_ObjectHideFlags: 0

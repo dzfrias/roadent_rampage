@@ -25,9 +25,8 @@ public class PlayerController : MonoBehaviour
     private float rotationInput;
     private float accelerationInput;
 
-    // Camera
-    private CameraController cameraController;
-    private CinemachineTilt cameraTilt;
+    [Header("Camera")]
+    [SerializeField] private CinemachineTilt cameraTilt;
 
     // Ground logic
     private bool onGround;
@@ -36,9 +35,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centerOfMass;
-        GameObject cam = GameObject.FindWithTag("Camera");
-        cameraController = cam.GetComponent<CameraController>();
-        cameraTilt = cam.GetComponent<CinemachineTilt>();
     }
 
     void Update()
