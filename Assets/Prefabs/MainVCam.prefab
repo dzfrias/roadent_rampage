@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 2978590486010450821}
   - component: {fileID: 4077327343156854463}
   - component: {fileID: 733612491842457902}
+  - component: {fileID: 7852327502165932943}
   m_Layer: 0
   m_Name: MainVCam
   m_TagString: Untagged
@@ -236,3 +237,18 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!114 &7852327502165932943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596788334239994165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffd5c47de37d42738515e53befcf2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTilt: 4
+  angularFrequency: 9
+  dampingRatio: 0.3
