@@ -19,17 +19,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 centerOfMass;
 
     [Header("Mechanics")]
-    [Tooltip("Time needed to be flipped for player to be able to unflip")]
-    [SerializeField] private float unflipTime;
-    [SerializeField] float airSteer;
+    [SerializeField] private float airSteer;
 
     // Inputs
     private float rotationInput;
     private float accelerationInput;
-
-    // Flipped logic
-    private bool flipped;
-    private float flippedTimer;
 
     // Camera
     private CameraController cameraController;
@@ -62,11 +56,6 @@ public class PlayerController : MonoBehaviour
         if (onGround)
         {
             Steer();
-        }
-
-        if (flipped)
-        {
-            flippedTimer += Time.deltaTime;
         }
     }
 
@@ -125,33 +114,6 @@ public class PlayerController : MonoBehaviour
             {
                 wheel.steerAngle = angleRight;
             }
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        // Collision with ground
-        if (collision.gameObject.layer == 3)
-        {
-            flipped = true;
-        }
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        // Collision with ground
-        if (collision.gameObject.layer == 3)
-        {
-            flipped = false;
-            flippedTimer = 0f;
-        }
-    }
-
-    public void Flip()
-    {
-        if (flippedTimer > unflipTime)
-        {
-            transform.rotation = transform.rotation * Quaternion.AngleAxis(180, Vector3.forward);
         }
     }
 
