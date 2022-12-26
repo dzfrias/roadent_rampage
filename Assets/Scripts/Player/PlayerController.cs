@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        bool lastOnGround = onGround;
         onGround = false;
         foreach (Wheel wheel in wheels)
         {
@@ -59,10 +58,6 @@ public class PlayerController : MonoBehaviour
                 onGround = true;
                 break;
             }
-        }
-        if (lastOnGround != onGround)
-        {
-            /* rb.angularVelocity = Vector3.zero; */
         }
         TiltCamera();
         if (onGround)
