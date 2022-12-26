@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Time needed to be flipped for player to be able to unflip")]
     [SerializeField] private float unflipTime;
     [SerializeField] float airSteer;
-    [SerializeField] float airSteerMax;
 
     // Inputs
     private float rotationInput;
@@ -94,7 +93,6 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddTorque(transform.right * accelerationInput * airSteer, ForceMode.VelocityChange);
         rb.AddTorque(transform.up * rotationInput * airSteer, ForceMode.VelocityChange);
-        rb.angularVelocity = Vector3.ClampMagnitude(rb.angularVelocity, airSteerMax);
     }
 
     void Steer()
