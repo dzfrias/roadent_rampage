@@ -82,7 +82,7 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  radius: 0.8
+  radius: 0.9
   corner: 0
   grip: 0.4
   mass: 20
@@ -136,7 +136,7 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  radius: 0.8
+  radius: 0.9
   corner: 3
   grip: 0.4
   mass: 20
@@ -273,7 +273,7 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  radius: 0.8
+  radius: 0.9
   corner: 2
   grip: 0.4
   mass: 20
@@ -584,7 +584,7 @@ MonoBehaviour:
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
-  radius: 0.8
+  radius: 0.9
   corner: 1
   grip: 0.4
   mass: 20
