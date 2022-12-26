@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
 public class PlayerTrigger : MonoBehaviour
 {
-    [HideInInspector] public bool isColliding { get; private set; }
+    [SerializeField] private UnityEvent triggered;
+    [SerializeField] private UnityEvent stopTriggered;
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
-            isColliding = true;
+            triggered.Invoke();
         }
     }
 
@@ -19,7 +21,7 @@ public class PlayerTrigger : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            isColliding = false;
+            stopTriggered.Invoke();
         }
     }
 }
