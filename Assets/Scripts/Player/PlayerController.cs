@@ -125,13 +125,7 @@ public class PlayerController : MonoBehaviour
             {
                 wheel.steerAngle = angleRight;
             }
-            wheel.accelerationInput = accelerationInput;
         }
-    }
-
-    void OnCameraChange(InputValue _value)
-    {
-        cameraController.ChangeTarget();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -153,7 +147,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnFlip(InputValue _value)
+    public void Flip()
     {
         if (flippedTimer > unflipTime)
         {
@@ -161,13 +155,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTurn(InputValue value)
+    public void Turn(float value)
     {
-        rotationInput = value.Get<float>();
+        rotationInput = value;
     }
 
-    void OnAccelerate(InputValue value)
+    public void Accelerate(float value)
     {
-        accelerationInput = value.Get<float>();
+        accelerationInput = value;
     }
 }

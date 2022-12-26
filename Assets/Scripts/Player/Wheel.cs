@@ -44,7 +44,7 @@ public class Wheel : MonoBehaviour
     [HideInInspector] public float steerAngle;
     private float wheelAngle;
 
-    [HideInInspector] public float accelerationInput;
+    private float accelerationInput;
     [HideInInspector] public bool onGround { get; private set; }
 
     void Start()
@@ -98,5 +98,10 @@ public class Wheel : MonoBehaviour
         float velChange = -steerVel * grip;
         float accelChange = velChange / Time.fixedDeltaTime;
         carRb.AddForceAtPosition(steeringDir * mass * accelChange, transform.position);
+    }
+
+    public void Accelerate(float value)
+    {
+        accelerationInput = value;
     }
 }
