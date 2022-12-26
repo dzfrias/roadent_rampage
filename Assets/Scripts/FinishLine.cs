@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other) 
+    public void FinishLevel() 
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player Finished The Level!");
-        }
+        Debug.Log("Player Finished The Level!");
     }
 }
