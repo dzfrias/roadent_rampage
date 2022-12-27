@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float maxDistance;
-    [SerializeField] private Vector3 warpOffset;
+    [SerializeField] private float warpOffset;
     [SerializeField, Range(0f, 1f)] private float speedDecrease;
     private NavMeshAgent agent;
     private Rigidbody targetRb;
@@ -21,11 +21,11 @@ public class EnemyMovement : MonoBehaviour
         targetRb = target.gameObject.GetComponent<Rigidbody>();
     }
 
-    Vector3 ClosestPoint()
+    Vector3 ClosestPoint(float offset)
     {
         NavMeshHit hit;
         // Get closest position to target
-        NavMesh.SamplePosition(target.position, out hit, Mathf.Infinity, NavMesh.AllAreas);
+        NavMesh.SamplePosition(target.position - target.forward * offset, out hit, Mathf.Infinity, NavMesh.AllAreas);
         return hit.position;
     }
 
@@ -33,19 +33,19 @@ public class EnemyMovement : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, target.position) > maxDistance)
         {
-            agent.Warp(ClosestPoint() - warpOffset);
+            agent.Warp(ClosestPoint(warpOffset));
             return;
         }
 
         agent.speed = Mathf.Max(targetRb.velocity.magnitude * speedDecrease, minSpeed);
-        agent.destination = ClosestPoint();
+        agent.destination = ClosestPoint(0f);
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject == target.gameObject)
         {
-            Debug.Log("The target was reached!");
+            Debug.Log("<color=red>The target was reached!</color>");
         }
     }
 }

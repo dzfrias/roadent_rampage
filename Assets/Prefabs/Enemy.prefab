@@ -135,6 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  maxDistance: 40
-  warpOffset: {x: 7, y: 0, z: 0}
+  maxDistance: 80
+  warpOffset: 15
   speedDecrease: 0.97
