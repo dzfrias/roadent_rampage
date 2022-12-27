@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 2141510636}
   - component: {fileID: 2141510633}
   - component: {fileID: 3855200378252065192}
+  - component: {fileID: 2141510639}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -538,6 +539,35 @@ MonoBehaviour:
   unflipTime: 2
   upsideDownEpsilon: 0.01
   rightSideEpsilon: 0.01
+--- !u!114 &2141510639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602739623024861862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d12ced79e5da4b4184c3e15710fa12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5836621905092602648}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SpeedBoost
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  airTimeMultiplier: 6
+  scoreThreshold: 10
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0

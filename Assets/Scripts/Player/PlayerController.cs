@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Mechanics")]
     [SerializeField] private float airSteer;
+    private ComboScorer comboScorer;
 
     // Inputs
     private float rotationInput;
@@ -40,10 +41,12 @@ public class PlayerController : MonoBehaviour
         rb.centerOfMass = centerOfMass;
         cameraTilt = camera.GetComponent<CinemachineTilt>();
         cameraPush = camera.GetComponent<CinemachinePushBack>();
+        comboScorer = GetComponent<ComboScorer>();
     }
 
     void Update()
     {
+        bool previousOnGround = onGround;
         onGround = false;
         foreach (Wheel wheel in wheels)
         {
@@ -57,6 +60,14 @@ public class PlayerController : MonoBehaviour
         if (onGround)
         {
             Steer();
+        }
+        if (previousOnGround != onGround && onGround)
+        {
+            comboScorer.HitGround();
+        }
+        else if (previousOnGround != onGround && !onGround)
+        {
+            comboScorer.LeftGround();
         }
         if (rb.velocity.magnitude > maxSpeed - 1)
         {
@@ -73,10 +84,6 @@ public class PlayerController : MonoBehaviour
         if (!onGround)
         {
             AirSteer();
-        }
-        else
-        {
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
     }
 
@@ -128,6 +135,11 @@ public class PlayerController : MonoBehaviour
                 wheel.steerAngle = angleRight;
             }
         }
+    }
+
+    public void SpeedBoost(float amount)
+    {
+        rb.AddForce(transform.forward * amount, ForceMode.VelocityChange);
     }
 
     public void Turn(float value)
