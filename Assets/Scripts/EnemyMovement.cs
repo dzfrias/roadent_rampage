@@ -40,4 +40,12 @@ public class EnemyMovement : MonoBehaviour
         agent.speed = Mathf.Max(targetRb.velocity.magnitude * speedDecrease, minSpeed);
         agent.destination = ClosestPoint();
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject == target.gameObject)
+        {
+            Debug.Log("The target was reached!");
+        }
+    }
 }
