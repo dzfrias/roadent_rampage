@@ -27,7 +27,9 @@ public class PlayerController : MonoBehaviour
     private float accelerationInput;
 
     [Header("Camera")]
-    [SerializeField] private CinemachineTilt cameraTilt;
+    [SerializeField] private new GameObject camera;
+    private CinemachineTilt cameraTilt;
+    private CinemachinePushBack cameraPush;
 
     // Ground logic
     private bool onGround;
@@ -36,6 +38,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centerOfMass;
+        cameraTilt = camera.GetComponent<CinemachineTilt>();
+        cameraPush = camera.GetComponent<CinemachinePushBack>();
     }
 
     void Update()
@@ -53,6 +57,14 @@ public class PlayerController : MonoBehaviour
         if (onGround)
         {
             Steer();
+        }
+        if (rb.velocity.magnitude > maxSpeed - 1)
+        {
+            cameraPush.Activate();
+        }
+        else
+        {
+            cameraPush.Deactivate();
         }
     }
 

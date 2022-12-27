@@ -109,9 +109,10 @@ GameObject:
   - component: {fileID: 4077327343156854463}
   - component: {fileID: 733612491842457902}
   - component: {fileID: 7852327502165932943}
+  - component: {fileID: 1605618680}
   m_Layer: 0
   m_Name: MainVCam
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +149,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 20
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -252,3 +253,18 @@ MonoBehaviour:
   maxTilt: 4
   angularFrequency: 9
   dampingRatio: 0.3
+--- !u!114 &1605618680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596788334239994165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a9d6cd0ff014153810abab3aa8ea2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -1
+  angularFrequency: 5
+  dampingRatio: 0.6
