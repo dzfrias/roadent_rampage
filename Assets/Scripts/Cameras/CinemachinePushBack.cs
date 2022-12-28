@@ -38,6 +38,6 @@ public class CinemachinePushBack : CinemachineExtension
             CinemachineVirtualCameraBase vcam,
             CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
     {
-        state.PositionCorrection = new Vector3(0, 0, currentOffset);
+        state.PositionCorrection = state.PositionCorrection + new Vector3(0, 0, currentOffset);
     }
 }
