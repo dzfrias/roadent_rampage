@@ -396,10 +396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90847dc8438a44dc5b8a066bdbe5365e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moverObject: {fileID: 602739621524266626}
   speed: 3000
   maxSpeed: 45
   centerOfMass: {x: 0, y: -0.4, z: 0}
+  moverObject: {fileID: 602739621524266626}
   airSteer: 0.06
   camera: {fileID: 0}
 --- !u!65 &2141510636
@@ -530,7 +530,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   airTimeMultiplier: 6
-  scoreThreshold: 10
+  scoreThreshold: 20
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0
