@@ -99,7 +99,14 @@ public class PlayerController : MonoBehaviour
 
     public void SpeedBoost(float amount)
     {
-        rb.AddForce(transform.forward * amount, ForceMode.VelocityChange);
+        if (accelerationInput == -1)
+        {
+            rb.AddForce(-transform.forward * amount * 2, ForceMode.VelocityChange);
+        }
+        else
+        {
+            rb.AddForce(transform.forward * amount, ForceMode.VelocityChange);
+        }
     }
 
     public void Turn(float value)
