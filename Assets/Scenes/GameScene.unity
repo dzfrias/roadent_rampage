@@ -14244,7 +14244,7 @@ MonoBehaviour:
   isMultithreaded: 1
   isSavingMeshes: 0
   isAllowingRoadUpdates: 1
-  editorPlayCamera: {fileID: 0}
+  editorPlayCamera: {fileID: 1310534470}
 --- !u!4 &877387457
 Transform:
   m_ObjectHideFlags: 0
@@ -19861,6 +19861,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289363953}
   m_Mesh: {fileID: 2140450447}
+--- !u!20 &1310534470 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8950282360797311878, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
+  m_PrefabInstance: {fileID: 8950282360813611167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!134 &1312073344
 PhysicMaterial:
   m_ObjectHideFlags: 0
@@ -32520,11 +32525,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3.13992e-25
+      value: 1.2016433e-26
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -5.0211628e-26
+      value: -1.9215926e-27
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33024,11 +33029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 3.13992e-25
+      value: 1.2016433e-26
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -5.0211628e-26
+      value: -1.9215926e-27
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

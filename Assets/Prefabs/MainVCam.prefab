@@ -265,6 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a9d6cd0ff014153810abab3aa8ea2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -1
+  offset: 0.5
   angularFrequency: 5
   dampingRatio: 0.6
