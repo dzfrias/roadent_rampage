@@ -10,47 +10,37 @@ public enum Corner
     BackRight,
 }
 
-public class Wheel : MonoBehaviour
+public class Wheel : MonoBehaviour, IMover
 {
-    private PlayerController car;
-    private Rigidbody carRb;
+    public float MaxSpeed { get; set; }
+    [SerializeField] private Rigidbody target;
 
     [Header("Suspension")]
-
-    [Tooltip("Higher restLength means higher above the ground")]
-    [SerializeField]
+    [SerializeField, Tooltip("Higher restLength means higher above the ground")]
     private float restLength;
-
-    [Tooltip("Higher springStiffness means more dramatic springs")]
-    [SerializeField]
+    [SerializeField, Tooltip("Higher springStiffness means more dramatic springs")]
     private float springStiffness;
-
-    [Tooltip("Higher damperStiffness means less springiness")]
-    [SerializeField]
+    [SerializeField, Tooltip("Higher damperStiffness means less springiness")]
     private float damperStiffness;
 
-    [SerializeField] private float radius;
-
     [Header("Wheel")]
-    public Corner corner;
-    [Range(0, 1)]
-    [Tooltip("Higher grip means less sideways slip.")]
-    [SerializeField] private float grip;
+    [SerializeField] private float radius;
+    [Range(0, 1), SerializeField, Tooltip("Higher grip means less sideways slip.")]
+    private float grip;
     [SerializeField] private float mass;
     [SerializeField] private float forwardsGrip;
+    [SerializeField, Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
+    private float steerTime;
 
-    [Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
-    [SerializeField] private float steerTime;
-    [HideInInspector] public float steerAngle;
+    // Private fields
     private float wheelAngle;
-
-    private float accelerationInput;
-    [HideInInspector] public bool onGround { get; private set; }
+    private float acceleration;
+    private float steerAngle;
+    private bool onGround;
 
     void Start()
     {
-        car = transform.root.GetComponent<PlayerController>();
-        carRb = transform.root.GetComponent<Rigidbody>();
+        target = transform.root.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -65,13 +55,13 @@ public class Wheel : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
             onGround = true;
-            if (carRb.GetPointVelocity(transform.position).magnitude <= car.maxSpeed)
+            if (target.GetPointVelocity(transform.position).magnitude <= MaxSpeed)
             {
-                carRb.AddForceAtPosition(transform.forward * car.speed * accelerationInput, transform.position);
+                target.AddForceAtPosition(transform.forward * acceleration, transform.position);
             }
-            if (accelerationInput == 0) 
+            if (acceleration == 0) 
             {
-                carRb.AddForceAtPosition(-carRb.GetPointVelocity(transform.position) * forwardsGrip, transform.position);
+                target.AddForceAtPosition(-target.GetPointVelocity(transform.position) * forwardsGrip, transform.position);
             }
             ApplySpring(hit);
             ApplySlip();
@@ -85,26 +75,36 @@ public class Wheel : MonoBehaviour
     void ApplySpring(RaycastHit hit)
     {
         Vector3 springDir = transform.up;
-        Vector3 tireVel = carRb.GetPointVelocity(transform.position);
+        Vector3 tireVel = target.GetPointVelocity(transform.position);
         float offset = restLength - hit.distance;
         float vel = Vector3.Dot(springDir, tireVel);
         float force = (offset * springStiffness) - (vel * damperStiffness);
 
-        carRb.AddForceAtPosition(springDir * force, transform.position);
+        target.AddForceAtPosition(springDir * force, transform.position);
     }
 
     void ApplySlip()
     {
         Vector3 steeringDir = transform.right;
-        Vector3 tireVel = carRb.GetPointVelocity(transform.position);
+        Vector3 tireVel = target.GetPointVelocity(transform.position);
         float steerVel = Vector3.Dot(steeringDir, tireVel);
         float velChange = -steerVel * grip;
         float accelChange = velChange / Time.fixedDeltaTime;
-        carRb.AddForceAtPosition(steeringDir * mass * accelChange, transform.position);
+        target.AddForceAtPosition(steeringDir * mass * accelChange, transform.position);
     }
 
     public void Accelerate(float value)
     {
-        accelerationInput = value;
+        acceleration = value;
+    }
+
+    public void Turn(float angle)
+    {
+        steerAngle = angle;
+    }
+
+    public bool IsGrounded()
+    {
+        return onGround;
     }
 }

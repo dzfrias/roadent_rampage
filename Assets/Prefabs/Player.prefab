@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602739621524266625}
+  - component: {fileID: 1087991084}
   m_Layer: 0
   m_Name: Wheels
   m_TagString: Untagged
@@ -35,6 +36,26 @@ Transform:
   m_Father: {fileID: 602739623024861867}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087991084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602739621524266626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a918b72f2614912aae851812351ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 45
+  topRight: {fileID: 602739623324744272}
+  topLeft: {fileID: 602739621693275186}
+  bottomRight: {fileID: 602739622106151395}
+  bottomLeft: {fileID: 602739622672329295}
+  turnRadius: 9
+  rearTrack: 1.525
+  wheelBase: 2.55
 --- !u!1 &602739621693275180
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,16 +100,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 602739623024861866}
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  corner: 0
   grip: 0.4
   mass: 20
   forwardsGrip: 200
   steerTime: 9
-  steerAngle: 0
 --- !u!1 &602739622106151325
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,16 +153,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 602739623024861866}
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  corner: 3
   grip: 0.4
   mass: 20
   forwardsGrip: 200
   steerTime: 9
-  steerAngle: 0
 --- !u!1 &602739622366507136
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,16 +289,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 602739623024861866}
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  corner: 2
   grip: 0.4
   mass: 20
   forwardsGrip: 200
   steerTime: 9
-  steerAngle: 0
 --- !u!1 &602739623024861862
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,16 +396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90847dc8438a44dc5b8a066bdbe5365e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheels:
-  - {fileID: 602739622672329295}
-  - {fileID: 602739622106151395}
-  - {fileID: 602739621693275186}
-  - {fileID: 602739623324744272}
+  moverObject: {fileID: 602739621524266626}
   speed: 3000
   maxSpeed: 45
-  wheelBase: 2.55
-  rearTrack: 1.525
-  turnRadius: 9
   centerOfMass: {x: 0, y: -0.4, z: 0}
   airSteer: 0.06
   camera: {fileID: 0}
@@ -421,54 +432,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5836621905092602648}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Accelerate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 602739622672329295}
-        m_TargetAssemblyTypeName: Wheel, Assembly-CSharp
-        m_MethodName: Accelerate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 602739622106151395}
-        m_TargetAssemblyTypeName: Wheel, Assembly-CSharp
-        m_MethodName: Accelerate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 602739621693275186}
-        m_TargetAssemblyTypeName: Wheel, Assembly-CSharp
-        m_MethodName: Accelerate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 602739623324744272}
-        m_TargetAssemblyTypeName: Wheel, Assembly-CSharp
         m_MethodName: Accelerate
         m_Mode: 0
         m_Arguments:
@@ -612,13 +575,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58601d434217f49fe9ffaaa10e2cd1c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 602739623024861866}
   restLength: 0.7
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  corner: 1
   grip: 0.4
   mass: 20
   forwardsGrip: 200
   steerTime: 9
-  steerAngle: 0

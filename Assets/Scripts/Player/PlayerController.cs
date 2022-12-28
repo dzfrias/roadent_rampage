@@ -6,34 +6,33 @@ using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody rb;
-
-    [SerializeField] private List<Wheel> wheels;
 
     [Header("Specs")]
-    public float speed;
-    public float maxSpeed;
-    [SerializeField] private float wheelBase;
-    [SerializeField] private float rearTrack;
-    [Tooltip("Higher turnRadius means less sharp turns")]
-    [SerializeField] private float turnRadius;
+    [SerializeField] private float speed;
+    [SerializeField] private float maxSpeed;
     [SerializeField] private Vector3 centerOfMass;
 
     [Header("Mechanics")]
+    [SerializeField] private GameObject moverObject;
     [SerializeField] private float airSteer;
-    private ComboScorer comboScorer;
-
-    // Inputs
-    private float rotationInput;
-    private float accelerationInput;
 
     [Header("Camera")]
     [SerializeField] private new GameObject camera;
     private CinemachineTilt cameraTilt;
     private CinemachinePushBack cameraPush;
 
+
+    // Core
+    private Rigidbody rb;
+    private IMover mover;
+    private ComboScorer comboScorer;
+
     // Ground logic
     private bool onGround;
+
+    // Inputs
+    private float rotationInput;
+    private float accelerationInput;
 
     void Start()
     {
@@ -42,24 +41,18 @@ public class PlayerController : MonoBehaviour
         cameraTilt = camera.GetComponent<CinemachineTilt>();
         cameraPush = camera.GetComponent<CinemachinePushBack>();
         comboScorer = GetComponent<ComboScorer>();
+        mover = moverObject.GetComponent<IMover>();
     }
 
     void Update()
     {
         bool previousOnGround = onGround;
-        onGround = false;
-        foreach (Wheel wheel in wheels)
-        {
-            if (wheel.onGround)
-            {
-                onGround = true;
-                break;
-            }
-        }
+        onGround = mover.IsGrounded();
         TiltCamera();
         if (onGround)
         {
-            Steer();
+            mover.Turn(rotationInput);
+            mover.Accelerate(speed * accelerationInput);
         }
         if (previousOnGround != onGround && onGround)
         {
@@ -69,7 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             comboScorer.LeftGround();
         }
-        if (rb.velocity.magnitude > maxSpeed - 1)
+        if (rb.velocity.magnitude > mover.MaxSpeed - 1)
         {
             cameraPush.Activate();
         }
@@ -102,39 +95,6 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddTorque(transform.right * accelerationInput * airSteer, ForceMode.VelocityChange);
         rb.AddTorque(transform.up * rotationInput * airSteer, ForceMode.VelocityChange);
-    }
-
-    void Steer()
-    {
-        float angleLeft;
-        float angleRight;
-        if (rotationInput > 0)
-        {
-            angleLeft  = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * rotationInput;
-            angleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * rotationInput;
-        }
-        else if (rotationInput < 0)
-        {
-            angleLeft  = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * rotationInput;
-            angleRight = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * rotationInput;
-        }
-        else
-        {
-            angleLeft  = 0;
-            angleRight = 0;
-        }
-
-        foreach (Wheel wheel in wheels)
-        {
-            if (wheel.corner == Corner.FrontLeft)
-            {
-                wheel.steerAngle = angleLeft;
-            }
-            if (wheel.corner == Corner.FrontRight)
-            {
-                wheel.steerAngle = angleRight;
-            }
-        }
     }
 
     public void SpeedBoost(float amount)
