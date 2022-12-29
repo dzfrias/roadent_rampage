@@ -26,7 +26,6 @@ public class ComboScorer : MonoBehaviour
         if (!mover.IsGrounded())
         {
             airTime += Time.deltaTime;
-            Debug.Log(airTime);
         }
         else
         {
