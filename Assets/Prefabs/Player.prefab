@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602739621524266625}
-  - component: {fileID: 1087991084}
   m_Layer: 0
   m_Name: Wheels
   m_TagString: Untagged
@@ -36,26 +35,6 @@ Transform:
   m_Father: {fileID: 602739623024861867}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1087991084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602739621524266626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a918b72f2614912aae851812351ed1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 45
-  topRight: {fileID: 602739623324744272}
-  topLeft: {fileID: 602739621693275186}
-  bottomRight: {fileID: 602739622106151395}
-  bottomLeft: {fileID: 602739622672329295}
-  turnRadius: 9
-  rearTrack: 1.525
-  wheelBase: 2.55
 --- !u!1 &602739621693275180
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +293,7 @@ GameObject:
   - component: {fileID: 2141510633}
   - component: {fileID: 3855200378252065192}
   - component: {fileID: 2141510639}
+  - component: {fileID: 2141510634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -399,7 +379,6 @@ MonoBehaviour:
   speed: 3000
   maxSpeed: 45
   centerOfMass: {x: 0, y: -0.4, z: 0}
-  moverObject: {fileID: 602739621524266626}
   airSteer: 0.06
   directionChangeFactor: 0.6
   camera: {fileID: 0}
@@ -532,7 +511,27 @@ MonoBehaviour:
         m_CallState: 2
   airTimeMultiplier: 3
   airTimeThreshold: 3
-  moverObject: {fileID: 602739621524266626}
+  moverObject: {fileID: 602739623024861862}
+--- !u!114 &2141510634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602739623024861862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a918b72f2614912aae851812351ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 45
+  topRight: {fileID: 602739623324744272}
+  topLeft: {fileID: 602739621693275186}
+  bottomRight: {fileID: 602739622106151395}
+  bottomLeft: {fileID: 602739622672329295}
+  turnRadius: 9
+  rearTrack: 1.525
+  wheelBase: 2.55
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0

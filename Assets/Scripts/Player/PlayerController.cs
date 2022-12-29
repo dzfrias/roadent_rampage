@@ -5,16 +5,15 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(IMover))]
 public class PlayerController : MonoBehaviour
 {
-
     [Header("Specs")]
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private Vector3 centerOfMass;
 
     [Header("Mechanics")]
-    [SerializeField] private GameObject moverObject;
     [SerializeField] private float airSteer;
     [SerializeField, Range(0, 1)] private float directionChangeFactor;
 
@@ -43,7 +42,7 @@ public class PlayerController : MonoBehaviour
         rb.centerOfMass = centerOfMass;
         cameraTilt = camera.GetComponent<CinemachineTilt>();
         cameraPush = camera.GetComponent<CinemachinePushBack>();
-        mover = moverObject.GetComponent<IMover>();
+        mover = GetComponent<IMover>();
     }
 
     void Update()

@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(IMover))]
 public class ComboScorer : MonoBehaviour
 {
     [SerializeField] private UnityEvent<float> comboFinished;
     [SerializeField] private float airTimeMultiplier;
     [SerializeField] private float airTimeThreshold = 3f;
-    [SerializeField] private GameObject moverObject;
 
     private IMover mover;
 
@@ -18,7 +18,7 @@ public class ComboScorer : MonoBehaviour
 
     void Start()
     {
-        mover = moverObject.GetComponent<IMover>();
+        mover = GetComponent<IMover>();
     }
 
     void Update()
