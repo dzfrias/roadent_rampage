@@ -20,14 +20,15 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")]
     [SerializeField] private new GameObject camera;
-    private CinemachineTilt cameraTilt;
-    private CinemachinePushBack cameraPush;
 
 
     // Core
     private Rigidbody rb;
     private IMover mover;
-    private ComboScorer comboScorer;
+
+    // Camera
+    private CinemachineTilt cameraTilt;
+    private CinemachinePushBack cameraPush;
 
     // Ground logic
     private bool onGround;
@@ -42,27 +43,17 @@ public class PlayerController : MonoBehaviour
         rb.centerOfMass = centerOfMass;
         cameraTilt = camera.GetComponent<CinemachineTilt>();
         cameraPush = camera.GetComponent<CinemachinePushBack>();
-        comboScorer = GetComponent<ComboScorer>();
         mover = moverObject.GetComponent<IMover>();
     }
 
     void Update()
     {
-        bool previousOnGround = onGround;
         onGround = mover.IsGrounded();
         TiltCamera();
         if (onGround)
         {
             mover.Turn(rotationInput);
             mover.Accelerate(speed * accelerationInput);
-        }
-        if (previousOnGround != onGround && onGround)
-        {
-            comboScorer.HitGround();
-        }
-        else if (previousOnGround != onGround && !onGround)
-        {
-            comboScorer.LeftGround();
         }
         if (rb.velocity.magnitude > mover.MaxSpeed - 1)
         {

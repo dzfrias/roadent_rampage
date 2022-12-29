@@ -8,40 +8,58 @@ public class ComboScorer : MonoBehaviour
 {
     [SerializeField] private UnityEvent<float> comboFinished;
     [SerializeField] private float airTimeMultiplier;
-    [SerializeField] private float scoreThreshold = 10f;
+    [SerializeField] private float airTimeThreshold = 3f;
+    [SerializeField] private GameObject moverObject;
 
-    private bool onGround;
-    private float runningScore;
+    private IMover mover;
+    private bool previousOnGround;
+
+    // Combo fields
+    private float airTime;
+
+    void Start()
+    {
+        mover = moverObject.GetComponent<IMover>();
+    }
 
     void Update()
     {
-        if (!onGround)
+        if (!mover.IsGrounded())
         {
-            runningScore += Time.deltaTime * airTimeMultiplier;
+            airTime += Time.deltaTime;
         }
+        else if (previousOnGround != mover.IsGrounded() && mover.IsGrounded())
+        {
+            float totalScore = 0f;
+            if (airTime >= airTimeThreshold)
+            {
+                totalScore += airTime * airTimeMultiplier;
+            }
+            if (totalScore == 0f)
+            {
+                return;
+            }
+            comboFinished.Invoke(totalScore);
+            Debug.Log($"Finished combo with {totalScore}!");
+            Reset();
+        }
+        else
+        {
+            airTime = 0f;
+        }
+        previousOnGround = mover.IsGrounded();
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 3 && !onGround)
+        if (collision.gameObject.layer == 3 && !mover.IsGrounded())
         {
-            runningScore = 0f;
+            Reset();
         }
     }
-
-    public void LeftGround()
+    
+    void Reset()
     {
-        onGround = false;
-    }
-
-    public void HitGround()
-    {
-        onGround = true;
-        if (runningScore > scoreThreshold)
-        {
-            comboFinished.Invoke(runningScore);
-            Debug.Log($"Finished combo with {runningScore}!");
-            runningScore = 0f;
-        }
+        airTime = 0f;
     }
 }

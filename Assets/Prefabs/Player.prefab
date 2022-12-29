@@ -530,8 +530,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  airTimeMultiplier: 6
-  scoreThreshold: 20
+  airTimeMultiplier: 3
+  airTimeThreshold: 3
+  moverObject: {fileID: 602739621524266626}
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0
