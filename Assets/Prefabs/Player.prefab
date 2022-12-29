@@ -401,6 +401,7 @@ MonoBehaviour:
   centerOfMass: {x: 0, y: -0.4, z: 0}
   moverObject: {fileID: 602739621524266626}
   airSteer: 0.06
+  directionChangeFactor: 0.6
   camera: {fileID: 0}
 --- !u!65 &2141510636
 BoxCollider:

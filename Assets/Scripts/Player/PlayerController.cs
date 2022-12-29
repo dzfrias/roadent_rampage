@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [Header("Mechanics")]
     [SerializeField] private GameObject moverObject;
     [SerializeField] private float airSteer;
+    [SerializeField, Range(0, 1)] private float directionChangeFactor;
 
     [Header("Camera")]
     [SerializeField] private new GameObject camera;
@@ -117,5 +119,11 @@ public class PlayerController : MonoBehaviour
     public void Accelerate(float value)
     {
         accelerationInput = value;
+        if (onGround && value != 0 && Mathf.Sign(value) != Mathf.Sign(rb.velocity.z))
+        {
+            // Calling this in Update() is fine, as one time impulses are 
+            // better suited in Update()
+            rb.AddForce(transform.forward * value * (Mathf.Abs(rb.velocity.z) * directionChangeFactor), ForceMode.VelocityChange);
+        }
     }
 }
