@@ -12,7 +12,6 @@ public class ComboScorer : MonoBehaviour
     [SerializeField] private GameObject moverObject;
 
     private IMover mover;
-    private bool previousOnGround;
 
     // Combo fields
     private float airTime;
@@ -27,27 +26,24 @@ public class ComboScorer : MonoBehaviour
         if (!mover.IsGrounded())
         {
             airTime += Time.deltaTime;
+            Debug.Log(airTime);
         }
-        else if (previousOnGround != mover.IsGrounded() && mover.IsGrounded())
+        else
         {
             float totalScore = 0f;
             if (airTime >= airTimeThreshold)
             {
-                totalScore += airTime * airTimeMultiplier;
+                totalScore += (airTime - airTimeThreshold) * airTimeMultiplier;
             }
             if (totalScore == 0f)
             {
+                Reset();
                 return;
             }
             comboFinished.Invoke(totalScore);
             Debug.Log($"Finished combo with {totalScore}!");
             Reset();
         }
-        else
-        {
-            airTime = 0f;
-        }
-        previousOnGround = mover.IsGrounded();
     }
 
     void OnCollisionEnter(Collision collision)
