@@ -15,7 +15,7 @@ public class Explosive : MonoBehaviour
         foreach (Collider collider in hits)
         {
             Rigidbody rb = collider.GetComponent<Rigidbody>();
-            if (rb is null) continue;
+            if (rb == null) continue;
             Explode(rb);
         }
         Destroy(gameObject);
