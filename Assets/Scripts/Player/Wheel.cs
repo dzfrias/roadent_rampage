@@ -59,7 +59,7 @@ public class Wheel : MonoBehaviour, IMover
             {
                 target.AddForceAtPosition(transform.forward * acceleration, transform.position);
             }
-            if (acceleration == 0) 
+            if (acceleration == 0 || hit.collider.gameObject.CompareTag("Terrain")) 
             {
                 target.AddForceAtPosition(-target.GetPointVelocity(transform.position) * forwardsGrip, transform.position);
             }
