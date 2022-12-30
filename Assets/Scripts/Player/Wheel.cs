@@ -21,6 +21,7 @@ public class Wheel : MonoBehaviour, IMover
     private float grip;
     [SerializeField] private float mass;
     [SerializeField] private float forwardsGrip;
+    [Range(0, 90), SerializeField, Tooltip("Angle wheel can climb up to")] private float maxClimbAngle = 45f;
     [SerializeField, Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
     private float steerTime;
 
@@ -47,6 +48,10 @@ public class Wheel : MonoBehaviour, IMover
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, radius))
         {
             onGround = true;
+            if (Vector3.Angle(Vector3.down, -transform.up) > maxClimbAngle && transform.forward.y >= 0)
+            {
+                acceleration = 0;
+            }
             if (target.GetPointVelocity(transform.position).magnitude <= MaxSpeed)
             {
                 target.AddForceAtPosition(transform.forward * acceleration, transform.position);
