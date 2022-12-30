@@ -87,6 +87,7 @@ MonoBehaviour:
   grip: 0.4
   mass: 20
   forwardsGrip: 200
+  maxClimbAngle: 45
   steerTime: 9
 --- !u!1 &602739622106151325
 GameObject:
@@ -140,6 +141,7 @@ MonoBehaviour:
   grip: 0.4
   mass: 20
   forwardsGrip: 200
+  maxClimbAngle: 45
   steerTime: 9
 --- !u!1 &602739622366507136
 GameObject:
@@ -276,6 +278,7 @@ MonoBehaviour:
   grip: 0.4
   mass: 20
   forwardsGrip: 200
+  maxClimbAngle: 45
   steerTime: 9
 --- !u!1 &602739623024861862
 GameObject:
@@ -509,9 +512,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  airTimeMultiplier: 3
+  airTimeMultiplier: 8
   airTimeThreshold: 3
-  moverObject: {fileID: 602739623024861862}
 --- !u!114 &2141510634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,4 +586,5 @@ MonoBehaviour:
   grip: 0.4
   mass: 20
   forwardsGrip: 200
+  maxClimbAngle: 45
   steerTime: 9
