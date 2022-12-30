@@ -9,18 +9,21 @@ public class Explosive : MonoBehaviour
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float upwardsModifier= 2f;
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        GameObject collidedObject = collision.gameObject;
-        if (collidedObject.CompareTag("Player"))
+        Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
+        foreach (Collider collider in hits)
         {
-            Explode(collidedObject);
+            Rigidbody rb = collider.GetComponent<Rigidbody>();
+            if (rb is null) continue;
+            Explode(rb);
         }
+        Destroy(gameObject);
     }
 
-    private void Explode(GameObject target)
+    void Explode(Rigidbody target)
     {
-        target.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, upwardsModifier, ForceMode.VelocityChange);
+        target.AddExplosionForce(explosionForce * target.mass, transform.position, explosionRadius, upwardsModifier, ForceMode.Impulse);
         Destroy(gameObject);
     }
 }
