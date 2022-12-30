@@ -2,14 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Corner
-{
-    FrontLeft,
-    FrontRight,
-    BackLeft,
-    BackRight,
-}
-
 public class Wheel : MonoBehaviour, IMover
 {
     public float MaxSpeed { get; set; }
