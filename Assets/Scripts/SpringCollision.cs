@@ -12,10 +12,8 @@ public class SpringCollision : MonoBehaviour
     [Header("Spring Motion")]
     [SerializeField] private float angularFrequency;
     [SerializeField] private float dampingRatio;
-    [SerializeField] private float resizeEpsilon = 0.0001f;
 
     [Header("Velocity Resizing")]
-    [SerializeField] private float velocityDivide;
     [SerializeField] private float resizeMin;
     [SerializeField] private float velocityMin;
 
@@ -26,12 +24,6 @@ public class SpringCollision : MonoBehaviour
 
     void Update()
     {
-        // Finished swelling up
-        if (velocity > 0 && velocity < resizeEpsilon)
-        {
-            targetSize = 0;
-        }
-
         float deltaTime = Time.deltaTime;
         SpringMotion.CalcDampedSimpleHarmonicMotion(ref size,
                 ref velocity,
@@ -50,8 +42,7 @@ public class SpringCollision : MonoBehaviour
             {
                 return;
             }
-            targetSize = resizeMin + (collision.relativeVelocity.magnitude / velocityDivide);
-            velocity = resizeEpsilon;
+            velocity = resizeMin + collision.relativeVelocity.magnitude;
         }
     }
 }
