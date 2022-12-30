@@ -113,8 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angularFrequency: 15
   dampingRatio: 0.3
-  resizeEpsilon: 0.005
-  velocityDivide: 45
   resizeMin: 0
   velocityMin: 0
 --- !u!114 &614194998
