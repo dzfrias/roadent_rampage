@@ -30712,10 +30712,6 @@ PrefabInstance:
       propertyPath: cameraChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1373226991}
-    - target: {fileID: 2141510639, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
-      propertyPath: airTimeMultiplier
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 602739623024861862, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: m_Name
       value: Player
