@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    void Update()
+    public void Shoot()
     {
-        if (!Input.GetMouseButtonDown(0))
-        {
-            return;
-        }
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
             Debug.Log($"Hit: {hit.transform.gameObject}!");
