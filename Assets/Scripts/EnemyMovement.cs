@@ -12,11 +12,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float speedDecrease;
     private NavMeshAgent agent;
     private Rigidbody targetRb;
+    private Rigidbody rb;
     private float minSpeed;
+    private bool isHit;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
         minSpeed = agent.speed;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
     }
@@ -31,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        if (isHit) { return; }
+
         if (Vector3.Distance(transform.position, target.position) > maxDistance)
         {
             agent.Warp(ClosestPoint(warpOffset));
@@ -47,5 +52,17 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log("<color=red>The target was reached!</color>");
         }
+    }
+
+    IEnumerator Knockback(float force)
+    {
+        agent.enabled = false;
+        rb.isKinematic = false;
+        rb.AddForce(-transform.forward * force, ForceMode.Impulse);
+        isHit = true;
+        yield return new WaitForSeconds(0.2f);
+        agent.enabled = true;
+        rb.isKinematic = true;
+        isHit = false;
     }
 }
