@@ -54,13 +54,13 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    IEnumerator Knockback(float force)
+    public IEnumerator Knockback(float force)
     {
         agent.enabled = false;
         rb.isKinematic = false;
         rb.AddForce(-transform.forward * force, ForceMode.Impulse);
         isHit = true;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         agent.enabled = true;
         rb.isKinematic = true;
         isHit = false;

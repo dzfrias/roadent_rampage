@@ -17019,8 +17019,8 @@ MonoBehaviour:
   isEditorCameraRotated: 0
   isEditorConstructing: 0
   editorConstructionID: 0
-  isEditorSelected: 0
-  isEditorMouseHittingTerrain: 1
+  isEditorSelected: 1
+  isEditorMouseHittingTerrain: 0
   editorMousePos: {x: 401.58667, y: 0.5778122, z: 491.69382}
   defaultNodeColor: {r: 0, g: 1, b: 1, a: 0.75}
   selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -17814,7 +17814,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!134 &1111033061
 PhysicMaterial:
@@ -32739,6 +32739,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1936520633467949859, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
+      propertyPath: m_Speed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
       propertyPath: target
       value: 
@@ -32753,7 +32757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1936520633467949861, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4
+      value: 2.53
       objectReference: {fileID: 0}
     - target: {fileID: 1936520633467949861, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
       propertyPath: m_LocalPosition.z
