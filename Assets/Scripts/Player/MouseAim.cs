@@ -4,9 +4,28 @@ using UnityEngine;
 
 public class MouseAim : MonoBehaviour
 {
+    [System.Serializable]
+    public struct DegreeRange
+    {
+        [Range(-180, 0)] public float lowerBound;
+        [Range(0, 180)] public float upperBound;
+    }
+
     [SerializeField] private float rotateSpeed = 300f;
     [SerializeField] private float rotateMultiplier = 0.99f;
+    [SerializeField] private DegreeRange yRotateRange;
+    [SerializeField] private DegreeRange xRotateRange;
     private Vector3 rotate;
+
+    public static Vector3 GetSignedEulerAngles(Vector3 angles)
+    {
+        Vector3 signedAngles = Vector3.zero;
+        for (int i = 0; i < 3; i++)
+        {
+            signedAngles[i] = (angles[i] + 180f) % 360f - 180f;
+        }
+        return signedAngles;
+    }
 
     void Start()
     {
@@ -25,5 +44,10 @@ public class MouseAim : MonoBehaviour
             rotate = new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0) * rotateSpeed;
         }
         transform.Rotate(rotate * Time.deltaTime);
+        Vector3 rotation = GetSignedEulerAngles(transform.localEulerAngles);
+        transform.localEulerAngles = new Vector3(
+                Mathf.Clamp(rotation.x, xRotateRange.lowerBound, xRotateRange.upperBound),
+                Mathf.Clamp(rotation.y, yRotateRange.lowerBound, yRotateRange.upperBound),
+                rotation.z);
     }
 }
