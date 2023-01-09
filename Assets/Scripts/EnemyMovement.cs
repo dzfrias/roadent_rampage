@@ -54,11 +54,15 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public IEnumerator Knockback(float force)
+    public IEnumerator Knockback(Vector3 hitPosition, float force)
     {
         agent.enabled = false;
         rb.isKinematic = false;
-        rb.AddForce(-transform.forward * force, ForceMode.Impulse);
+        Vector3 direction = (transform.position - hitPosition).normalized;
+        // Stops enemy from getting hit upwards
+        direction.y = 0;
+        rb.AddForce(direction * force, ForceMode.Impulse);
+        //rb.AddForce(-transform.forward * force, ForceMode.Impulse);
         isHit = true;
         yield return new WaitForSeconds(0.5f);
         agent.enabled = true;

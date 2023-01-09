@@ -11,7 +11,7 @@ public class Shooter : MonoBehaviour
             Debug.Log($"Hit: {hit.transform.gameObject}!");
             if (hit.collider.gameObject.CompareTag("Enemy"))
             {
-                StartCoroutine(hit.collider.GetComponent<EnemyMovement>().Knockback(8));
+                StartCoroutine(hit.collider.GetComponent<EnemyMovement>().Knockback(hit.point, 10));
             }
         }
         else
