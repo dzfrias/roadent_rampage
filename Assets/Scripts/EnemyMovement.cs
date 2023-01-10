@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour, IHittable
 {
     [SerializeField] private Transform target;
     [SerializeField] private float maxDistance;
@@ -54,15 +54,17 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public IEnumerator Knockback(Vector3 hitPosition, float force)
+    public void Hit(Vector3 direction, float force)
+    {
+        StartCoroutine("KnockbackTime");
+        direction.y = 0;
+        rb.AddForce(direction * force, ForceMode.Impulse);
+    }
+
+    IEnumerator KnockbackTime()
     {
         agent.enabled = false;
         rb.isKinematic = false;
-        Vector3 direction = (transform.position - hitPosition).normalized;
-        // Stops enemy from getting hit upwards
-        direction.y = 0;
-        rb.AddForce(direction * force, ForceMode.Impulse);
-        //rb.AddForce(-transform.forward * force, ForceMode.Impulse);
         isHit = true;
         yield return new WaitForSeconds(0.5f);
         agent.enabled = true;

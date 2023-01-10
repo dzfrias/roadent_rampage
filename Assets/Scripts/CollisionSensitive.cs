@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
-public class CollisionSensitive : MonoBehaviour
+public class CollisionSensitive : MonoBehaviour, IHittable
 {
     [SerializeField] private float force;
     [SerializeField] private float upForce;
@@ -32,5 +32,10 @@ public class CollisionSensitive : MonoBehaviour
         {
             collide = collision;
         }
+    }
+
+    public void Hit(Vector3 direction, float force)
+    {
+        rb.AddForce(direction.normalized * force, ForceMode.Impulse);
     }
 }

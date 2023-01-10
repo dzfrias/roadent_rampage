@@ -9,9 +9,9 @@ public class Shooter : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
             Debug.Log($"Hit: {hit.transform.gameObject}!");
-            if (hit.collider.gameObject.CompareTag("Enemy"))
+            if (hit.collider.gameObject.TryGetComponent(out IHittable hittableObject))
             {
-                StartCoroutine(hit.collider.GetComponent<EnemyMovement>().Knockback(hit.point, 10));
+                hittableObject.Hit((hit.collider.transform.position - hit.point).normalized, 10);
             }
         }
         else
