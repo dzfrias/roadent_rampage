@@ -11,7 +11,7 @@ public class Shooter : MonoBehaviour
             Debug.Log($"Hit: {hit.transform.gameObject}!");
             if (hit.collider.gameObject.TryGetComponent(out IHittable hittableObject))
             {
-                hittableObject.Hit((hit.collider.transform.position - hit.point).normalized, 10);
+                hittableObject.Hit(hit.point, 10);
             }
         }
         else

@@ -34,8 +34,8 @@ public class CollisionSensitive : MonoBehaviour, IHittable
         }
     }
 
-    public void Hit(Vector3 direction, float force)
+    public void Hit(Vector3 hitPoint, float shootForce)
     {
-        rb.AddForce(direction.normalized * force, ForceMode.Impulse);
+        rb.AddExplosionForce(force * shootForce, hitPoint, 10f, upForce);
     }
 }

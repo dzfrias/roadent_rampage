@@ -54,11 +54,10 @@ public class EnemyMovement : MonoBehaviour, IHittable
         }
     }
 
-    public void Hit(Vector3 direction, float force)
+    public void Hit(Vector3 hitPoint, float force)
     {
         StartCoroutine("KnockbackTime");
-        direction.y = 0;
-        rb.AddForce(direction * force, ForceMode.Impulse);
+        rb.AddForce(-transform.forward * force, ForceMode.Impulse);
     }
 
     IEnumerator KnockbackTime()
