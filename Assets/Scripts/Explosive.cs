@@ -26,4 +26,10 @@ public class Explosive : MonoBehaviour
         target.AddExplosionForce(explosionForce * target.mass, transform.position, explosionRadius, upwardsModifier, ForceMode.Impulse);
         Destroy(gameObject);
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
 }
