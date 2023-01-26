@@ -26,4 +26,11 @@ public class ForwardLineDraw : MonoBehaviour
             lineRenderer.SetPosition(1, transform.forward * defaultDistance + transform.position);
         }
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Vector3 direction = transform.TransformDirection(Vector3.forward) * defaultDistance;
+        Gizmos.DrawRay(transform.position, direction);
+    }
 }
