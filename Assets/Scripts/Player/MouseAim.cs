@@ -16,6 +16,7 @@ public class MouseAim : MonoBehaviour
     [SerializeField] private DegreeRange yRotateRange;
     [SerializeField] private DegreeRange xRotateRange;
     private Vector3 rotate;
+    private Outline outlinedObject;
 
     public static Vector3 GetSignedEulerAngles(Vector3 angles)
     {
@@ -49,5 +50,29 @@ public class MouseAim : MonoBehaviour
                 Mathf.Clamp(rotation.x, xRotateRange.lowerBound, xRotateRange.upperBound),
                 Mathf.Clamp(rotation.y, yRotateRange.lowerBound, yRotateRange.upperBound),
                 rotation.z);
+        
+        OutlineObject();
+    }
+
+    void OutlineObject()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
+        {
+            Debug.Log($"Hit: {hit.transform.gameObject}!");
+            if (hit.collider.gameObject.TryGetComponent(out Outline outlineObject))
+            {
+                outlinedObject = outlineObject;
+                outlinedObject.enabled = true;
+            }
+
+            if (outlinedObject != null && hit.collider.gameObject != outlinedObject.gameObject)
+            {
+                outlinedObject.enabled = false;
+            }
+        }
+        else if (outlinedObject != null)
+        {
+            outlinedObject.enabled = false;
+        }
     }
 }
