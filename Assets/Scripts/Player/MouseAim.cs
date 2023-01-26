@@ -10,6 +10,7 @@ public class MouseAim : MonoBehaviour
     [SerializeField] private float dampingTime = 0.2f;
     [SerializeField] private bool relative = true;
     
+    private bool locked;
     private Vector3 targetAngles;
     private Vector3 followAngles;
     private Vector3 followVelocity;
@@ -22,8 +23,19 @@ public class MouseAim : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public void Lock()
+    {
+        locked = true;
+    }
+
+    public void Unlock()
+    {
+        locked = false;
+    }
+
     void Update()
     {
+        if (locked) return;
         transform.localRotation = origionalRotation;
 
         float inputH;
