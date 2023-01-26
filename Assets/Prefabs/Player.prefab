@@ -763,14 +763,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcde04420eede4baf8ebb91a109c2610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 200
-  rotateMultiplier: 0.99
-  yRotateRange:
-    lowerBound: -90
-    upperBound: 90
-  xRotateRange:
-    lowerBound: -15
-    upperBound: 5
+  rotationRange: {x: 70, y: 70}
+  rotationSpeed: 2
+  dampingTime: 0.1
+  relative: 1
 --- !u!114 &1226332544
 MonoBehaviour:
   m_ObjectHideFlags: 0

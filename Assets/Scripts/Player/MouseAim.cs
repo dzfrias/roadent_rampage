@@ -1,53 +1,76 @@
-using System.Collections;
-using System.Collections.Generic;
+// Credits to: https://github.com/unity3d-jp/playgrownd/blob/master/Assets/Standard%20Assets/Utility/SimpleMouseRotator.cs
+// for the bulk of this script.
+
 using UnityEngine;
 
 public class MouseAim : MonoBehaviour
 {
-    [System.Serializable]
-    public struct DegreeRange
-    {
-        [Range(-180, 0)] public float lowerBound;
-        [Range(0, 180)] public float upperBound;
-    }
-
-    [SerializeField] private float rotateSpeed = 300f;
-    [SerializeField] private float rotateMultiplier = 0.99f;
-    [SerializeField] private DegreeRange yRotateRange;
-    [SerializeField] private DegreeRange xRotateRange;
-    private Vector3 rotate;
-
-    public static Vector3 GetSignedEulerAngles(Vector3 angles)
-    {
-        Vector3 signedAngles = Vector3.zero;
-        for (int i = 0; i < 3; i++)
-        {
-            signedAngles[i] = (angles[i] + 180f) % 360f - 180f;
-        }
-        return signedAngles;
-    }
+    [SerializeField] private Vector2 rotationRange = new Vector2(70, 70);
+    [SerializeField] private float rotationSpeed = 10;
+    [SerializeField] private float dampingTime = 0.2f;
+    [SerializeField] private bool relative = true;
+    
+    private Vector3 targetAngles;
+    private Vector3 followAngles;
+    private Vector3 followVelocity;
+    private Quaternion origionalRotation;
 
     void Start()
     {
+        origionalRotation = transform.localRotation;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Update()
     {
-        if (Input.GetAxis("Mouse Y") == 0 && Input.GetAxis("Mouse X") == 0)
+        transform.localRotation = origionalRotation;
+
+        float inputH;
+        float inputV;
+        if (relative)
         {
-            rotate *= rotateMultiplier;
+            inputH = Input.GetAxis("Mouse X");
+            inputV = Input.GetAxis("Mouse Y");
+
+            if (targetAngles.y > 180)
+            {
+                targetAngles.y -= 360;
+                followAngles.y -= 360;
+            }
+            if (targetAngles.x > 180)
+            {
+                targetAngles.x -= 360;
+                followAngles.x -= 360;
+            }
+            if (targetAngles.y < -180)
+            {
+                targetAngles.y += 360;
+                followAngles.y += 360;
+            }
+            if (targetAngles.x < -180)
+            {
+                targetAngles.x += 360;
+                followAngles.x += 360;
+            }
+
+            targetAngles.y += inputH * rotationSpeed;
+            targetAngles.x += inputV * rotationSpeed;
+
+            targetAngles.y = Mathf.Clamp(targetAngles.y, -rotationRange.y * 0.5f, rotationRange.y * 0.5f);
+            targetAngles.x = Mathf.Clamp(targetAngles.x, -rotationRange.x * 0.5f, rotationRange.x * 0.5f);
         }
         else
         {
-            rotate = new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0) * rotateSpeed;
+            inputH = Input.mousePosition.x;
+            inputV = Input.mousePosition.y;
+
+            targetAngles.y = Mathf.Lerp(-rotationRange.y * 0.5f, rotationRange.y * 0.5f, inputH / Screen.width);
+            targetAngles.x = Mathf.Lerp(-rotationRange.x * 0.5f, rotationRange.x * 0.5f, inputV / Screen.height);
         }
-        transform.Rotate(rotate * Time.deltaTime);
-        Vector3 rotation = GetSignedEulerAngles(transform.localEulerAngles);
-        transform.localEulerAngles = new Vector3(
-                Mathf.Clamp(rotation.x, xRotateRange.lowerBound, xRotateRange.upperBound),
-                Mathf.Clamp(rotation.y, yRotateRange.lowerBound, yRotateRange.upperBound),
-                rotation.z);
+
+        followAngles = Vector3.SmoothDamp(followAngles, targetAngles, ref followVelocity, dampingTime);
+
+        transform.localRotation = origionalRotation * Quaternion.Euler(-followAngles.x, followAngles.y, 0);
     }
 }
