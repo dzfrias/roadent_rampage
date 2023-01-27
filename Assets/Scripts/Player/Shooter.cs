@@ -4,7 +4,22 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    public void Shoot()
+    [SerializeField] private float fireCooldown;
+
+    private bool shooting;
+    private bool canShoot = true;
+
+    public void SetShooting(float value)
+    {
+        shooting = value == 1;
+    }
+
+    void Update()
+    {
+        if (shooting && canShoot) Shoot();
+    }
+
+    void Shoot()
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
@@ -18,5 +33,13 @@ public class Shooter : MonoBehaviour
         {
             Debug.Log("Hit nothing");
         }
+        StartCoroutine(Cooldown());
+    }
+
+    IEnumerator Cooldown()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(fireCooldown);
+        canShoot = true;
     }
 }
