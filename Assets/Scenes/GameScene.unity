@@ -2630,6 +2630,29 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &175492711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+  m_PrefabInstance: {fileID: 2175922978628460319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &175492718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175492711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 3.44
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!134 &178375990
 PhysicMaterial:
   m_ObjectHideFlags: 0
@@ -12279,6 +12302,29 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &721332894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6830483992709379447, guid: 5f9b4956baf2d4f1fa72b20a6741c42f, type: 3}
+  m_PrefabInstance: {fileID: 6830483990834284525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &721332902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721332894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &731225879
 GameObject:
   m_ObjectHideFlags: 0
@@ -21764,7 +21810,13 @@ MonoBehaviour:
   outlineBox: {fileID: 5518241560183159630, guid: 7dba63dd79ffe774e9e11ca15dc8ce12, type: 3}
   outlineMaterial: {fileID: 2100000, guid: 5584b88f9e4294a0c941d43b99a9de69, type: 2}
   outlineScaleFactor: -1.05
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  outlineColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  outlineRenderer: {fileID: 0}
+  outlineObject: {fileID: 0}
 --- !u!1 &1416810656
 GameObject:
   m_ObjectHideFlags: 0
@@ -23781,7 +23833,13 @@ MonoBehaviour:
   outlineBox: {fileID: 5518241560183159630, guid: 7dba63dd79ffe774e9e11ca15dc8ce12, type: 3}
   outlineMaterial: {fileID: 2100000, guid: 5584b88f9e4294a0c941d43b99a9de69, type: 2}
   outlineScaleFactor: -1.05
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  outlineColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  outlineRenderer: {fileID: 0}
+  outlineObject: {fileID: 0}
 --- !u!1 &1547478965
 GameObject:
   m_ObjectHideFlags: 0
@@ -32722,15 +32780,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15790741
+      value: 0.15790743
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000000471715
+      value: -0.000000010734695
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -7.543367e-10
+      value: 0.0000000017166247
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33351,15 +33409,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15790741
+      value: 0.15790743
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000000471715
+      value: -0.000000010734695
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -7.543367e-10
+      value: 0.0000000017166247
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
