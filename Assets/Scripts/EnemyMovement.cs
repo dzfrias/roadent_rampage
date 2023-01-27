@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour, IHittable
     [SerializeField] private float maxDistance;
     [SerializeField] private float warpOffset;
     [SerializeField, Range(0f, 1f)] private float speedDecrease;
+    [SerializeField] private float hitForce = 10f;
     private NavMeshAgent agent;
     private Rigidbody targetRb;
     private Rigidbody rb;
@@ -54,10 +55,10 @@ public class EnemyMovement : MonoBehaviour, IHittable
         }
     }
 
-    public void Hit(Vector3 hitPoint, float force)
+    public void Hit(Vector3 hitPoint, Vector3 direction)
     {
         StartCoroutine("KnockbackTime");
-        rb.AddForce(-transform.forward * force, ForceMode.Impulse);
+        rb.AddForce(-direction * hitForce, ForceMode.Impulse);
     }
 
     IEnumerator KnockbackTime()

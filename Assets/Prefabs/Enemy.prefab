@@ -139,6 +139,7 @@ MonoBehaviour:
   maxDistance: 80
   warpOffset: 15
   speedDecrease: 0.97
+  hitForce: 10
 --- !u!54 &1093114408
 Rigidbody:
   m_ObjectHideFlags: 0

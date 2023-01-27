@@ -8,6 +8,7 @@ public class CollisionSensitive : MonoBehaviour, IHittable
 {
     [SerializeField] private float force;
     [SerializeField] private float upForce;
+    [SerializeField] private float hitForce = 20f;
 
     private Rigidbody rb;
     private Collision collide;
@@ -34,8 +35,8 @@ public class CollisionSensitive : MonoBehaviour, IHittable
         }
     }
 
-    public void Hit(Vector3 hitPoint, float shootForce)
+    public void Hit(Vector3 hitPoint, Vector3 shootDir)
     {
-        rb.AddExplosionForce(force * shootForce, hitPoint, 10f, upForce);
+        rb.AddExplosionForce(force * hitForce, hitPoint + shootDir * 2f, 10f, upForce);
     }
 }

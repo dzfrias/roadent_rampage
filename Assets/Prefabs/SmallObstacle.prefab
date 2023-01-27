@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 35
   upForce: 2.5
+  hitForce: 40
 --- !u!114 &1288393139
 MonoBehaviour:
   m_ObjectHideFlags: 0

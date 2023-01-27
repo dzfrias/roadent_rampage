@@ -9,7 +9,7 @@ public class Explosive : MonoBehaviour, IHittable
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float upwardsModifier= 2f;
 
-    public void Hit(Vector3 hitPoint, float force)
+    public void Hit(Vector3 hitPoint, Vector3 direction)
     {
         Explode();
     }
