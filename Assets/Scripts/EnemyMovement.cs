@@ -6,11 +6,17 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovement : MonoBehaviour, IHittable
 {
+    [Header("Tracking")]
     [SerializeField] private Transform target;
     [SerializeField] private float maxDistance;
     [SerializeField] private float warpOffset;
     [SerializeField, Range(0f, 1f)] private float speedDecrease;
+
+    [Header("Hit Logic")]
     [SerializeField] private float hitForce = 10f;
+    [SerializeField] private float hitDuration = 0.5f;
+    [SerializeField] private float hitStun = 0.5f;
+
     private NavMeshAgent agent;
     private Rigidbody targetRb;
     private Rigidbody rb;
@@ -35,7 +41,7 @@ public class EnemyMovement : MonoBehaviour, IHittable
 
     void Update()
     {
-        if (isHit) { return; }
+        if (isHit) return; 
 
         if (Vector3.Distance(transform.position, target.position) > maxDistance)
         {
@@ -66,7 +72,10 @@ public class EnemyMovement : MonoBehaviour, IHittable
         agent.enabled = false;
         rb.isKinematic = false;
         isHit = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(hitDuration);
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        yield return new WaitForSeconds(hitStun);
         agent.enabled = true;
         rb.isKinematic = true;
         isHit = false;
