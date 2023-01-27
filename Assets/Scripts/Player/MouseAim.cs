@@ -21,7 +21,7 @@ public class MouseAim : MonoBehaviour
     {
         Quaternion targetRot = Quaternion.Euler(180, 0, 0);
         if (reversed) targetRot = Quaternion.identity;
-        transform.rotation = targetRot;
+        transform.localRotation = targetRot;
         origionalRotation = transform.localRotation;
         reversed = !reversed;
     }
