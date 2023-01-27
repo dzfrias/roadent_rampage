@@ -17,8 +17,6 @@ public class MouseAim : MonoBehaviour
     private Outline outlinedObject;
     private Quaternion origionalRotation;
 
-    private Outline outlinedObject;
-
     void Start()
     {
         origionalRotation = transform.localRotation;
