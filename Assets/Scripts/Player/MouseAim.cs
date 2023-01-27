@@ -93,7 +93,6 @@ public class MouseAim : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
-            Debug.Log($"Hit: {hit.transform.gameObject}!");
             if (hit.collider.gameObject.TryGetComponent(out Outline outlineObject))
             {
                 outlinedObject = outlineObject;

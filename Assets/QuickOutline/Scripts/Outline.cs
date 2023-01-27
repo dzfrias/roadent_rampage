@@ -81,9 +81,6 @@ public class Outline : MonoBehaviour {
   private bool needsUpdate;
 
   void Awake() {
-
-    this.enabled = false;
-
     // Cache renderers
     renderers = GetComponentsInChildren<Renderer>();
 
@@ -99,6 +96,11 @@ public class Outline : MonoBehaviour {
 
     // Apply material properties immediately
     needsUpdate = true;
+  }
+
+  void Start()
+  {
+    this.enabled = false;
   }
 
   void OnEnable() {
