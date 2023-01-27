@@ -10,12 +10,21 @@ public class MouseAim : MonoBehaviour
     [SerializeField] private float dampingTime = 0.2f;
     [SerializeField] private bool relative = true;
     
-    private bool locked;
+    private bool reversed;
     private Vector3 targetAngles;
     private Vector3 followAngles;
     private Vector3 followVelocity;
     private Outline outlinedObject;
     private Quaternion origionalRotation;
+
+    public void ReverseAim()
+    {
+        Quaternion targetRot = Quaternion.Euler(180, 0, 0);
+        if (reversed) targetRot = Quaternion.identity;
+        transform.rotation = targetRot;
+        origionalRotation = transform.localRotation;
+        reversed = !reversed;
+    }
 
     void Start()
     {
@@ -24,19 +33,8 @@ public class MouseAim : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void Lock()
-    {
-        locked = true;
-    }
-
-    public void Unlock()
-    {
-        locked = false;
-    }
-
     void Update()
     {
-        if (locked) return;
         transform.localRotation = origionalRotation;
 
         float inputH;
@@ -45,6 +43,11 @@ public class MouseAim : MonoBehaviour
         {
             inputH = Input.GetAxis("Mouse X");
             inputV = Input.GetAxis("Mouse Y");
+            if (reversed)
+            {
+                inputH *= -1;
+                inputV *= -1;
+            }
 
             if (targetAngles.y > 180)
             {
