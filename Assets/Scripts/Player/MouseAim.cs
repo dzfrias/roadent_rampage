@@ -96,15 +96,15 @@ public class MouseAim : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
+            if (outlinedObject != null && hit.collider.gameObject != outlinedObject.gameObject)
+            {
+                outlinedObject.enabled = false;
+            }
+
             if (hit.collider.gameObject.TryGetComponent(out Outline outlineObject))
             {
                 outlinedObject = outlineObject;
                 outlinedObject.enabled = true;
-            }
-
-            if (outlinedObject != null && hit.collider.gameObject != outlinedObject.gameObject)
-            {
-                outlinedObject.enabled = false;
             }
         }
         else if (outlinedObject != null)
