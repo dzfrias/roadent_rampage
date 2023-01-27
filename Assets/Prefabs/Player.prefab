@@ -528,8 +528,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  airTimeMultiplier: 8
-  airTimeThreshold: 3
+  airTimeMultiplier: 14
+  airTimeThreshold: 2
 --- !u!114 &2141510634
 MonoBehaviour:
   m_ObjectHideFlags: 0
