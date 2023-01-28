@@ -114,6 +114,7 @@ MonoBehaviour:
   speedForce: 30
   hitCooldown: 2
   particles: {fileID: 8328726357277208916, guid: d198b9cbc13454d2289a21e74e1ab40b, type: 3}
+  hitColor: {r: 0.5283019, g: 0.495906, b: 0.495906, a: 0}
 --- !u!114 &2653833377244730614
 MonoBehaviour:
   m_ObjectHideFlags: 0
