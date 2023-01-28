@@ -114,8 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angularFrequency: 15
   dampingRatio: 0.3
-  resizeMin: 0
-  velocityMin: 0
+  onCollide: 1
+  minResize: 0
 --- !u!114 &383562651
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpringCollision))]
+[RequireComponent(typeof(SpringResize))]
 public class Wall : MonoBehaviour, IHittable
 {
     [SerializeField] private GameObject particles;
@@ -10,13 +10,13 @@ public class Wall : MonoBehaviour, IHittable
     [SerializeField] private float health = 10f;
 
     private HealthSystem healthSystem;
-    private SpringCollision springCollision;
+    private SpringResize springResize;
 
     void Start()
     {
         healthSystem = new HealthSystem(health);
         healthSystem.OnHealthChanged += HealthSystem_OnHealthChanged;
-        springCollision = GetComponent<SpringCollision>();
+        springResize = GetComponent<SpringResize>();
     }
 
     public void Hit(Vector3 hitPoint, Vector3 direction)
@@ -24,7 +24,7 @@ public class Wall : MonoBehaviour, IHittable
         healthSystem.Damage(1f);
         GameObject p = Instantiate(particles, hitPoint, Quaternion.LookRotation(direction));
         p.GetComponent<ParticleSystem>().Play();
-        springCollision.SetVelocity(velocityAdd);
+        springResize.SetVelocity(velocityAdd);
     }
 
     private void HealthSystem_OnHealthChanged(object sender, System.EventArgs e) 
