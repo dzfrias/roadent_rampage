@@ -7,13 +7,14 @@ public class Wall : MonoBehaviour, IHittable
 {
     [SerializeField] private GameObject particles;
     [SerializeField] private float velocityAdd = 50f;
+    [SerializeField] private float health = 10f;
 
     private HealthSystem healthSystem;
     private SpringCollision springCollision;
 
     void Start()
     {
-        healthSystem = new HealthSystem(10f);
+        healthSystem = new HealthSystem(health);
         healthSystem.OnHealthChanged += HealthSystem_OnHealthChanged;
         springCollision = GetComponent<SpringCollision>();
     }
