@@ -6,16 +6,23 @@ public class SpeedupTarget : MonoBehaviour, IHittable
 {
     [SerializeField] private float speedForce = 30f;
     [SerializeField] private float hitCooldown = 2f;
+    [SerializeField] private GameObject particles;
 
     private bool canBeHit = true;
+    private GameObject player;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
-        if (!canBeHit) { return; }
+        if (!canBeHit) return;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<Rigidbody>().AddForce(player.transform.forward * speedForce, ForceMode.VelocityChange);
         StartCoroutine("HitCooldown");
+        Instantiate(particles, transform.position, transform.rotation);
     }
 
     IEnumerator HitCooldown()
