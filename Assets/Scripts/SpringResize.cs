@@ -35,9 +35,9 @@ public class SpringResize : MonoBehaviour
                 deltaTime,
                 angularFrequency,
                 dampingRatio);
-        float newX = Mathf.Clamp(startSize.x + size, 0, Mathf.Infinity);
-        float newY = Mathf.Clamp(startSize.y + size, 0, Mathf.Infinity);
-        float newZ = Mathf.Clamp(startSize.z + size, 0, Mathf.Infinity);
+        float newX = Mathf.Clamp(startSize.x + size, 0.5f, Mathf.Infinity);
+        float newY = Mathf.Clamp(startSize.y + size, 0.5f, Mathf.Infinity);
+        float newZ = Mathf.Clamp(startSize.z + size, 0.5f, Mathf.Infinity);
         transform.localScale = new Vector3(newX, newY, newZ);
     }
 
