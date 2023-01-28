@@ -34,6 +34,11 @@ public class SpringCollision : MonoBehaviour
         transform.localScale = new Vector3(startSize.x + size, startSize.y + size, startSize.z + size);
     }
 
+    public void SetVelocity(float velocityParam)
+    {
+        velocity = velocityParam;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))

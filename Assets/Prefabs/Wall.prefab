@@ -130,6 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4a8ff170aea3144b9c7b0f263c0bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 3389583007053902756, guid: 742ce656d05fd4f16b8c996d3edac0a8, type: 3}
+  angularFrequency: 15
+  dampingRatio: 0.3
+  velocityAdd: 50
 --- !u!114 &357185461
 MonoBehaviour:
   m_ObjectHideFlags: 0
