@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 721332902}
   - component: {fileID: 1667903363}
   - component: {fileID: 1667903364}
+  - component: {fileID: 1569663748}
   m_Layer: 0
   m_Name: BouncyObstacle
   m_TagString: Untagged
@@ -215,3 +216,16 @@ MonoBehaviour:
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 1, y: -2, z: 0}
+--- !u!114 &1569663748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830483992709379447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
