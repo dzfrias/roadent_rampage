@@ -21,7 +21,7 @@ public class Wall : MonoBehaviour, IHittable
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
         healthSystem.Damage(1f);
-        GameObject p = Instantiate(particles, hitPoint, Quaternion.Euler(-direction));
+        GameObject p = Instantiate(particles, hitPoint, Quaternion.LookRotation(direction));
         p.GetComponent<ParticleSystem>().Play();
         springCollision.SetVelocity(velocityAdd);
     }
