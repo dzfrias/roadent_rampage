@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class SpringResize : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class SpringResize : MonoBehaviour
     [SerializeField] private float dampingRatio;
 
     [SerializeField] private bool onCollide;
-    // TODO: Make more sophisticated? Put dependency on onCollide in inspector
     [SerializeField] private float minResize;
 
     private float targetSize;
@@ -53,5 +53,33 @@ public class SpringResize : MonoBehaviour
         {
             velocity = minResize + collision.relativeVelocity.magnitude;
         }
+    }
+}
+
+[CustomEditor(typeof(SpringResize))]
+public class SpringResize_Editor : Editor
+{
+    private SerializedProperty onCollide;
+    private SerializedProperty minResize;
+
+    void OnEnable()
+    {
+        onCollide = serializedObject.FindProperty("onCollide");
+        minResize = serializedObject.FindProperty("minResize");
+    }
+
+    public override void OnInspectorGUI()
+    {
+        DrawPropertiesExcluding(serializedObject, "onCollide", "minResize");
+        serializedObject.Update();
+
+        EditorGUILayout.PropertyField(onCollide);
+
+        if (onCollide.boolValue)
+        {
+            EditorGUILayout.PropertyField(minResize);
+        }
+
+        serializedObject.ApplyModifiedProperties();
     }
 }
