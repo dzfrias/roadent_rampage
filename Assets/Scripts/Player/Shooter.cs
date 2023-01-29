@@ -24,10 +24,11 @@ public class Shooter : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
             Debug.Log($"Hit: {hit.transform.gameObject}!");
-            if (hit.collider.gameObject.TryGetComponent(out IHittable hittableObject))
+            Component[] hittables = hit.collider.gameObject.GetComponents(typeof(IHittable));
+            foreach (IHittable hittable in hittables)
             {
                 Vector3 dist = -(hit.point - transform.position);
-                hittableObject.Hit(hit.point, dist.normalized);
+                hittable.Hit(hit.point, dist.normalized);
             }
         }
         else
