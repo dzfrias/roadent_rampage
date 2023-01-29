@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 [RequireComponent(typeof(Collider))]
 public class Explosive : MonoBehaviour, IHittable
@@ -9,6 +10,13 @@ public class Explosive : MonoBehaviour, IHittable
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float upwardsModifier= 2f;
 
+    private CinemachineImpulseSource impulseSource;
+
+    void Start()
+    {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
         Explode();
@@ -16,6 +24,7 @@ public class Explosive : MonoBehaviour, IHittable
 
     void Explode()
     {
+        impulseSource.GenerateImpulse();
         Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in hits)
         {
