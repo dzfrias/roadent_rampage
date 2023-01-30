@@ -133,7 +133,7 @@ MonoBehaviour:
   hitParticles: {fileID: 3389583007053902756, guid: 742ce656d05fd4f16b8c996d3edac0a8, type: 3}
   destroyParticles: {fileID: 1822496590773366015, guid: 6b300ea71795b4ec5b10089f7c77c361, type: 3}
   velocityAdd: 50
-  health: 10
+  health: 8
 --- !u!114 &357185461
 MonoBehaviour:
   m_ObjectHideFlags: 0
