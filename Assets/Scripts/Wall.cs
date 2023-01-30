@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(SpringResize))]
 public class Wall : MonoBehaviour, IHittable
 {
-    [SerializeField] private GameObject particles;
+    [SerializeField] private GameObject hitParticles;
+    [SerializeField] private GameObject destroyParticles;
     [SerializeField] private float velocityAdd = 50f;
     [SerializeField] private float health = 10f;
 
@@ -22,13 +23,17 @@ public class Wall : MonoBehaviour, IHittable
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
         healthSystem.Damage(1f);
-        GameObject p = Instantiate(particles, hitPoint, Quaternion.LookRotation(direction));
+        GameObject p = Instantiate(hitParticles, hitPoint, Quaternion.LookRotation(direction));
         p.GetComponent<ParticleSystem>().Play();
         springResize.SetVelocity(velocityAdd);
     }
 
-    private void HealthSystem_OnHealthChanged(object sender, System.EventArgs e) 
+    void HealthSystem_OnHealthChanged(object sender, System.EventArgs e) 
     {
-        if (healthSystem.GetHealth() <= 0) Destroy(this.gameObject);
+        if (healthSystem.GetHealth() <= 0) {
+            GameObject p = Instantiate(destroyParticles, transform.position, Quaternion.identity);
+            p.GetComponent<ParticleSystem>().Play();
+            Destroy(gameObject);
+        }
     }
 }

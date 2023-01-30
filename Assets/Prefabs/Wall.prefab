@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4a8ff170aea3144b9c7b0f263c0bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 3389583007053902756, guid: 742ce656d05fd4f16b8c996d3edac0a8, type: 3}
+  hitParticles: {fileID: 3389583007053902756, guid: 742ce656d05fd4f16b8c996d3edac0a8, type: 3}
+  destroyParticles: {fileID: 1822496590773366015, guid: 6b300ea71795b4ec5b10089f7c77c361, type: 3}
   velocityAdd: 50
   health: 10
 --- !u!114 &357185461
