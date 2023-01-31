@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedModifier : MonoBehaviour
+public class SpeedModifier : MonoBehaviour, IDriveSurface
 {
-    [field: SerializeField] public float Modifier { get; private set; }
+    [SerializeField] private float modifyAmount;
+
+    public void WheelHit(Wheel wheel)
+    {
+        wheel.ApplyForce(wheel.Velocity() * modifyAmount);
+    }
 }

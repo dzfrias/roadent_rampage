@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8df8a2c1fb284c5ca4fea6657c58d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Modifier>k__BackingField: 100
+  modifyAmount: 100
 --- !u!64 &3566919936120973651
 MeshCollider:
   m_ObjectHideFlags: 0

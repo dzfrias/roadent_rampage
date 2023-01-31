@@ -63,9 +63,9 @@ public class Wheel : MonoBehaviour, IMover
             // PERF: It would be nice to have a game manager script that keeps
             // a dictionary of all objects containing SpeedModifier, but does
             // so lazily. See https://stackoverflow.com/questions/57383739/how-to-avoid-calling-getcomponent-in-ontriggerenter
-            if (hit.collider.gameObject.TryGetComponent(out SpeedModifier modifier))
+            if (hit.collider.gameObject.TryGetComponent(out IDriveSurface driveSurface))
             {
-                target.AddForceAtPosition(target.GetPointVelocity(transform.position) * modifier.Modifier, transform.position);
+                driveSurface.WheelHit(this);
             }
             ApplySpring(hit);
             ApplySlip();
@@ -74,6 +74,16 @@ public class Wheel : MonoBehaviour, IMover
         {
             onGround = false;
         }
+    }
+
+    public void ApplyForce(Vector3 force)
+    {
+        target.AddForceAtPosition(force, transform.position);
+    }
+
+    public Vector3 Velocity()
+    {
+        return target.GetPointVelocity(transform.position);
     }
 
     void ApplySpring(RaycastHit hit)
