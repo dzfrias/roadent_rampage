@@ -24,6 +24,7 @@ public class Explosive : MonoBehaviour, IHittable
 
     void Explode()
     {
+        AudioManager.instance.Play("explosion");
         impulseSource.GenerateImpulse();
         Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in hits)

@@ -21,6 +21,7 @@ public class Shooter : MonoBehaviour
 
     void Shoot()
     {
+        AudioManager.instance.Play("shoot");
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
             Debug.Log($"Hit: {hit.transform.gameObject}!");

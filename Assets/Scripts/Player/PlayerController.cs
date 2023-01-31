@@ -109,6 +109,16 @@ public class PlayerController : MonoBehaviour
     public void Accelerate(float value)
     {
         accelerationInput = value;
+
+        if (accelerationInput == 0)
+        {
+            AudioManager.instance.Stop("accelerate");
+        } 
+        else
+        {
+            AudioManager.instance.Play("accelerate");
+        }
+
         if (onGround && value != 0 && Mathf.Sign(value) != Mathf.Sign(rb.velocity.z))
         {
             // Calling this in Update() is fine, as one time impulses are 

@@ -22,6 +22,7 @@ public class Wall : MonoBehaviour, IHittable
 
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
+        AudioManager.instance.Play("hit");
         healthSystem.Damage(1f);
         GameObject p = Instantiate(hitParticles, hitPoint, Quaternion.LookRotation(direction));
         p.GetComponent<ParticleSystem>().Play();
