@@ -31054,10 +31054,6 @@ PrefabInstance:
       propertyPath: cameraChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1373226991}
-    - target: {fileID: 2141510634, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
-      propertyPath: accelerateSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: fb2759f47f9cce94f843d6525a0900da, type: 3}
     - target: {fileID: 602739623024861862, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: m_Name
       value: Player
@@ -31110,10 +31106,6 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 799647436}
-    - target: {fileID: 5836621905092602648, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
-      propertyPath: accelerateSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: fb2759f47f9cce94f843d6525a0900da, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
 --- !u!1 &2068437057

@@ -595,8 +595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unflipTime: 2
-  upsideDownEpsilon: 0.01
-  rightSideEpsilon: 0.01
+  upsideDownEpsilon: 10
+  rightSideEpsilon: 5
 --- !u!114 &2141510639
 MonoBehaviour:
   m_ObjectHideFlags: 0
