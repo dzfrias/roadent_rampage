@@ -22,36 +22,45 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        foreach (Sound s in sounds)
+        foreach (Sound sound in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
+            sound.source = gameObject.AddComponent<AudioSource>();
+            sound.source.clip = sound.clip;
 
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
+            sound.source.volume = sound.volume;
+            sound.source.pitch = sound.pitch;
+            sound.source.loop = sound.loop;
         }
     }
 
     public void Play(String name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null) 
-        { 
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return; 
-        }
-        s.source.Play();
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (!DoesSoundExist(sound)) { return; }
+        sound.source.Play();
     }
 
     public void Stop(String name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null) 
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (!DoesSoundExist(sound)) { return; }
+        sound.source.Stop();
+    }
+
+    public void SetPitch(string name, float newPitch)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (!DoesSoundExist(sound)) { return; }
+        sound.source.pitch = newPitch;
+    }
+
+    private bool DoesSoundExist(Sound sound)
+    {
+        if (sound == null) 
         { 
             Debug.LogWarning("Sound: " + name + " not found!");
-            return; 
+            return false; 
         }
-        s.source.Stop();
+        return true;
     }
 }
