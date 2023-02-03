@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
         cameraTilt = camera.GetComponent<CinemachineTilt>();
         cameraPush = camera.GetComponent<CinemachinePushBack>();
         mover = GetComponent<IMover>();
+
+        AudioManager.instance.Play("accelerate");
     }
 
     void Update()
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
         {
             mover.Turn(rotationInput);
             mover.Accelerate(speed * accelerationInput);
+            AdjustAcceleratePitch();
         }
         if (rb.velocity.magnitude > mover.MaxSpeed - 1)
         {
@@ -83,6 +86,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void AdjustAcceleratePitch()
+    {
+        AudioManager.instance.SetPitch("accelerate", rb.velocity.magnitude / 25);
+    }
+
     void AirSteer()
     {
         rb.AddTorque(transform.right * accelerationInput * airSteer, ForceMode.VelocityChange);
@@ -109,15 +117,6 @@ public class PlayerController : MonoBehaviour
     public void Accelerate(float value)
     {
         accelerationInput = value;
-
-        if (accelerationInput == 0)
-        {
-            AudioManager.instance.Stop("accelerate");
-        } 
-        else
-        {
-            AudioManager.instance.Play("accelerate");
-        }
 
         if (onGround && value != 0 && Mathf.Sign(value) != Mathf.Sign(rb.velocity.z))
         {

@@ -32933,7 +32933,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
       propertyPath: sounds.Array.data[4].pitch
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1483263106063964484, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
       propertyPath: m_Name
