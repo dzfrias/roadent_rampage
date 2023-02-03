@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class SpringResize : MonoBehaviour
 {
@@ -56,6 +59,7 @@ public class SpringResize : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(SpringResize))]
 public class SpringResize_Editor : Editor
 {
@@ -83,3 +87,4 @@ public class SpringResize_Editor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif
