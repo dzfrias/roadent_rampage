@@ -40,6 +40,7 @@ public class ComboScorer : MonoBehaviour
                 return;
             }
             comboFinished.Invoke(totalScore);
+            AudioManager.instance.Play("landcombo");
             Debug.Log($"Finished combo with {totalScore}!");
             Reset();
         }
