@@ -12,6 +12,11 @@ public class SettingsPane : MonoBehaviour
         audioMixer.SetFloat("Volume", volume);
     }
 
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
     void Update()
     {
         // TODO: Use new input system? New input system seems a bit overkill...
