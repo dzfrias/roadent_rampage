@@ -29,6 +29,14 @@ public class Wall : MonoBehaviour, IHittable
         springResize.SetVelocity(velocityAdd);
     }
 
+    void OnCollisionEnter(Collision other) 
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            AudioManager.instance.Play("collision");
+        }
+    }
+
     void HealthSystem_OnHealthChanged(object sender, System.EventArgs e) 
     {
         if (healthSystem.GetHealth() <= 0) {
