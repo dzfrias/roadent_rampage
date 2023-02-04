@@ -32931,42 +32931,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[5].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: e9a9c77fa6fd1494fa3e111d364e3c7f, type: 3}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[5].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[5].name
-      value: music
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[4].pitch
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[5].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[0].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
-      propertyPath: sounds.Array.data[5].volume
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 1483263106063964484, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
       propertyPath: m_Name
       value: AudioManager

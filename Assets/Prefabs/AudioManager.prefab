@@ -44,16 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d693a31a511dd5246a9cf046642f30dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24300002, guid: b4f31713da59641d1914dedc958777eb, type: 2}
   sounds:
   - name: shoot
     clip: {fileID: 8300000, guid: d33cf083bfc67824d9903d9f5f365402, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: hit
     clip: {fileID: 8300000, guid: 86469d666db1062489aac26f68dd1af2, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -72,6 +73,12 @@ MonoBehaviour:
   - name: accelerate
     clip: {fileID: 8300000, guid: 04ac30fcad684e643bb934ae430f1c11, type: 3}
     volume: 1
+    pitch: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: music
+    clip: {fileID: 8300000, guid: e9a9c77fa6fd1494fa3e111d364e3c7f, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}

@@ -6,6 +6,7 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    [SerializeField] private AudioMixerGroup audioMixer;
     [SerializeField] private Sound[] sounds;
 
     void Awake()
@@ -26,6 +27,7 @@ public class AudioManager : MonoBehaviour
         {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
+            sound.source.outputAudioMixerGroup = audioMixer;
 
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
