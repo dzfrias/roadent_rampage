@@ -32931,6 +32931,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 75e779d5d6b6a4942b3ea161d3469afd, type: 3}
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.data[6].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483263106063964481, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1483263106063964484, guid: dca416856060c7a4591d9691dd4b04d4, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -33022,15 +33050,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15790743
+      value: 0.15790741
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1.99601e-25
+      value: -0.000000020590463
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.1918942e-26
+      value: 0.000000003292697
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33704,15 +33732,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15790743
+      value: 0.15790741
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1.99601e-25
+      value: -0.000000020590463
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.1918942e-26
+      value: 0.000000003292697
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

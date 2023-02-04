@@ -37,6 +37,7 @@ public class CollisionSensitive : MonoBehaviour, IHittable
 
     public void Hit(Vector3 hitPoint, Vector3 shootDir)
     {
+        AudioManager.instance.Play("hit");
         rb.AddExplosionForce(force * hitForce, hitPoint + shootDir * 2f, 10f, upForce);
     }
 }

@@ -14,6 +14,7 @@ public class HitRelease : MonoBehaviour, IHittable
 
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
+        AudioManager.instance.Play("hit");
         GameObject p = Instantiate(particles, hitPoint, Quaternion.LookRotation(direction));
         p.GetComponent<ParticleSystem>().Play();
     }
