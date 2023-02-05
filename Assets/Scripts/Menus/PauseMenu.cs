@@ -5,13 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject ui;
     private bool paused;
+
+    void ChildrenActive(bool active)
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(active);
+        }
+    }
 
     public void Resume()
     {
         AudioManager.instance.ResumeSounds();
-        ui.SetActive(false);
+        ChildrenActive(false);
         Time.timeScale = 1f;
         paused = false;
     }
@@ -32,7 +39,7 @@ public class PauseMenu : MonoBehaviour
         else
         {
             AudioManager.instance.PauseSounds();
-            ui.SetActive(true);
+            ChildrenActive(true);
             Time.timeScale = 0f;
             paused = true;
         }
