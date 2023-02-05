@@ -52,7 +52,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: hit
+  - name: damage
     clip: {fileID: 8300000, guid: 86469d666db1062489aac26f68dd1af2, type: 3}
     volume: 1
     pitch: 1
@@ -81,4 +81,22 @@ MonoBehaviour:
     volume: 0.1
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: hit
+    clip: {fileID: 8300000, guid: 75e779d5d6b6a4942b3ea161d3469afd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: collision
+    clip: {fileID: 8300000, guid: f0e12e5d16843954b9a264df6f2f0ece, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: landcombo
+    clip: {fileID: 8300000, guid: 40ba3a6d2472cbf4f905efd5fda8f896, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
