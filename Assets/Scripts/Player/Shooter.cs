@@ -21,6 +21,7 @@ public class Shooter : MonoBehaviour
 
     void Shoot()
     {
+        if (GameManager.instance.isPaused) return;
         AudioManager.instance.Play("shoot");
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {

@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour, IHittable
 {
     [Header("Tracking")]
-    [SerializeField] private Transform target;
     [SerializeField] private float maxDistance;
     [SerializeField] private float warpOffset;
     [SerializeField, Range(0f, 1f)] private float speedDecrease;
@@ -17,6 +16,7 @@ public class EnemyMovement : MonoBehaviour, IHittable
     [SerializeField] private float hitDuration = 0.5f;
     [SerializeField] private float hitStun = 0.5f;
 
+    private Transform target;
     private NavMeshAgent agent;
     private Rigidbody targetRb;
     private Rigidbody rb;
@@ -28,6 +28,7 @@ public class EnemyMovement : MonoBehaviour, IHittable
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
         minSpeed = agent.speed;
+        target = GameManager.instance.player.transform;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
     }
 

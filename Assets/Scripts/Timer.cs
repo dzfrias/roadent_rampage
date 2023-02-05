@@ -3,15 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[RequireComponent(typeof(TMP_Text))]
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private TMP_Text timerText;
-    
+    private TMP_Text timerText;
     private int minutes;
     private float seconds;
     private bool counting = true;
 
-    // Update is called once per frame
+    void Start()
+    {
+        GameManager.onFinishLineReached += Stop;
+        timerText = GetComponent<TMP_Text>();
+    }
+
+    void OnDestroy()
+    {
+        GameManager.onFinishLineReached -= Stop;
+    }
+
     void Update()
     {
         if (!counting) { return; }

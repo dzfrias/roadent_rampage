@@ -16,10 +16,10 @@ public class PlayerController : MonoBehaviour
     [Header("Mechanics")]
     [SerializeField] private float airSteer;
     [SerializeField, Range(0, 1)] private float directionChangeFactor;
+    [SerializeField] private float skidThreshold = 20f;
 
     [Header("Camera")]
     [SerializeField] private new GameObject camera;
-
 
     // Core
     private Rigidbody rb;
@@ -72,6 +72,10 @@ public class PlayerController : MonoBehaviour
         if (!onGround)
         {
             AirSteer();
+        }
+        if (Mathf.Abs(Vector3.Dot(transform.right, rb.velocity)) > skidThreshold)
+        {
+            // TODO: Add sound here
         }
     }
 
