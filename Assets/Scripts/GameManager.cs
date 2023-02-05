@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static event Action onFinishLineReached;
     public GameObject player { get; private set; }
+    public bool isPaused;
 
     void Awake()
     {
@@ -26,6 +27,22 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void Unpause()
+    {
+        isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void Finish()

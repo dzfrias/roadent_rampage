@@ -29,8 +29,6 @@ public class MouseAim : MonoBehaviour
     void Start()
     {
         origionalRotation = transform.localRotation;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     void Update()
