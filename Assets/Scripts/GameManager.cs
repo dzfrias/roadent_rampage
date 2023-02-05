@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    public static event Action OnFinishLineReached;
-    public GameObject Player { get; private set; }
+    public static GameManager instance;
+    public static event Action onFinishLineReached;
+    public GameObject player { get; private set; }
 
     void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
         else
         {
@@ -25,11 +25,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player");
     }
 
     public void Finish()
     {
-        OnFinishLineReached?.Invoke();
+        onFinishLineReached?.Invoke();
+        Debug.Log("Player Finished The Level!");
     }
 }

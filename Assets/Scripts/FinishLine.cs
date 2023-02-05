@@ -6,6 +6,6 @@ public class FinishLine : MonoBehaviour
 {
     public void FinishLevel() 
     {
-        Debug.Log("Player Finished The Level!");
+        GameManager.instance.Finish();
     }
 }

@@ -135,7 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9b825a81a6cdc43930bd274b6ea447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   maxDistance: 80
   warpOffset: 15
   speedDecrease: 0.97

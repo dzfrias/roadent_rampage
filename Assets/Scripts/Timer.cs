@@ -11,6 +11,16 @@ public class Timer : MonoBehaviour
     private float seconds;
     private bool counting = true;
 
+    void Start()
+    {
+        GameManager.onFinishLineReached += Stop;
+    }
+
+    void OnDestroy()
+    {
+        GameManager.onFinishLineReached -= Stop;
+    }
+
     // Update is called once per frame
     void Update()
     {
