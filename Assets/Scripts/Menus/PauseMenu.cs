@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        AudioManager.instance.ResumeSounds();
         ui.SetActive(false);
         Time.timeScale = 1f;
         paused = false;
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PauseSounds();
             ui.SetActive(true);
             Time.timeScale = 0f;
             paused = true;

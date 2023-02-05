@@ -63,8 +63,24 @@ public class AudioManager : MonoBehaviour
         if (sound == null) 
         { 
             Debug.LogWarning("Sound: " + name + " not found!");
-            return false; 
+            return false;
         }
         return true;
+    }
+
+    public void PauseSounds()
+    {
+        foreach (Sound sound in sounds)
+        {
+            sound.source.Pause();
+        }
+    }
+
+    public void ResumeSounds()
+    {
+        foreach (Sound sound in sounds)
+        {
+            sound.source.UnPause();
+        }
     }
 }
