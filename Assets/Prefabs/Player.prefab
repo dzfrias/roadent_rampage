@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 3855200378252065192}
   - component: {fileID: 2141510639}
   - component: {fileID: 2141510634}
+  - component: {fileID: 2141510641}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -625,6 +626,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2141510641}
+        m_TargetAssemblyTypeName: TextSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   airTimeMultiplier: 14
   airTimeThreshold: 2
 --- !u!114 &2141510634
@@ -647,6 +660,21 @@ MonoBehaviour:
   turnRadius: 9
   rearTrack: 1.525
   wheelBase: 2.55
+--- !u!114 &2141510641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602739623024861862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df88b2c140c574eaf95e9abd4cf4b594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6080847613524300687, guid: 846e4f926e71948f7969e96ecf40478f, type: 3}
+  canvas: {fileID: 0}
+  duration: 1
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0
