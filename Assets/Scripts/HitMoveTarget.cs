@@ -21,7 +21,7 @@ public class HitMoveTarget : MonoBehaviour, IHittable
     public void Hit(Vector3 point, Vector3 direction)
     {
         if (hit) return;
-        target.DOMove(target.position + moveBy, moveDuration);
+        target.DOMove(target.position + moveBy, moveDuration).SetEase(Ease.OutBounce);
         material.DOColor(inactiveColor, moveDuration * 1.5f);
         hit = true;
     }

@@ -26,6 +26,7 @@ public class SpeedupTarget : MonoBehaviour, IHittable
     {
         if (!canBeHit) return;
 
+        transform.DOPunchScale(new Vector3(1, 1, 1), 0.3f, 8, 0.4f);
         AudioManager.instance.Play("speedup");
         player.GetComponent<Rigidbody>().AddForce(player.transform.forward * speedForce, ForceMode.VelocityChange);
         StartCoroutine("HitCooldown");
