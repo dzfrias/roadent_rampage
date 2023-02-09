@@ -16,14 +16,14 @@ public class ForwardLineDraw : MonoBehaviour
 
     void Update()
     {
-        lineRenderer.SetPosition(0, Vector3.zero);
-        if (Physics.Raycast(Vector3.zero, transform.forward, out RaycastHit hit))
+        lineRenderer.SetPosition(0, transform.position);
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
         {
-            lineRenderer.SetPosition(1, transform.forward * hit.distance);
+            lineRenderer.SetPosition(1, transform.forward * hit.distance + transform.position);
         }
         else
         {
-            lineRenderer.SetPosition(1, transform.forward * defaultDistance);
+            lineRenderer.SetPosition(1, transform.forward * defaultDistance + transform.position);
         }
     }
 
