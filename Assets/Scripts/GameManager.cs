@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static event Action onFinishLineReached;
     public GameObject player { get; private set; }
+    [HideInInspector]
     public bool isPaused;
 
     void Awake()

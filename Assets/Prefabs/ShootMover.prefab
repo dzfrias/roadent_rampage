@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4505418646971202451}
   moveBy: {x: -18, y: 0, z: 0}
-  moveDuration: 0.3
+  moveDuration: 0.5
   inactiveColor: {r: 0.5294118, g: 0.49411765, b: 0.49411765, a: 0}
 --- !u!114 &4505418648510109528
 MonoBehaviour:
