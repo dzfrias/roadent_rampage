@@ -9,11 +9,14 @@ public class Explosive : MonoBehaviour, IHittable
     [SerializeField] private float explosionForce = 10f;
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float upwardsModifier= 2f;
-
+    [SerializeField] private float explosionForceRequired = 15f; //Set to 0 if you want explode on touch
     private CinemachineImpulseSource impulseSource;
 
     void Start()
     {
+        if(explosionForceRequired == 0f)
+            Destroy(GetComponent<Rigidbody>());
+        
         impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
@@ -38,7 +41,8 @@ public class Explosive : MonoBehaviour, IHittable
 
     void OnCollisionEnter(Collision collision)
     {
-        Explode();
+        if (collision.relativeVelocity.magnitude > explosionForceRequired)
+            Explode();
     }
 
     void OnDrawGizmosSelected()
