@@ -119,7 +119,7 @@ MonoBehaviour:
   explosionForce: 30
   explosionRadius: 10
   upwardsModifier: 3
-  explosionForceRequired: 15
+  explosionForceRequired: 0
 --- !u!114 &175492718
 MonoBehaviour:
   m_ObjectHideFlags: 0
