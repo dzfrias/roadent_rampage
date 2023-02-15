@@ -15,11 +15,6 @@ public class Explosive : MonoBehaviour, IHittable
 
     void Start()
     {
-        if (explosionForceRequired == 0f)
-        {
-            Destroy(GetComponent<Rigidbody>());
-        }
-
         impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
@@ -44,7 +39,7 @@ public class Explosive : MonoBehaviour, IHittable
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.relativeVelocity.magnitude > explosionForceRequired)
+        if (collision.relativeVelocity.magnitude > explosionForceRequired && collision.gameObject.CompareTag("Player"))
         {
             Explode();
         }
