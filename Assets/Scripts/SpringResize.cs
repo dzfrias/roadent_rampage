@@ -9,8 +9,8 @@ using UnityEditor;
 public class SpringResize : MonoBehaviour
 {
     [Header("Spring Motion")]
-    [SerializeField] private float angularFrequency;
-    [SerializeField] private float dampingRatio;
+    [SerializeField] private float angularFrequency = 10f;
+    [SerializeField, Range(0f, 1f)] private float dampingRatio = 0.5f;
 
     [SerializeField] private bool onCollide;
     [SerializeField] private float minResize;
