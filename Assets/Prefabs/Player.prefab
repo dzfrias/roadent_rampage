@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 602739621693275187}
   - component: {fileID: 602739621693275186}
   m_Layer: 0
-  m_Name: FrontLeft
+  m_Name: BackRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 602739622106151324}
   - component: {fileID: 602739622106151395}
   m_Layer: 0
-  m_Name: BackRight
+  m_Name: FrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 602739622672329288}
   - component: {fileID: 602739622672329295}
   m_Layer: 0
-  m_Name: BackLeft
+  m_Name: FrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,13 +653,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 30
-  topRight: {fileID: 602739623324744272}
-  topLeft: {fileID: 602739621693275186}
-  bottomRight: {fileID: 602739622106151395}
-  bottomLeft: {fileID: 602739622672329295}
-  turnRadius: 9
-  rearTrack: 1.525
-  wheelBase: 2.55
+  topRight: {fileID: 602739622672329295}
+  topLeft: {fileID: 602739622106151395}
+  bottomRight: {fileID: 602739621693275186}
+  bottomLeft: {fileID: 602739623324744272}
+  turnRadius: 5
+  rearTrack: 1
+  wheelBase: 10
 --- !u!114 &2141510641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 602739623324744273}
   - component: {fileID: 602739623324744272}
   m_Layer: 0
-  m_Name: FrontRight
+  m_Name: BackLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

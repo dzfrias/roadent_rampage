@@ -47,8 +47,8 @@ public class FourWheels : MonoBehaviour, IMover
             angleRight = 0;
         }
 
-        topRight.Turn(angleRight);
-        topLeft.Turn(angleLeft);
+        topRight.Turn(-angleRight);
+        topLeft.Turn(-angleLeft);
     }
     
     public void Accelerate(float speed)
