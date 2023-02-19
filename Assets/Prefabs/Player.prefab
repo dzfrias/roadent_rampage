@@ -659,7 +659,7 @@ MonoBehaviour:
   bottomLeft: {fileID: 602739623324744272}
   turnRadius: 8
   rearTrack: 2
-  wheelBase: 5
+  wheelBase: 4
 --- !u!114 &2141510641
 MonoBehaviour:
   m_ObjectHideFlags: 0
