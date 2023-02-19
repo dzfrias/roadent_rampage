@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90847dc8438a44dc5b8a066bdbe5365e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3000
+  speed: 2500
   maxSpeed: 45
   centerOfMass: {x: 0, y: -0.4, z: 0}
   airSteer: 0.06
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a918b72f2614912aae851812351ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 45
+  maxSpeed: 30
   topRight: {fileID: 602739623324744272}
   topLeft: {fileID: 602739621693275186}
   bottomRight: {fileID: 602739622106151395}
