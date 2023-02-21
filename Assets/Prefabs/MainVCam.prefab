@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 2.14, z: -6.52}
+  m_FollowOffset: {x: 0, y: 2.14, z: -4.54}
   m_XDamping: 0.25
   m_YDamping: 0
   m_ZDamping: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 80
+    FieldOfView: 100
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -265,6 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a9d6cd0ff014153810abab3aa8ea2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0.5
+  offset: 0.3
   angularFrequency: 5
   dampingRatio: 0.6
