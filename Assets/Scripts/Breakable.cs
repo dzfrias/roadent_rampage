@@ -24,9 +24,10 @@ public class Breakable : MonoBehaviour, IHittable
     {
         AudioManager.instance.Play("damage");
         healthSystem.Damage(1f);
+        springResize.SetVelocity(velocityAdd);
+        if (hitParticles == null) return;
         GameObject p = Instantiate(hitParticles, hitPoint, Quaternion.LookRotation(direction));
         p.GetComponent<ParticleSystem>().Play();
-        springResize.SetVelocity(velocityAdd);
     }
 
     void OnCollisionEnter(Collision other) 
@@ -40,8 +41,11 @@ public class Breakable : MonoBehaviour, IHittable
     void HealthSystem_OnHealthChanged(object sender, System.EventArgs e) 
     {
         if (healthSystem.GetHealth() <= 0) {
-            GameObject p = Instantiate(destroyParticles, transform.position, Quaternion.identity);
-            p.GetComponent<ParticleSystem>().Play();
+            if (destroyParticles != null)
+            {
+                GameObject p = Instantiate(destroyParticles, transform.position, Quaternion.identity);
+                p.GetComponent<ParticleSystem>().Play();
+            }
             Destroy(gameObject);
         }
     }
