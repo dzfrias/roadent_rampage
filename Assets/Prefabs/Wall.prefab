@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6793369610139349877}
   - component: {fileID: 4191608734957810685}
   - component: {fileID: 6743994689671604780}
-  - component: {fileID: 152365584482180692}
   - component: {fileID: 357185461}
+  - component: {fileID: 604816730}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -118,22 +118,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &152365584482180692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2990253368123460249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4a8ff170aea3144b9c7b0f263c0bad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitParticles: {fileID: 3389583007053902756, guid: 742ce656d05fd4f16b8c996d3edac0a8, type: 3}
-  destroyParticles: {fileID: 1822496590773366015, guid: 6b300ea71795b4ec5b10089f7c77c361, type: 3}
-  velocityAdd: 50
-  health: 8
 --- !u!114 &357185461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +134,19 @@ MonoBehaviour:
   dampingRatio: 0.3
   onCollide: 1
   minResize: 0
+--- !u!114 &604816730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990253368123460249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c699156574e8b476c82128ce3d7bac02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitParticles: {fileID: 3389583007053902756, guid: 742ce656d05fd4f16b8c996d3edac0a8, type: 3}
+  destroyParticles: {fileID: 1822496590773366015, guid: 6b300ea71795b4ec5b10089f7c77c361, type: 3}
+  velocityAdd: 50
+  health: 8

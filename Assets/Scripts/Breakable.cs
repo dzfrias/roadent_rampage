@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpringResize))]
-public class Wall : MonoBehaviour, IHittable
+public class Breakable : MonoBehaviour, IHittable
 {
     [SerializeField] private GameObject hitParticles;
     [SerializeField] private GameObject destroyParticles;
