@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class Wheel : MonoBehaviour, IMover
 {
     public float MaxSpeed { get; set; }
@@ -20,7 +21,6 @@ public class Wheel : MonoBehaviour, IMover
     private float grip;
     [SerializeField] private float mass;
     [SerializeField] private float forwardsGrip;
-    [SerializeField] private TrailRenderer Trail;
     [Range(0, 90), SerializeField, Tooltip("Angle wheel can climb up to")] private float maxClimbAngle = 45f;
     [SerializeField, Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
     private float steerTime;
@@ -39,7 +39,7 @@ public class Wheel : MonoBehaviour, IMover
     void Update()
     {
         wheelAngle = Mathf.Lerp(wheelAngle, -steerAngle, steerTime * Time.deltaTime);
-        transform.localRotation = Quaternion.Euler(Vector3.forward + Vector3.up * wheelAngle);
+        transform.localRotation = Quaternion.Euler(Vector3.up * wheelAngle);
     }
 
     void FixedUpdate()
@@ -104,13 +104,7 @@ public class Wheel : MonoBehaviour, IMover
         float steerVel = Vector3.Dot(steeringDir, tireVel);
         float velChange = -steerVel * grip;
         float accelChange = velChange / Time.fixedDeltaTime;
-        Vector3 force = steeringDir * mass * accelChange;
-        if(force.magnitude > 5000){
-            Trail.emitting = true;
-        }else{
-            Trail.emitting = false;
-        }
-        target.AddForceAtPosition(force, transform.position);
+        target.AddForceAtPosition(steeringDir * mass * accelChange, transform.position);
     }
 
     public void Accelerate(float value)
