@@ -9,6 +9,22 @@ public class PlayerTrigger : MonoBehaviour
     [SerializeField] private UnityEvent triggered;
     [SerializeField] private UnityEvent stopTriggered;
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            triggered.Invoke();
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            stopTriggered.Invoke();
+        }
+    }
+
     void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
