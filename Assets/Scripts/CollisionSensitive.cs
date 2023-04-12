@@ -11,27 +11,17 @@ public class CollisionSensitive : MonoBehaviour, IHittable
     [SerializeField] private float hitForce = 20f;
 
     private Rigidbody rb;
-    private Collision collide;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate()
-    {
-        if (collide != null)
-        {
-            rb.AddExplosionForce(collide.relativeVelocity.magnitude * force, collide.GetContact(0).point, 10f, upForce);
-            collide = null;
-        }
-    }
-
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.contactCount != 0)
         {
-            collide = collision;
+            rb.AddExplosionForce(collision.relativeVelocity.magnitude * force, collision.GetContact(0).point, 10f, upForce);
         }
     }
 
