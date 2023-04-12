@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2833251469987380332}
   - component: {fileID: 51031059967740070}
   - component: {fileID: 1529578473}
+  - component: {fileID: 1641190778}
   m_Layer: 0
   m_Name: ConventionCenter
   m_TagString: Untagged
@@ -98,3 +99,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 150, y: 30.000008, z: 200}
   m_Center: {x: -0.00009536743, y: 3.103437, z: 0}
+--- !u!114 &1641190778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996695570014284147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
