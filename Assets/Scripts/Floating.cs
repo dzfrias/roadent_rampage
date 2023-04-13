@@ -8,6 +8,7 @@ public class Floating : MonoBehaviour
     [SerializeField] private float moveAmount = 1f;
     [SerializeField] private float moveDuration = 1f;
     [SerializeField] private float spawnMoveAmount;
+    [SerializeField] private float spawnMoveDuration = 0.8f;
 
     void Start()
     {
@@ -17,6 +18,6 @@ public class Floating : MonoBehaviour
 
     void OnEnable()
     {
-        transform.DOMoveX(transform.position.x + spawnMoveAmount, 0.8f).SetEase(Ease.OutBounce);
+        transform.DOMoveX(transform.position.x + spawnMoveAmount, spawnMoveDuration).SetEase(Ease.OutElastic);
     }
 }

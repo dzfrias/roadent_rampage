@@ -207,3 +207,4 @@ MonoBehaviour:
   moveAmount: 2
   moveDuration: 1
   spawnMoveAmount: 30
+  spawnMoveDuration: 1.4
