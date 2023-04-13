@@ -10,11 +10,13 @@ public class Drop : MonoBehaviour
 
     void Start()
     {
+        gameObject.SetActive(false);
         transform.Translate(0f, startDist, 0f);
     }
 
     public void Activate()
     {
-        transform.DOMoveY(transform.position.y - startDist, moveDuration).SetEase(Ease.InOutBounce);
+        gameObject.SetActive(true);
+        transform.DOMoveY(transform.position.y - startDist, moveDuration).SetEase(Ease.OutBounce);
     }
 }
