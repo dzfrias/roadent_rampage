@@ -31,11 +31,6 @@ public class Wheel : MonoBehaviour, IMover
     private float steerAngle;
     private bool onGround;
 
-    void Start()
-    {
-        target = transform.root.GetComponent<Rigidbody>();
-    }
-
     void Update()
     {
         wheelAngle = Mathf.Lerp(wheelAngle, -steerAngle, steerTime * Time.deltaTime);
