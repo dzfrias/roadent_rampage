@@ -13,11 +13,16 @@ public class Floating : MonoBehaviour
     void Start()
     {
         float startPos = transform.position.y;
-        transform.DOMoveY(startPos + moveAmount, moveDuration).SetEase(Ease.OutBounce).SetLoops(-1, LoopType.Yoyo);
+        transform.DOMoveY(startPos + moveAmount, moveDuration).SetEase(Ease.OutBounce).SetLoops(-1, LoopType.Yoyo).SetId(gameObject);
     }
 
     void OnEnable()
     {
         transform.DOMoveX(transform.position.x + spawnMoveAmount, spawnMoveDuration).SetEase(Ease.OutElastic);
+    }
+
+    void OnDestroy()
+    {
+        DOTween.Kill(gameObject);
     }
 }

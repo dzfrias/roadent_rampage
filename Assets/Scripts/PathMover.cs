@@ -20,12 +20,17 @@ public class PathMover : MonoBehaviour
 
     void Start()
     {
-        Sequence sequence = DOTween.Sequence();
-        if (loop) { sequence.SetLoops(-1); }
+        Sequence sequence = DOTween.Sequence().SetId(gameObject);
+        if (loop) sequence.SetLoops(-1); 
         foreach (var waypoint in waypoints)
         {
             sequence.Append(transform.DOMove(waypoint.transform.position, waypoint.moveDuration).SetEase(movementEase));
             sequence.Append(transform.DORotate(waypoint.transform.rotation.eulerAngles, waypoint.rotateDuration).SetEase(rotationEase));
         }
+    }
+
+    void OnDestroy()
+    {
+        DOTween.Kill(gameObject);
     }
 }
