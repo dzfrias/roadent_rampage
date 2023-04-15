@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     public void Finish()
     {
         onFinishLineReached?.Invoke();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Destroy(gameObject);
     }
 }
