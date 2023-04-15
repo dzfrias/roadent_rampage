@@ -11,6 +11,7 @@ public class LevelChanger : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        GameManager.onFinishLineReached += FadeToMenu;
     }
 
     public void FadeToLevel(int index)
@@ -22,5 +23,10 @@ public class LevelChanger : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToLoad);
+    }
+
+    public void FadeToMenu()
+    {
+        FadeToLevel(0);
     }
 }

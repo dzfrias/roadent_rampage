@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static event Action onFinishLineReached;
     public GameObject player { get; private set; }
-    [SerializeField] private LevelChanger levelChanger;
+
     [HideInInspector]
     public bool isPaused;
 
@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     public void Finish()
     {
         onFinishLineReached?.Invoke();
-        levelChanger.FadeToLevel(0);
-        Debug.Log("Player Finished The Level!");
+        Destroy(gameObject);
     }
 }
