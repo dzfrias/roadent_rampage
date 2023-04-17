@@ -14,6 +14,11 @@ public class LevelChanger : MonoBehaviour
         GameManager.onFinishLineReached += FadeToLevelEnd;
     }
 
+    void OnDestroy()
+    {
+        GameManager.onFinishLineReached -= FadeToLevelEnd;
+    }
+
     public void FadeToLevel(int index)
     {
         levelToLoad = index;
