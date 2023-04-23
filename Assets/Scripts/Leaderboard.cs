@@ -68,6 +68,7 @@ public class Leaderboard : MonoBehaviour
             else
             {
                 Debug.Log("Problem retrieving score: " + response.Error);
+                text.text = "Error getting score: " + response.Error;
                 done = true;
             }
         });
