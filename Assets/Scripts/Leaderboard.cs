@@ -23,7 +23,7 @@ public class Leaderboard : MonoBehaviour
         string playerID = PlayerPrefs.GetString("PlayerID");
         float score = time.minutes * 60 + time.seconds;
         int scoreInt = (int)(score * 100);
-        LootLockerSDKManager.SubmitScore(playerID, scoreInt, "highscore", (response) =>
+        LootLockerSDKManager.SubmitScore(playerID, scoreInt, "highscore" + time.levelIndex.ToString(), (response) =>
         {
             if (response.success)
             {
@@ -45,7 +45,7 @@ public class Leaderboard : MonoBehaviour
         bool done = false;
         string playerID = PlayerPrefs.GetString("PlayerID");
         int index = 1;
-        LootLockerSDKManager.GetScoreList("highscore", 10, 0, (response) =>
+        LootLockerSDKManager.GetScoreList("highscore" + time.levelIndex.ToString(), 10, 0, (response) =>
         {
             if (response.success)
             {

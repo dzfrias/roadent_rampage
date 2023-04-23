@@ -7,6 +7,7 @@ public class TimeScriptableObject : ScriptableObject
 {
     public int minutes;
     public float seconds;
+    public int levelIndex;
 
     public override string ToString()
     {
