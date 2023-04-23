@@ -1,18 +1,20 @@
 using System;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LootLocker.Requests;
+using TMPro;
 
 public class Leaderboard : MonoBehaviour
 {
     [SerializeField] private TimeScriptableObject time;
+    [SerializeField] private TMP_Text text;
 
-    private const int leaderboardID = 13656;
-
-    void Start()
+    IEnumerator Start()
     {
-        StartCoroutine(SubmitScore());
+        yield return SubmitScore();
+        yield return GetScores();
     }
 
     IEnumerator SubmitScore()
@@ -35,6 +37,41 @@ public class Leaderboard : MonoBehaviour
             }
         });
 
-        yield return new WaitWhile(() => done == false);
+        yield return new WaitWhile(() => !done);
+    }
+
+    IEnumerator GetScores()
+    {
+        bool done = false;
+        string playerID = PlayerPrefs.GetString("PlayerID");
+        int index = 1;
+        LootLockerSDKManager.GetScoreList("highscore", 10, 0, (response) =>
+        {
+            if (response.success)
+            {
+                Debug.Log("Successfully retrieved score");
+
+                StringBuilder sb = new StringBuilder();
+                foreach (var score in response.items)
+                {
+                    float realScore = (float)score.score / 100;
+                    int minutes = (int)(realScore / 60);
+                    float seconds = realScore % 60;
+                    sb.AppendFormat("{0}. {1}m {2}s", index, minutes, seconds);
+                    index++;
+                }
+
+                text.text = sb.ToString();
+
+                done = true;
+            }
+            else
+            {
+                Debug.Log("Problem retrieving score: " + response.Error);
+                done = true;
+            }
+        });
+
+        yield return new WaitWhile(() => !done);
     }
 }
