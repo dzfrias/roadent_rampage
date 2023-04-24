@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92d1c9958ac542a4b3736b3b0147297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useLootLocker: 1
+  useLootLocker: 0
   isPaused: 0
