@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "CameraChange",
-                    "type": "Button",
-                    "id": "d7498714-9936-4a3b-8b06-f35362f7b1cc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "20ddfe68-cb4f-47a1-b0f5-eb06378bdfbc",
@@ -135,17 +126,6 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Flip",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6b513da9-fe3a-467f-b766-5c84fa312c5f",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "CameraChange",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

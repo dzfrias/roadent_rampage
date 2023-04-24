@@ -122,11 +122,12 @@ public class PlayerController : MonoBehaviour
     {
         accelerationInput = value;
 
-        if (onGround && value != 0 && Mathf.Sign(value) != Mathf.Sign(rb.velocity.z))
+        Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
+        if (onGround && value != 0 && Mathf.Sign(value) != Mathf.Sign(localVelocity.z))
         {
             // Calling this in Update() is fine, as one time impulses are 
             // better suited in Update()
-            rb.AddForce(transform.forward * value * (Mathf.Abs(rb.velocity.z) * directionChangeFactor), ForceMode.VelocityChange);
+            rb.AddForce(transform.forward * value * (Mathf.Abs(localVelocity.z) * directionChangeFactor), ForceMode.VelocityChange);
         }
     }
 }

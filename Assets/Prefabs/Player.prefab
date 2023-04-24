@@ -60,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602739621693275180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -0.3, z: -0.5}
+  m_LocalPosition: {x: 1.15, y: -0.5, z: -0.9}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,11 +84,11 @@ MonoBehaviour:
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  grip: 0.4
+  grip: 0.55
   mass: 20
   forwardsGrip: 200
   maxClimbAngle: 45
-  steerTime: 9
+  steerTime: 18
 --- !u!1 &602739622106151325
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602739622106151325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: -0.3, z: 0.5}
+  m_LocalPosition: {x: -1.15, y: -0.5, z: 0.7}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -138,11 +138,11 @@ MonoBehaviour:
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  grip: 0.4
+  grip: 0.55
   mass: 20
   forwardsGrip: 200
   maxClimbAngle: 45
-  steerTime: 9
+  steerTime: 18
 --- !u!1 &602739622672329289
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602739622672329289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -0.3, z: 0.5}
+  m_LocalPosition: {x: 1.15, y: -0.5, z: 0.7}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,11 +192,11 @@ MonoBehaviour:
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  grip: 0.4
+  grip: 0.55
   mass: 20
   forwardsGrip: 200
   maxClimbAngle: 45
-  steerTime: 9
+  steerTime: 18
 --- !u!1 &602739623024861862
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 602739623024861862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7, y: 1, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1652878329902118213}
@@ -392,31 +392,7 @@ MonoBehaviour:
         m_CallState: 2
   cameraChange:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
-        m_MethodName: ChangeTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1431132402}
-        m_TargetAssemblyTypeName: MouseAim, Assembly-CSharp
-        m_MethodName: ReverseAim
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3855200378252065192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,9 +466,9 @@ MonoBehaviour:
   topLeft: {fileID: 602739622106151395}
   bottomRight: {fileID: 602739621693275186}
   bottomLeft: {fileID: 602739623324744272}
-  turnRadius: 6
-  rearTrack: 0.5
-  wheelBase: 3
+  turnRadius: 5.5
+  rearTrack: 1
+  wheelBase: 3.5
 --- !u!114 &2141510641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602739623324744274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: -0.3, z: -0.5}
+  m_LocalPosition: {x: -1.15, y: -0.5, z: -0.9}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -557,11 +533,11 @@ MonoBehaviour:
   springStiffness: 90000
   damperStiffness: 3000
   radius: 0.9
-  grip: 0.4
+  grip: 0.55
   mass: 20
   forwardsGrip: 200
   maxClimbAngle: 45
-  steerTime: 9
+  steerTime: 18
 --- !u!1 &2453790402987522046
 GameObject:
   m_ObjectHideFlags: 0

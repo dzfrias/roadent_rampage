@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class Timer : MonoBehaviour
     private int minutes;
     private float seconds;
     private bool counting = true;
+    private int levelIndex;
 
     void Start()
     {
         GameManager.onFinishLineReached += Stop;
+        levelIndex = SceneManager.GetActiveScene().buildIndex - 2;
     }
 
     void OnDestroy()
@@ -31,6 +34,7 @@ public class Timer : MonoBehaviour
         }
         finalTime.minutes = minutes;
         finalTime.seconds = seconds;
+        finalTime.levelIndex = levelIndex;
     }
 
     public void Stop()
