@@ -827,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e4e7908a3aa1645db8b7e64e59d791a6, type: 3}
       propertyPath: m_Name
-      value: acorn_cannon
+      value: AcornCannon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e7908a3aa1645db8b7e64e59d791a6, type: 3}
