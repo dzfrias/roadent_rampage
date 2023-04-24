@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 134078821}
   - component: {fileID: 134078823}
   - component: {fileID: 134078822}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GoForward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1957,7 @@ GameObject:
   - component: {fileID: 193885888}
   - component: {fileID: 193885890}
   - component: {fileID: 193885889}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShootRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
