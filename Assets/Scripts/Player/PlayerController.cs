@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(IMover))]
+[RequireComponent(typeof(Rigidbody), typeof(IMover))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Specs")]
