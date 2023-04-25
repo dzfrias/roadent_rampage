@@ -59,6 +59,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestructableCar
       objectReference: {fileID: 0}
+    - target: {fileID: 8595349021510698779, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 5646137567559894302, guid: b1f8eddd4ce0f47078f76e4fa262b2c3, type: 3}
+    - target: {fileID: 8595349021510698779, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: playSound
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
 --- !u!1 &4368102692084096396 stripped

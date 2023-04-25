@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8118818949036754472}
-  - component: {fileID: 539832568}
   m_Layer: 0
   m_Name: ShootMover 1
   m_TagString: Untagged
@@ -34,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &539832568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8118818949036754473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
 --- !u!1 &8118818950326524263
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +45,7 @@ GameObject:
   - component: {fileID: 8118818950326524267}
   - component: {fileID: 8118818950326524264}
   - component: {fileID: 8118818950326524265}
+  - component: {fileID: 866837883}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -144,6 +131,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &866837883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118818950326524263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
+  playSound: 1
 --- !u!1001 &1813126643039613808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265,6 +266,20 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1278811767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578771990433566241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b1f8eddd4ce0f47078f76e4fa262b2c3, type: 3}
+  playSound: 1
 --- !u!4 &2207674686250243227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf336bc8ab39e4ffeb3670bd7f748ab4, type: 3}
