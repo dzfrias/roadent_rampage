@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 423096621480313522}
   - component: {fileID: 2019396581}
   - component: {fileID: 2019396582}
+  - component: {fileID: 8595349021510698779}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -198,3 +199,16 @@ MonoBehaviour:
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 0, y: -0.6, z: 0}
+--- !u!114 &8595349021510698779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605772452605121454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}

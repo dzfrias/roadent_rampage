@@ -6,12 +6,6 @@ public class HitRelease : MonoBehaviour, IHittable
 {
     [SerializeField] private GameObject particles;
 
-    void OnCollisionEnter(Collision collision)
-    {
-        GameObject p = Instantiate(particles, collision.contacts[0].point, Quaternion.identity);
-        p.GetComponent<ParticleSystem>().Play();
-    }
-
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
         AudioManager.instance.Play("hit");
