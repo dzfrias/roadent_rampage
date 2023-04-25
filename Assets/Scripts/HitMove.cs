@@ -16,7 +16,6 @@ public class HitMove : MonoBehaviour, IHittable
 
     public void Hit(Vector3 hitPoint, Vector3 shootDir)
     {
-        AudioManager.instance.Play("hit");
         rb.AddForce(-shootDir * hitForce);
     }
 }

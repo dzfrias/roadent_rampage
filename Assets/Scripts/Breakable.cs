@@ -22,7 +22,6 @@ public class Breakable : MonoBehaviour, IHittable
 
     public void Hit(Vector3 hitPoint, Vector3 direction)
     {
-        AudioManager.instance.Play("damage");
         healthSystem.Damage(1f);
         springResize.SetVelocity(velocityAdd);
         if (hitParticles == null) return;

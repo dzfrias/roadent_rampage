@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4381973365910528376}
   - component: {fileID: -2236374604618160934}
   - component: {fileID: 1677894053206078490}
+  - component: {fileID: 2413195264230452335}
   m_Layer: 0
   m_Name: traffic_cone
   m_TagString: Untagged
@@ -132,3 +133,16 @@ MonoBehaviour:
   force: 100
   upForce: 100
   hitForce: 20
+--- !u!114 &2413195264230452335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5976522043595276248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}

@@ -52,12 +52,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: damage
-    clip: {fileID: 8300000, guid: 86469d666db1062489aac26f68dd1af2, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: speedup
     clip: {fileID: 8300000, guid: 9fc896261df9e8b4bb77d07a94473913, type: 3}
     volume: 0.5
@@ -81,12 +75,6 @@ MonoBehaviour:
     volume: 0.1
     pitch: 1
     loop: 1
-    source: {fileID: 0}
-  - name: hit
-    clip: {fileID: 8300000, guid: 75e779d5d6b6a4942b3ea161d3469afd, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
     source: {fileID: 0}
   - name: collision
     clip: {fileID: 8300000, guid: f0e12e5d16843954b9a264df6f2f0ece, type: 3}
