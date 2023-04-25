@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8118818950326524264}
   - component: {fileID: 8118818950326524265}
   - component: {fileID: 866837883}
+  - component: {fileID: 1839029116409523503}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -144,7 +145,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
-  playSound: 1
+--- !u!114 &1839029116409523503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118818950326524263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
+  minVelocity: 12
 --- !u!1001 &1813126643039613808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,6 +246,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4130652, y: 2.1195977, z: 1.4184601}
   m_Center: {x: 0.000000029802322, y: -0.07735762, z: 0.0026976764}
+--- !u!114 &1278811767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578771990433566241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b1f8eddd4ce0f47078f76e4fa262b2c3, type: 3}
 --- !u!114 &7155806237227113379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +293,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1278811767
+--- !u!114 &8283934160965260494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,11 +302,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578771990433566241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 5646137567559894302, guid: b1f8eddd4ce0f47078f76e4fa262b2c3, type: 3}
-  playSound: 1
+  particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
+  minVelocity: 12
 --- !u!4 &2207674686250243227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf336bc8ab39e4ffeb3670bd7f748ab4, type: 3}
