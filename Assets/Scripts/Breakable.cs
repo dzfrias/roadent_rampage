@@ -29,14 +29,6 @@ public class Breakable : MonoBehaviour, IHittable
         p.GetComponent<ParticleSystem>().Play();
     }
 
-    void OnCollisionEnter(Collision other) 
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            AudioManager.instance.Play("collision");
-        }
-    }
-
     void HealthSystem_OnHealthChanged(object sender, System.EventArgs e) 
     {
         if (healthSystem.GetHealth() <= 0) {
