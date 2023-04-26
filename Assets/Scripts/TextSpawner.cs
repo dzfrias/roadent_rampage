@@ -26,4 +26,11 @@ public class TextSpawner : MonoBehaviour
         spawned.GetComponent<TMP_Text>().text = text.ToString();
         Destroy(spawned, duration);
     }
+
+    public void Spawn(string text)
+    {
+        spawned = Instantiate(textGameObject, canvasGameObject.transform);
+        spawned.GetComponent<TMP_Text>().text = text;
+        Destroy(spawned, duration);
+    }
 }

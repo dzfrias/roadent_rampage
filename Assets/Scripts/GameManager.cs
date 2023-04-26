@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public static event Action onFinishLineReached;
+    public static event Action<string> onBroadcastText;
+    public static event Action onClearBroadcast;
     public GameObject player { get; private set; }
 
     [HideInInspector]
@@ -82,5 +84,15 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         isPaused = false;
+    }
+
+    public void BroadcastText(string text)
+    {
+        onBroadcastText?.Invoke(text);
+    }
+
+    public void ClearBroadcast()
+    {
+        onClearBroadcast?.Invoke();
     }
 }
