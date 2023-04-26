@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(IMover))]
+[RequireComponent(typeof(IMover), typeof(Collider))]
 public class ComboScorer : MonoBehaviour
 {
     [SerializeField] private UnityEvent<float> comboFinished;
@@ -41,6 +40,8 @@ public class ComboScorer : MonoBehaviour
             }
             comboFinished.Invoke(totalScore);
             AudioManager.instance.Play("landcombo");
+            GameManager.instance.BroadcastText(totalScore.ToString());
+            StartCoroutine(RemoveText());
             Debug.Log($"Finished combo with {totalScore}!");
             Reset();
         }
@@ -57,5 +58,11 @@ public class ComboScorer : MonoBehaviour
     void Reset()
     {
         airTime = 0f;
+    }
+
+    IEnumerator RemoveText()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameManager.instance.ClearBroadcast();
     }
 }

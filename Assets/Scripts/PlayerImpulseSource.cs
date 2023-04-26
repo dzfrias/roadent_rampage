@@ -18,7 +18,6 @@ public class PlayerImpulseSource : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            AudioManager.instance.Play("collision");
             impulseSource.GenerateImpulse();
         }
     }

@@ -11535,10 +11535,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2141510641, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 2060481024}
     - target: {fileID: 602739623024861862, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: m_Name
       value: Player
@@ -20753,11 +20749,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7994366013521447363, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
   m_PrefabInstance: {fileID: 2059546472}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &2060481024 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 6373664090109493210, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
-  m_PrefabInstance: {fileID: 1015379747}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2065982844
 GameObject:
