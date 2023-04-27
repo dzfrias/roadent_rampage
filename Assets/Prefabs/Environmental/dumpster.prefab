@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8235066312384455385}
   - component: {fileID: 6173347018776696339}
   - component: {fileID: 331670895100285536}
+  - component: {fileID: 1986160538}
+  - component: {fileID: 1986160539}
   m_Layer: 0
   m_Name: dumpster
   m_TagString: Untagged
@@ -92,9 +94,36 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5669150224938530758}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c138af3237d6c4d589c1720275f58c98, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.5209236, y: 2.5627694, z: 4.413989}
   m_Center: {x: 0.00000011920932, y: 0.03138423, z: 0.00000011920932}
+--- !u!114 &1986160538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669150224938530758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
+--- !u!114 &1986160539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669150224938530758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
+  minVelocity: 12
