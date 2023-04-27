@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 331670895100285536}
   - component: {fileID: 1986160538}
   - component: {fileID: 1986160539}
+  - component: {fileID: 1012722804}
   m_Layer: 0
   m_Name: dumpster
   m_TagString: Untagged
@@ -127,3 +128,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
   minVelocity: 12
+--- !u!114 &1012722804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669150224938530758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad724e384f634e7aa35d255056fb509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angularFrequency: 10
+  dampingRatio: 0.3
+  onCollide: 1
+  hitStrength: 0.5

@@ -7,6 +7,7 @@ public class SpringResize : MonoBehaviour
     [SerializeField] private float angularFrequency = 10f;
     [SerializeField, Range(0f, 1f)] private float dampingRatio = 0.5f;
     [SerializeField] private bool onCollide;
+    [SerializeField] private float hitStrength = 1f;
 
     private float targetSize;
     private float velocity;
@@ -35,7 +36,7 @@ public class SpringResize : MonoBehaviour
 
     public void SetVelocity(float velocityParam)
     {
-        velocity = velocityParam;
+        velocity = velocityParam * hitStrength;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -43,7 +44,7 @@ public class SpringResize : MonoBehaviour
         if (!onCollide) return;
         if (collision.gameObject.CompareTag("Player"))
         {
-            velocity = collision.relativeVelocity.magnitude;
+            velocity = collision.relativeVelocity.magnitude * hitStrength;
         }
     }
 }
