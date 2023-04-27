@@ -17,7 +17,9 @@ public class ForwardLineDraw : MonoBehaviour
     void Update()
     {
         lineRenderer.SetPosition(0, transform.position);
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
+        // Ignores IgnoreRaycast and IgnoreShoot layers
+        LayerMask mask = ~0b10000100;
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, Mathf.Infinity, mask))
         {
             lineRenderer.SetPosition(1, transform.forward * hit.distance + transform.position);
         }

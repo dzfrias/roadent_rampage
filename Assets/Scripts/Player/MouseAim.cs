@@ -95,4 +95,9 @@ public class MouseAim : MonoBehaviour
             outlinedObject.enabled = false;
         }
     }
+
+    public void Recoil()
+    {
+        followAngles += Vector3.right * 2;
+    }
 }

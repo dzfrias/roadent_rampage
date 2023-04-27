@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869334045598498524}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WheelGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602739621524266625}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WheelPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602739621693275187}
   - component: {fileID: 602739621693275186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602739622106151324}
   - component: {fileID: 602739622106151395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602739622672329288}
   - component: {fileID: 602739622672329295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 3855200378252065192}
   - component: {fileID: 2141510639}
   - component: {fileID: 2141510634}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602739623324744273}
   - component: {fileID: 602739623324744272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 1431132400}
   - component: {fileID: 1431132402}
   - component: {fileID: 1226332544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,6 +721,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireCooldown: 0.1
+  onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1431132402}
+        m_TargetAssemblyTypeName: MouseAim, Assembly-CSharp
+        m_MethodName: Recoil
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &27546947752370264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarBody
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0001589de544c4f6c8977ffdb5fdf97d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0001589de544c4f6c8977ffdb5fdf97d, type: 3}
 --- !u!4 &570660488859371443 stripped
@@ -793,6 +812,10 @@ PrefabInstance:
     - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_Name
       value: FrontLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6583429850494902107, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_RootOrder
@@ -918,6 +941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AcornCannon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4e7908a3aa1645db8b7e64e59d791a6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e7908a3aa1645db8b7e64e59d791a6, type: 3}
 --- !u!4 &6922939857170214729 stripped
@@ -935,6 +962,10 @@ PrefabInstance:
     - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_Name
       value: FrontRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6583429850494902107, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_RootOrder
@@ -1016,6 +1047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackRight
       objectReference: {fileID: 0}
+    - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6583429850494902107, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1077,6 +1112,10 @@ PrefabInstance:
     - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_Name
       value: BackLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771039928330995169, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6583429850494902107, guid: cb5d62325f643462aaaa842298dcf9dc, type: 3}
       propertyPath: m_RootOrder
