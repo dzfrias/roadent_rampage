@@ -6,7 +6,7 @@ using DG.Tweening;
 public class HitMoveTarget : MonoBehaviour, IHittable
 {
     [SerializeField] private Transform target;
-    [SerializeField] private Vector3 moveBy;
+    [SerializeField] private Transform moveTo;
     [SerializeField] private float moveDuration = 0.3f;
     [SerializeField] private Color inactiveColor;
 
@@ -21,7 +21,8 @@ public class HitMoveTarget : MonoBehaviour, IHittable
     public void Hit(Vector3 point, Vector3 direction)
     {
         if (hit) return;
-        target.DOMove(target.position + moveBy, moveDuration).SetEase(Ease.OutBounce);
+        target.DOMove(moveTo.position, moveDuration).SetEase(Ease.OutBounce);
+        target.DORotate(moveTo.rotation.eulerAngles, moveDuration).SetEase(Ease.OutBounce);
         material.DOColor(inactiveColor, moveDuration * 1.5f);
         hit = true;
     }
