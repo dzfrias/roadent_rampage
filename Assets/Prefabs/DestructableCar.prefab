@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestructableCar
       objectReference: {fileID: 0}
+    - target: {fileID: 8564626398420810316, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d689fc965ce02df4c891c844b644f7b5, type: 2}
     - target: {fileID: 8595349021510698779, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: particles
       value: 
@@ -105,4 +109,4 @@ MonoBehaviour:
   angularFrequency: 10
   dampingRatio: 0.5
   onCollide: 0
-  minResize: 0
+  hitStrength: 1
