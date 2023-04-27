@@ -7,19 +7,19 @@ public class Floating : MonoBehaviour
 {
     [SerializeField] private float moveAmount = 1f;
     [SerializeField] private float moveDuration = 1f;
-    [SerializeField] private float spawnMoveAmount;
+    [SerializeField] private Vector3 spawnMove;
     [SerializeField] private float spawnMoveDuration = 0.8f;
 
-    private float startX;
+    private Vector3 start;
     private bool firstEnable;
 
     void Start()
     {
         float startPos = transform.position.y;
         transform.DOMoveY(startPos + moveAmount, moveDuration).SetEase(Ease.OutBounce).SetLoops(-1, LoopType.Yoyo).SetId(gameObject);
-        startX = transform.localPosition.x;
+        start = transform.localPosition;
         gameObject.SetActive(false);
-        transform.Translate(new Vector3(-spawnMoveAmount, 0, 0), Space.World);
+        transform.Translate(spawnMove, Space.World);
     }
 
     void OnEnable()
@@ -29,7 +29,7 @@ public class Floating : MonoBehaviour
             firstEnable = true;
             return;
         }
-        transform.DOLocalMoveX(startX, spawnMoveDuration).SetEase(Ease.OutElastic);
+        transform.DOLocalMove(start, spawnMoveDuration).SetEase(Ease.OutElastic);
     }
 
     void OnDestroy()
