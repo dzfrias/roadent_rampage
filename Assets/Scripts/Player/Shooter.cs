@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Shooter : MonoBehaviour
 {
     [SerializeField] private float fireCooldown;
+    [SerializeField] private GameObject particleEffect;
     [SerializeField] private UnityEvent onShoot;
 
     private bool shooting;
@@ -41,6 +42,7 @@ public class Shooter : MonoBehaviour
         {
             Debug.Log("Hit nothing");
         }
+        Instantiate(particleEffect, transform);
         onShoot?.Invoke();
         StartCoroutine(Cooldown());
     }
