@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 8595349021510698779, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: particles
       value: 
-      objectReference: {fileID: 5646137567559894302, guid: b1f8eddd4ce0f47078f76e4fa262b2c3, type: 3}
+      objectReference: {fileID: 6891844732924746815, guid: 7d35081ec028e4624913a448d2022d4c, type: 3}
     - target: {fileID: 8595349021510698779, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: playSound
       value: 0

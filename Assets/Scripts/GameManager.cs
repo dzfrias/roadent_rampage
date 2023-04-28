@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static event Action onFinishLineReached;
     public static event Action<string> onBroadcastText;
     public static event Action onClearBroadcast;
+    public static event Action<bool> onDarken;
     public GameObject player { get; private set; }
 
     [HideInInspector]
@@ -94,5 +95,15 @@ public class GameManager : MonoBehaviour
     public void ClearBroadcast()
     {
         onClearBroadcast?.Invoke();
+    }
+
+    public void Darken()
+    {
+        onDarken?.Invoke(true);
+    }
+
+    public void Undarken()
+    {
+        onDarken?.Invoke(false);
     }
 }
