@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -577,7 +577,154 @@ MonoBehaviour:
   bridgeCounterpartNode: {fileID: 0}
   intersection: {fileID: 0}
   EdgeObjects: []
-  SplinatedObjects: []
+  SplinatedObjects:
+  - uID: c3fb12ce-ed5f-414b-9917-a232010eef72
+    isRequiringUpdate: 0
+    isDefault: 0
+    isMaterialOverriden: 0
+    isExactSplination: 0
+    isMatchingRoadDefinition: 0
+    isMatchingRoadIncrements: 1
+    isTrimEnd: 0
+    isTrimStart: 0
+    isToggled: 0
+    isMatchingTerrain: 0
+    isBridge: 0
+    isStretched: 0
+    isStretchedOffset: 0
+    isStretchedSize: 0
+    isBoxColliderFlippedOnX: 0
+    isBoxColliderFlippedOnZ: 0
+    isStraightLineMatchStartEnd: 0
+    isFlippingRotation: 0
+    isStatic: 1
+    isNotCenterMode: 1
+    masterObjTrans: {fileID: 13738691}
+    currentSplination: {fileID: 0}
+    currentSplinationCap1: {fileID: 0}
+    currentSplinationCap2: {fileID: 0}
+    currentSplinationString: 
+    currentSplinationCap1String: 
+    currentSplinationCap2String: 
+    capHeightOffset1: 0
+    capHeightOffset2: 0
+    minMaxMod: 0.002
+    vertexMatchingPrecision: 0.005
+    stretchUVThreshold: 0.05
+    Output: {fileID: 0}
+    mesh: {fileID: 0}
+    SplinatedMaterial1: {fileID: 0}
+    SplinatedMaterial2: {fileID: 0}
+    SplinatedMaterial1String: 
+    SplinatedMaterial2String: 
+    boxColliderOffset: {x: 0, y: 0, z: 0}
+    boxColliderSize: {x: 0, y: 0, z: 0}
+    horizontalCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    horizontalSep: 0
+    verticalCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    verticalRaise: 0
+    VerticalCutoff: 0
+    VerticalMeshCutoffOffset: 0.04
+    isVerticalCutoff: 0
+    isVerticalCutoffDownwards: 0
+    isVerticalMeshCutoffOppositeDir: 0
+    isVerticalCutoffMatchingZero: 0
+    RoadRaise: 0
+    StartTime: 0.6019336
+    EndTime: 0.64312863
+    mMaxX: -1
+    mMinX: -1
+    mMaxY: -1
+    mMinY: -1
+    mMaxZ: -1
+    mMinZ: -1
+    CustomRotation: {x: 0, y: 0, z: 0}
+    StartPos: {x: 41.505016, y: 3.0791097, z: 998.5925}
+    EndPos: {x: -5.472934, y: 27.467892, z: 1059.2666}
+    spline: {fileID: 1198731700}
+    node: {fileID: 13738690}
+    Axis: 0
+    RepeatUVType: 0
+    EndCapStart: {fileID: 0}
+    EndCapEnd: {fileID: 0}
+    EndCapStartOutput: {fileID: 0}
+    EndCapEndOutput: {fileID: 0}
+    EndCapStartString: 
+    EndCapEndString: 
+    isEndCapCustomMatchStart: 1
+    isEndObjectsMatchingGround: 0
+    EndCapCustomOffsetStart: {x: 0, y: 0, z: 0}
+    EndCapCustomOffsetEnd: {x: 0, y: 0, z: 0}
+    EndCapCustomRotOffsetStart: {x: 0, y: 0, z: 0}
+    EndCapCustomRotOffsetEnd: {x: 0, y: 180, z: 0}
+    isStartDown: 0
+    isStartTypeDownOverriden: 0
+    startTypeDownOverride: 0
+    isEndDown: 0
+    isEndTypeDownOverriden: 0
+    endTypeDownOverride: 0
+    CollisionType: 1
+    isCollisionConvex: 0
+    isSimpleCollisionAutomatic: 1
+    isCollisionExtrude: 0
+    isCollisionTrigger: 0
+    CollisionBoxBL: {x: 0, y: 0, z: 0}
+    CollisionBoxBR: {x: 0, y: 0, z: 0}
+    CollisionBoxTL: {x: 0, y: 0, z: 0}
+    CollisionBoxTR: {x: 0, y: 0, z: 0}
+    CollisionTriBL: {x: 0, y: 0, z: 0}
+    CollisionTriBR: {x: 0, y: 0, z: 0}
+    CollisionTriT: {x: 0, y: 0, z: 0}
+    objectName: ExtrudedObject
+    thumbString: 
+    desc: 
+    displayName: 
   tTriList: []
   tHMList: []
   isDrawingIntersectionHighlightGizmos: 0
@@ -4084,6 +4231,7 @@ GameObject:
   - component: {fileID: 407107375}
   - component: {fileID: 407107374}
   - component: {fileID: 407107373}
+  - component: {fileID: 407107376}
   m_Layer: 0
   m_Name: RoadCut9
   m_TagString: Untagged
@@ -4172,6 +4320,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407107371}
   m_Mesh: {fileID: 859785366}
+--- !u!114 &407107376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407107371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8df8a2c1fb284c5ca4fea6657c58d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifyAmount: 40
 --- !u!134 &420231697
 PhysicMaterial:
   m_ObjectHideFlags: 0
@@ -6482,15 +6643,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01073433
+      value: 0.010734341
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1e-45
+      value: 0.000000017205387
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -1.8469917e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8497,15 +8658,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01073433
+      value: 0.010734341
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1e-45
+      value: 0.000000017205387
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -1.8469917e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9366,6 +9527,7 @@ GameObject:
   - component: {fileID: 1053825446}
   - component: {fileID: 1053825445}
   - component: {fileID: 1053825444}
+  - component: {fileID: 1053825447}
   m_Layer: 0
   m_Name: SCutR9
   m_TagString: Untagged
@@ -9453,6 +9615,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1059013282}
+--- !u!114 &1053825447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053825442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8df8a2c1fb284c5ca4fea6657c58d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifyAmount: 40
 --- !u!43 &1059013282
 Mesh:
   m_ObjectHideFlags: 0
@@ -22310,6 +22485,7 @@ GameObject:
   - component: {fileID: 1891678619}
   - component: {fileID: 1891678618}
   - component: {fileID: 1891678617}
+  - component: {fileID: 1891678620}
   m_Layer: 0
   m_Name: SCutL9
   m_TagString: Untagged
@@ -22397,6 +22573,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1894637431}
+--- !u!114 &1891678620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891678615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8df8a2c1fb284c5ca4fea6657c58d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifyAmount: 40
 --- !u!43 &1894637431
 Mesh:
   m_ObjectHideFlags: 0
