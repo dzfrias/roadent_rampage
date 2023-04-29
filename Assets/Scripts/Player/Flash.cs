@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flash : MonoBehaviour
 {
     [SerializeField] private float time;
-    private Light light;
+    private new Light light;
 
     void Start()
     {
