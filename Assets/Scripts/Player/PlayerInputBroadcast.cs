@@ -11,7 +11,6 @@ public class PlayerInputBroadcast : MonoBehaviour
     [SerializeField] private UnityEvent<float> rotate;
     [SerializeField] private UnityEvent<float> click;
     [SerializeField] private UnityEvent flip;
-    [SerializeField] private UnityEvent cameraChange;
 
     void OnAccelerate(InputValue value)
     {
@@ -26,11 +25,6 @@ public class PlayerInputBroadcast : MonoBehaviour
     void OnFlip(InputValue value)
     {
         flip.Invoke();
-    }
-
-    void OnCameraChange()
-    {
-        cameraChange.Invoke();
     }
 
     void OnClick(InputValue value)
