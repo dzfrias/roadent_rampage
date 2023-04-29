@@ -1,34 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class EnemyMovement : MonoBehaviour, IHittable
+public class EnemyMovement : MonoBehaviour
 {
     [Header("Tracking")]
+    [SerializeField] private Transform target;
     [SerializeField] private float maxDistance;
     [SerializeField] private float warpOffset;
     [SerializeField, Range(0f, 1f)] private float speedDecrease;
+    [SerializeField] private UnityEvent onTargetReached;
 
-    [Header("Hit Logic")]
-    [SerializeField] private float hitForce = 10f;
-    [SerializeField] private float hitDuration = 0.5f;
-    [SerializeField] private float hitStun = 0.5f;
-
-    private Transform target;
     private NavMeshAgent agent;
     private Rigidbody targetRb;
     private Rigidbody rb;
     private float minSpeed;
-    private bool isHit;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
         minSpeed = agent.speed;
-        target = GameManager.instance.player.transform;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
     }
 
@@ -42,8 +37,6 @@ public class EnemyMovement : MonoBehaviour, IHittable
 
     void Update()
     {
-        if (isHit) return; 
-
         if (Vector3.Distance(transform.position, target.position) > maxDistance)
         {
             agent.Warp(ClosestPoint(warpOffset));
@@ -59,26 +52,7 @@ public class EnemyMovement : MonoBehaviour, IHittable
         if (collision.gameObject == target.gameObject)
         {
             Debug.Log("<color=red>The target was reached!</color>");
+            onTargetReached?.Invoke();
         }
-    }
-
-    public void Hit(Vector3 hitPoint, Vector3 direction)
-    {
-        StartCoroutine("KnockbackTime");
-        rb.AddForce(-direction * hitForce, ForceMode.Impulse);
-    }
-
-    IEnumerator KnockbackTime()
-    {
-        agent.enabled = false;
-        rb.isKinematic = false;
-        isHit = true;
-        yield return new WaitForSeconds(hitDuration);
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        yield return new WaitForSeconds(hitStun);
-        agent.enabled = true;
-        rb.isKinematic = true;
-        isHit = false;
     }
 }
