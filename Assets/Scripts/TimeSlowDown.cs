@@ -8,11 +8,6 @@ public class TimeSlowDown : MonoBehaviour
     [SerializeField] private float amount = 0.5f;
     [SerializeField] private float transitionTime = 0.7f;
 
-    void Start()
-    {
-        enabled = false;
-    }
-
     void OnEnable()
     {
         DOTween
