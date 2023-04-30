@@ -93,7 +93,7 @@ MonoBehaviour:
   hitParticles: {fileID: 0}
   destroyParticles: {fileID: 0}
   velocityAdd: 10
-  health: 6
+  health: 4
 --- !u!114 &5327981458379988542
 MonoBehaviour:
   m_ObjectHideFlags: 0
