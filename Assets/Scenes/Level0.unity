@@ -14092,6 +14092,7 @@ MonoBehaviour:
   keys:
   - space
   prompt: Hold space to shoot
+  removeAfter: 2.5
 --- !u!1001 &1446074223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18111,6 +18112,7 @@ MonoBehaviour:
   - right
   - left
   prompt: Use arrows to turn
+  removeAfter: 2.5
 --- !u!1001 &1869673891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21023,6 +21025,10 @@ PrefabInstance:
     - target: {fileID: 575867366, guid: de54e43a87f144ca7a3fcd067e087bbc, type: 3}
       propertyPath: prompt
       value: w to go forward
+      objectReference: {fileID: 0}
+    - target: {fileID: 575867366, guid: de54e43a87f144ca7a3fcd067e087bbc, type: 3}
+      propertyPath: removeAfter
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 575867366, guid: de54e43a87f144ca7a3fcd067e087bbc, type: 3}
       propertyPath: keys.Array.size
