@@ -1336,6 +1336,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypointParent
       value: 
       objectReference: {fileID: 1136639078}
@@ -2685,6 +2689,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524794465946513000, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618362273105347894, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
+      propertyPath: loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5618362273105347894, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
@@ -5176,6 +5184,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypointParent
       value: 
@@ -8401,6 +8413,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypointParent
       value: 
       objectReference: {fileID: 869884759}
@@ -11323,6 +11339,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypointParent
       value: 
       objectReference: {fileID: 1136639078}
@@ -12926,6 +12946,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5618362273105347894, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618362273105347894, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
       propertyPath: waypointParent
       value: 
       objectReference: {fileID: 1974370589}
@@ -13138,6 +13162,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524794465946513000, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5618362273105347894, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
+      propertyPath: loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5618362273105347894, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
@@ -21086,6 +21114,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypointParent
       value: 
       objectReference: {fileID: 1974370589}
@@ -24545,6 +24577,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2143560110}
     m_Modifications:
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypoints.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -27429,6 +27465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
+    - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
+      propertyPath: loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1109222045, guid: 7e92a18024f1de54187c1762d843a915, type: 3}
       propertyPath: waypointParent
       value: 
