@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class KeyText : MonoBehaviour
 {
-    [SerializeField] private string key;
+    [SerializeField] private List<string> keys;
     [SerializeField] private string prompt;
 
     private bool active;
@@ -21,7 +22,7 @@ public class KeyText : MonoBehaviour
     {
         if (!active) return;
 
-        if (Input.GetKeyDown(key))
+        if (keys.Any(key => Input.GetKeyDown(key)))
         {
             active = false;
             GameManager.instance.ClearBroadcast();
