@@ -8,7 +8,7 @@ public class TextBroadcast : MonoBehaviour
 {
     private TMP_Text text;
 
-    void Start()
+    void Awake()
     {
         text = GetComponent<TMP_Text>();
         GameManager.onBroadcastText += ShowText;
