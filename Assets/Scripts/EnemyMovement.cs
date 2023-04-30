@@ -16,13 +16,11 @@ public class EnemyMovement : MonoBehaviour
 
     private NavMeshAgent agent;
     private Rigidbody targetRb;
-    private Rigidbody rb;
     private float minSpeed;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        rb = GetComponent<Rigidbody>();
         minSpeed = agent.speed;
         targetRb = target.gameObject.GetComponent<Rigidbody>();
     }
