@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using DG.Tweening;
 
 public class PathMover : MonoBehaviour
 {
-    [SerializeField] GameObject waypointParent;
-    private GameObject previousWaypointParent;
-    [SerializeField] bool loop = false;
-    [SerializeField] Ease movementEase = Ease.Linear;
-    [SerializeField] Ease rotationEase = Ease.Linear;
+    [SerializeField] private bool loop = false;
+    [SerializeField] private Ease movementEase = Ease.Linear;
+    [SerializeField] private Ease rotationEase = Ease.Linear;
+
+    [Header("Waypoints")]
+    [SerializeField] private GameObject waypointParent;
+    [SerializeField] private Waypoint[] waypoints;
+
     [System.Serializable]
     public struct Waypoint
     {
@@ -25,22 +29,15 @@ public class PathMover : MonoBehaviour
         }
     }
 
-    [SerializeField] private Waypoint[] waypoints;
+    void OnValidate() {
+        if (waypointParent == null) return;
 
-    private void OnValidate() {
-        // Checks if waypointParent variable has been changed
-        if (waypointParent != null && previousWaypointParent != waypointParent)
-        {
-            // Updates waypoints with children of waypointParent
-            int i = 0;
-            foreach (Transform childTransform in waypointParent.transform)
-            {
-                Waypoint waypoint = new Waypoint(childTransform, 2f, 0f);
-                waypoints[i] = waypoint;
-                i++;
-            }
-        }
-        previousWaypointParent = waypointParent;
+        waypoints = waypointParent
+                        .GetComponentsInChildren<Transform>()
+                        // Skip because it gets waypointParent's transform
+                        .Skip(1)
+                        .Select(t => new Waypoint(t, 1f, 1f))
+                        .ToArray();
     }
 
     void Start()
