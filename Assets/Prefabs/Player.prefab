@@ -555,9 +555,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  cameraChange:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3855200378252065192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +614,7 @@ MonoBehaviour:
   topLeft: {fileID: 602739622106151395}
   bottomRight: {fileID: 602739621693275186}
   bottomLeft: {fileID: 602739623324744272}
-  turnRadius: 5.5
+  turnRadius: 8
   rearTrack: 1
   wheelBase: 3.5
 --- !u!1 &602739623324744274
