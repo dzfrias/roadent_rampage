@@ -36,7 +36,7 @@ public class PathMover : MonoBehaviour
                         .GetComponentsInChildren<Transform>()
                         // Skip because it gets waypointParent's transform
                         .Skip(1)
-                        .Select(t => new Waypoint(t, 1f, 1f))
+                        .Select((t, idx) => new Waypoint(t, waypoints.ElementAtOrDefault(idx).moveDuration, waypoints.ElementAtOrDefault(idx).rotateDuration))
                         .ToArray();
     }
 
