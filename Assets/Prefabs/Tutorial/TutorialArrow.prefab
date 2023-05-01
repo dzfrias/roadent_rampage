@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b91cd6a4baa74753b98735dd306e3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateOnce: 0
+  activateOnce: 1
   triggered:
     m_PersistentCalls:
       m_Calls:
@@ -207,5 +207,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAmount: 2
   moveDuration: 1
-  spawnMoveAmount: 30
+  spawnMove: {x: 0, y: 0, z: 0}
   spawnMoveDuration: 1.2
