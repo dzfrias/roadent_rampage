@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2484833879117274147, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4033495696020468003, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -18,6 +22,22 @@ PrefabInstance:
     - target: {fileID: 4033495696020468003, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230625275610664175, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740348176047784655, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360927883009424285, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190346687168445113, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7390554908594913571, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -97,10 +117,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7605772452605121454, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: m_Name
-      value: MovingCar (2)
+      value: MovingCar
       objectReference: {fileID: 0}
     - target: {fileID: 7605772452605121454, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605772452605121454, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916015486031207321, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
