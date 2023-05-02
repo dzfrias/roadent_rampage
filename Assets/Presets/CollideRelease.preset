@@ -27,9 +27,17 @@ Preset:
   - target: {fileID: 0}
     propertyPath: particles
     value: 
+    objectReference: {fileID: 883492293396620731, guid: 09c20fcd0f3f146208364d1168dfed84, type: 3}
+  - target: {fileID: 0}
+    propertyPath: particlesAlt
+    value: 
     objectReference: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
   - target: {fileID: 0}
     propertyPath: minVelocity
-    value: 12
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: velocityThreshold
+    value: 18
     objectReference: {fileID: 0}
   m_ExcludedProperties: []

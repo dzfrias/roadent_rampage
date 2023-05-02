@@ -6,14 +6,27 @@ using UnityEngine;
 public class CollideRelease : MonoBehaviour
 {
     [SerializeField] private GameObject particles;
+    [SerializeField] private GameObject particlesAlt;
     [SerializeField] private float minVelocity;
+    [SerializeField] private float velocityThreshold;
+
+    void OnValidate()
+    {
+        velocityThreshold = Mathf.Max(minVelocity, velocityThreshold);
+    }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.relativeVelocity.magnitude > minVelocity)
+        float vel = collision.relativeVelocity.magnitude;
+        if (vel > minVelocity)
         {
             Vector3 point = collision.contacts[0].point;
-            GameObject p = Instantiate(particles, point, Quaternion.identity);
+            GameObject finalParticles = particles;
+            if (vel >= velocityThreshold && particlesAlt != null)
+            {
+                finalParticles = particlesAlt;
+            }
+            Instantiate(finalParticles, point, Quaternion.identity);
         }
     }
 }

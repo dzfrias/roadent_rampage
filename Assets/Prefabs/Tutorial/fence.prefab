@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
-  minVelocity: 12
+  particles: {fileID: 883492293396620731, guid: 09c20fcd0f3f146208364d1168dfed84, type: 3}
+  particlesAlt: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
+  minVelocity: 8
+  velocityThreshold: 18
 --- !u!114 &9179218948921900978
 MonoBehaviour:
   m_ObjectHideFlags: 0
