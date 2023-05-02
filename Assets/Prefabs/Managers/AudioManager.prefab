@@ -76,12 +76,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: collision
-    clip: {fileID: 8300000, guid: f0e12e5d16843954b9a264df6f2f0ece, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: landcombo
     clip: {fileID: 8300000, guid: 40ba3a6d2472cbf4f905efd5fda8f896, type: 3}
     volume: 1
