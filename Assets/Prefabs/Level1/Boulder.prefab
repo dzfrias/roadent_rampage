@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 1871967387704566856}
   - component: {fileID: 3338658255226285037}
   - component: {fileID: 698546913181490983}
-  - component: {fileID: 574243916403656285}
   - component: {fileID: 4125026357003883988}
   - component: {fileID: 979098809378161516}
   - component: {fileID: 4417132449457734983}
+  - component: {fileID: 3508186040956332681}
   m_Layer: 0
-  m_Name: boulder
+  m_Name: Boulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,20 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &574243916403656285
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346928988572843762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 289301614986012343, guid: 93a1b6b319441df4cacc26d07124fc6d, type: 3}
 --- !u!54 &4125026357003883988
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -190,3 +176,16 @@ MonoBehaviour:
   m_UseImpactDirection: 0
   m_ScaleImpactWithMass: 0
   m_ScaleImpactWithSpeed: 0
+--- !u!135 &3508186040956332681
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346928988572843762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 9.2305155
+  m_Center: {x: -0.14637184, y: 0.15100193, z: -0.14784718}
