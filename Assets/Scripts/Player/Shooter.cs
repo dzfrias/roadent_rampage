@@ -9,6 +9,13 @@ public class Shooter : MonoBehaviour
     [SerializeField] private GameObject particleEffect;
     [SerializeField] private UnityEvent onShoot;
 
+    [Header("Heat Up")]
+    [SerializeField] private float chargeAdd;
+    [SerializeField] private float chargeRemove;
+    [SerializeField] private float chargeWaitTime;
+
+    private float charge;
+    private bool waitingForCharge;
     private bool shooting;
     private bool canShoot = true;
 
@@ -19,7 +26,19 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
-        if (shooting && canShoot) Shoot();
+        if (shooting && canShoot && !waitingForCharge)
+        {
+            Shoot();
+            return;
+        }
+        if ((!shooting && charge >= chargeRemove * Time.deltaTime) || waitingForCharge)
+        {
+            charge -= chargeRemove * Time.deltaTime;
+            if (charge > 0 && charge < 1)
+            {
+                waitingForCharge = false;
+            }
+        }
     }
 
     void Shoot()
@@ -43,8 +62,17 @@ public class Shooter : MonoBehaviour
             Debug.Log("Hit nothing");
         }
         Instantiate(particleEffect, transform);
+        charge += chargeAdd;
+        charge = Mathf.Min(charge, 100f);
+        if (charge == 100f)
+        {
+            waitingForCharge = true;
+        }
+        else
+        {
+            StartCoroutine(Cooldown());
+        }
         onShoot?.Invoke();
-        StartCoroutine(Cooldown());
     }
 
     IEnumerator Cooldown()
