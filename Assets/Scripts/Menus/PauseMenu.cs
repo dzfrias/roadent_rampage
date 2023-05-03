@@ -15,35 +15,23 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void Resume()
-    {
-        GameManager.instance.Unpause();
-        AudioManager.instance.ResumeSounds();
-        ChildrenActive(false);
-        Time.timeScale = 1f;
-        paused = false;
-    }
-
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        paused = false;
         GameManager.instance.Finish();
     }
 
-    void OnPause()
+    public void TogglePause()
     {
         if (paused)
         {
-            Resume();
+            GameManager.instance.Unpause();
         }
         else
         {
-            AudioManager.instance.PauseSounds();
             GameManager.instance.Pause();
-            ChildrenActive(true);
-            Time.timeScale = 0f;
-            paused = true;
         }
+        paused = !paused;
+        ChildrenActive(paused);
     }
 }

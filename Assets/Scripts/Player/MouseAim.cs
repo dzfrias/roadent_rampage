@@ -9,12 +9,19 @@ public class MouseAim : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10;
     [SerializeField] private float dampingTime = 0.2f;
     [SerializeField] private bool relative = true;
+
+    private Vector2 input;
     
     private Vector3 targetAngles;
     private Vector3 followAngles;
     private Vector3 followVelocity;
     private Outline outlinedObject;
     private Quaternion origionalRotation;
+
+    public void ReadInput(Vector2 newInput)
+    {
+        input = newInput;
+    }
 
     void Start()
     {
@@ -29,8 +36,8 @@ public class MouseAim : MonoBehaviour
         float inputV;
         if (relative)
         {
-            inputH = Input.GetAxis("Mouse X");
-            inputV = Input.GetAxis("Mouse Y");
+            inputH = input.x;
+            inputV = input.y;
 
             if (targetAngles.y > 180)
             {

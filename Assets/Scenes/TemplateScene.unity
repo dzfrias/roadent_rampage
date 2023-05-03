@@ -1111,6 +1111,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
+--- !u!114 &1672656968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4899492276402589574, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
+  m_PrefabInstance: {fileID: 1672656967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513fa75c011704a2ebe8ac6739d393ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1945981074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1119,8 +1130,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2141510633, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
+      propertyPath: pause.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141510633, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
+      propertyPath: pause.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1672656968}
+    - target: {fileID: 2141510633, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
+      propertyPath: pause.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePause
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141510633, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: cameraChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141510633, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
+      propertyPath: pause.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2141510641, guid: 34b19db459cb1d04991f883525f3c377, type: 3}
       propertyPath: canvas

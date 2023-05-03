@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        AudioManager.instance.ResumeSounds();
+        Time.timeScale = 1f;
     }
 
     public void Pause()
@@ -77,6 +79,8 @@ public class GameManager : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        AudioManager.instance.PauseSounds();
+        Time.timeScale = 0f;
     }
 
     public void Finish()
