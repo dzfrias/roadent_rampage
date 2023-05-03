@@ -9,6 +9,7 @@ public class ComboScorer : MonoBehaviour
     [SerializeField] private UnityEvent<float> comboFinished;
     [SerializeField] private float airTimeMultiplier;
     [SerializeField] private float airTimeThreshold = 3f;
+    [SerializeField] private float max = Mathf.Infinity;
 
     private IMover mover;
 
@@ -38,6 +39,7 @@ public class ComboScorer : MonoBehaviour
                 Reset();
                 return;
             }
+            totalScore = Mathf.Min(totalScore, max);
             comboFinished.Invoke(totalScore);
             AudioManager.instance.Play("landcombo");
             GameManager.instance.BroadcastText(totalScore.ToString());
