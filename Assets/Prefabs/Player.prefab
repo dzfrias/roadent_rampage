@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRange: {x: 20, y: 90}
-  rotationSpeed: 0.8
+  rotationSpeed: 0.15
   dampingTime: 0.1
   relative: 1
 --- !u!114 &1226332544
