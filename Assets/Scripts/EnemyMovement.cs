@@ -53,4 +53,14 @@ public class EnemyMovement : MonoBehaviour
             onTargetReached?.Invoke();
         }
     }
+
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
+
+    public Transform GetTarget()
+    {
+        return target;
+    }
 }
