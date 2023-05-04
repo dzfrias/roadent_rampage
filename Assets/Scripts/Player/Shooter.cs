@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Shooter : MonoBehaviour
@@ -13,6 +14,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] private float chargeAdd;
     [SerializeField] private float chargeRemove;
     [SerializeField] private float chargeWaitTime;
+    [SerializeField] private Slider output;
 
     private float charge;
     private bool waitingForCharge;
@@ -38,6 +40,10 @@ public class Shooter : MonoBehaviour
             {
                 waitingForCharge = false;
             }
+        }
+        if (output != null)
+        {
+            output.value = charge;
         }
     }
 
