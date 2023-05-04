@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] private float chargeAdd;
     [SerializeField] private float chargeRemove;
     [SerializeField] private float chargeWaitTime;
-    [SerializeField] private Slider output;
+    [SerializeField] private ShooterCharge output;
 
     private float charge;
     private bool waitingForCharge;
@@ -38,12 +38,13 @@ public class Shooter : MonoBehaviour
             charge -= chargeRemove * Time.deltaTime;
             if (charge > 0 && charge < 1)
             {
+                output.Overcharge(false);
                 waitingForCharge = false;
             }
         }
         if (output != null)
         {
-            output.value = charge;
+            output.SetCharge(charge);
         }
     }
 
@@ -70,9 +71,11 @@ public class Shooter : MonoBehaviour
         Instantiate(particleEffect, transform);
         charge += chargeAdd;
         charge = Mathf.Min(charge, 100f);
+        output.Bounce();
         if (charge == 100f)
         {
             waitingForCharge = true;
+            output.Overcharge(true);
         }
         else
         {

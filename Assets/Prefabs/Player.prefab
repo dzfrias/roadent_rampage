@@ -910,6 +910,7 @@ MonoBehaviour:
   chargeAdd: 3
   chargeRemove: 20
   chargeWaitTime: 0
+  output: {fileID: 0}
 --- !u!1001 &27546947752370264
 PrefabInstance:
   m_ObjectHideFlags: 0

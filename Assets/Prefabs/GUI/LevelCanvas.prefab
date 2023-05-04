@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1979940553}
   - component: {fileID: 1979940554}
+  - component: {fileID: 1979940555}
   m_Layer: 5
   m_Name: CooldownBar
   m_TagString: Untagged
@@ -112,7 +113,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -30, y: 20}
-  m_SizeDelta: {x: 200, y: 30}
+  m_SizeDelta: {x: 200, y: 20}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1979940554
 MonoBehaviour:
@@ -165,6 +166,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1979940555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979940552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2b7384e0804444fbf1541698c25dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fill: {fileID: 455077549}
+  angularFrequency: 10
+  dampingRatio: 0.3
 --- !u!1 &2612815649585571352
 GameObject:
   m_ObjectHideFlags: 0
