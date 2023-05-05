@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 1936520633467949859}
   - component: {fileID: 1936520633467949860}
   - component: {fileID: 5280643368273856817}
-  - component: {fileID: 3851682960850266783}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -176,21 +175,6 @@ CapsuleCollider:
   m_Height: 9.773641
   m_Direction: 1
   m_Center: {x: -0.0000076293945, y: 3.984527, z: 0}
---- !u!114 &3851682960850266783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936520633467949865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0af9a0ab7f04facb38d8625a066bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMinionPrefab: {fileID: 1936520633467949865, guid: a1a854bf22fac4c5b90eec22823254b5, type: 3}
-  spawnrate: 10
-  spawnLocationFromEnemy: {x: 1, y: 0, z: 0}
 --- !u!1001 &7294529729105976774
 PrefabInstance:
   m_ObjectHideFlags: 0

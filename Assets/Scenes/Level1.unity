@@ -33023,33 +33023,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1999985454}
     - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
       propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1456024578}
-    - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelChanger, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936520633467949860, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: onTargetReached.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1936520633467949861, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -33097,10 +33073,6 @@ PrefabInstance:
     - target: {fileID: 1936520633467949865, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1936520633467949865, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aae2f8e395633b4fb6ab7a3c4d40278, type: 3}

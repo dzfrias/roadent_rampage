@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 3855200378252065192}
   - component: {fileID: 2141510639}
   - component: {fileID: 2141510634}
+  - component: {fileID: 1999985456}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -648,6 +649,23 @@ MonoBehaviour:
   turnRadius: 8
   rearTrack: 1
   wheelBase: 3.5
+--- !u!114 &1999985456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602739623024861862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0af9a0ab7f04facb38d8625a066bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMinionPrefab: {fileID: 1936520633467949865, guid: a1a854bf22fac4c5b90eec22823254b5, type: 3}
+  maxOffset: 30
+  spawnBetween: {x: 1, y: 2}
+  distBetween: {x: 190, y: 200}
+  maxSpawn: 3
 --- !u!1 &602739623324744274
 GameObject:
   m_ObjectHideFlags: 0
