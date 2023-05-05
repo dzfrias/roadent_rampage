@@ -13,6 +13,7 @@ public class Shooter : MonoBehaviour
     [Header("Heat Up")]
     [SerializeField] private float chargeAdd;
     [SerializeField] private float chargeRemove;
+    [SerializeField] private float overchargeRemove;
     [SerializeField] private float chargeWaitTime;
     [SerializeField] private ShooterCharge output;
 
@@ -35,7 +36,8 @@ public class Shooter : MonoBehaviour
         }
         if ((!shooting && charge >= chargeRemove * Time.deltaTime) || waitingForCharge)
         {
-            charge -= chargeRemove * Time.deltaTime;
+            float remove = waitingForCharge ? overchargeRemove : chargeRemove;
+            charge -= remove * Time.deltaTime;
             if (charge > 0 && charge < 1)
             {
                 output.Overcharge(false);

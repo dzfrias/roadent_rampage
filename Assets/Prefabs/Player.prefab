@@ -909,6 +909,7 @@ MonoBehaviour:
         m_CallState: 2
   chargeAdd: 3
   chargeRemove: 20
+  overchargeRemove: 40
   chargeWaitTime: 0
   output: {fileID: 0}
 --- !u!1001 &27546947752370264
