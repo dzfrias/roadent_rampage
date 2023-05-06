@@ -55,10 +55,5 @@ public class ShooterCharge : MonoBehaviour
         {
             fill.color = Color.red;
         }
-
-        if (slider.value > 0 && slider.value < 1)
-        {
-            slider.value = 0f;
-        }
     }
 }

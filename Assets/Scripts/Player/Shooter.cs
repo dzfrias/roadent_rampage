@@ -29,6 +29,11 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
+        if (charge <= chargeRemove * Time.deltaTime)
+        {
+            charge = 0f;
+        }
+
         if (shooting && canShoot && !waitingForCharge)
         {
             Shoot();
