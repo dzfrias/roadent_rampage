@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CustomBlends:
   - m_From: MainVCam
-    m_To: SnapCamera
+    m_To: RearCam
     m_Blend:
       m_Style: 7
-      m_Time: 0.75
+      m_Time: 0
       m_CustomCurve:
         serializedVersion: 2
         m_Curve:
@@ -78,11 +78,11 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
-  - m_From: SnapCamera
+  - m_From: RearCam
     m_To: MainVCam
     m_Blend:
       m_Style: 1
-      m_Time: 0.5
+      m_Time: 0
       m_CustomCurve:
         serializedVersion: 2
         m_Curve:

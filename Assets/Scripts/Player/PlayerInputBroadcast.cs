@@ -13,11 +13,12 @@ public class PlayerInputBroadcast : MonoBehaviour
     [SerializeField] private UnityEvent<Vector2> aim;
     [SerializeField] private UnityEvent flip;
     [SerializeField] private UnityEvent pause;
+    [SerializeField] private UnityEvent<bool> reverseCamera;
 
-     private Gamepad p1;
-     private Gamepad p2;
-    
+    private Gamepad p1;
+    private Gamepad p2;
     private PlayerInput input;
+    private bool isReversed;
 
     void Start()
     {
@@ -73,5 +74,11 @@ public class PlayerInputBroadcast : MonoBehaviour
             return;
         }
         aim.Invoke(value.Get<Vector2>());
+    }
+
+    void OnRearCamera(InputValue value)
+    {
+        isReversed = !isReversed;
+        reverseCamera.Invoke(isReversed);
     }
 }
