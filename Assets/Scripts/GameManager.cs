@@ -3,12 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using LootLocker.Requests;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private bool useLootLocker = true;
-
     public static GameManager instance;
     public static event Action onFinishLineReached;
     public static event Action<string> onBroadcastText;
@@ -38,31 +35,6 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (useLootLocker)
-        {
-            StartCoroutine(ActivateLootLocker());
-        }
-    }
-
-    IEnumerator ActivateLootLocker()
-    {
-        bool done = false;
-        LootLockerSDKManager.StartGuestSession((response) =>
-        {
-            if (response.success)
-            {
-                Debug.Log("Player logged in");
-                PlayerPrefs.SetString("PlayerID", response.player_id.ToString());
-                done = true;
-            }
-            else
-            {
-                Debug.Log("Error logging player in");
-                done = true;
-            }
-        });
-
-        yield return new WaitWhile(() => done == false);
     }
 
     public void Unpause()
