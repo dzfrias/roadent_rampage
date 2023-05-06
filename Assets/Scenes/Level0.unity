@@ -2196,15 +2196,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734348
+      value: 0.01073436
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: -0.000000017205387
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 1.8469949e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11208,15 +11208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734348
+      value: 0.01073436
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1e-45
+      value: -0.000000017205387
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1.8469949e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11303,6 +11303,10 @@ PrefabInstance:
     - target: {fileID: 455077548, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069139908903040800, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
+      propertyPath: m_fontSize
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 5581465262255994113, guid: 52be66a18cee64da2a186bb6d987051e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -15769,9 +15773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49de6dafad874e0ba7ab8e225cabe6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keys:
-  - space
-  prompt: Hold space to shoot
+  prompt: Hold \Shoot to shoot
   removeAfter: 2.5
 --- !u!1001 &1446074223
 PrefabInstance:
@@ -20547,10 +20549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49de6dafad874e0ba7ab8e225cabe6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keys:
-  - right
-  - left
-  prompt: Use arrows to turn
+  prompt: Use \Turn to turn
   removeAfter: 2.5
 --- !u!1001 &1869673891
 PrefabInstance:
@@ -23987,7 +23986,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 575867366, guid: de54e43a87f144ca7a3fcd067e087bbc, type: 3}
       propertyPath: prompt
-      value: w to go forward
+      value: \Forward to go forward
       objectReference: {fileID: 0}
     - target: {fileID: 575867366, guid: de54e43a87f144ca7a3fcd067e087bbc, type: 3}
       propertyPath: removeAfter
