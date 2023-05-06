@@ -31,7 +31,7 @@ public class Flip : MonoBehaviour
     {
         if (flippedTime >= showMessageTime && !showedMessage)
         {
-            GameManager.instance.BroadcastText("Press space to unflip your car!");
+            GameManager.instance.BroadcastText("Press \\Flip to unflip your car!");
             showedMessage = true;
         }
 
