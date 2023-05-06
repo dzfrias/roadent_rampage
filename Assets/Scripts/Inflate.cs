@@ -22,7 +22,7 @@ public class Inflate : MonoBehaviour
     {
         Vector3 endScale = transform.localScale;
         transform.localScale = Vector3.zero;
-        transform.DOScale(endScale, duration).SetEase(Ease.OutQuad);
+        transform.DOScale(endScale, duration).SetEase(Ease.OutQuad).SetId(gameObject);
         if (lockPosition) StartCoroutine(LockPosition());
     }
 
@@ -36,5 +36,10 @@ public class Inflate : MonoBehaviour
             d -= Time.deltaTime;
             yield return null;
         }
+    }
+
+    void OnDestroy()
+    {
+        DOTween.Kill(gameObject);
     }
 }

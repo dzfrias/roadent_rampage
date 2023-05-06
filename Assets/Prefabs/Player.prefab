@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyMinionPrefab: {fileID: 5500934993889582943, guid: 4cdc8fbdbade14dee81ae0c828048401, type: 3}
-  maxOffset: 30
+  maxOffset: 20
   spawnBetween: {x: 1, y: 2}
   distBetween: {x: 190, y: 200}
   maxSpawn: 3

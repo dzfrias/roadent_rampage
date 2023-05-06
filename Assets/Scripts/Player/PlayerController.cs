@@ -129,4 +129,22 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(transform.forward * value * (Mathf.Abs(localVelocity.z) * directionChangeFactor), ForceMode.VelocityChange);
         }
     }
+
+    public void Stun(float seconds)
+    {
+        StartCoroutine(StunForSeconds(seconds));
+    }
+
+    IEnumerator StunForSeconds(float seconds)
+    {
+        Vector3 startPos = transform.position;
+        float s = seconds;
+        while (s >= 0f)
+        {
+            transform.position = startPos;
+            rb.velocity = Vector3.zero;
+            s -= Time.deltaTime;
+            yield return null;
+        }
+    }
 }

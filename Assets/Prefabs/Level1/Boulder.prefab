@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 979098809378161516}
   - component: {fileID: 4417132449457734983}
   - component: {fileID: 3508186040956332681}
+  - component: {fileID: 8427322522674606709}
   m_Layer: 0
   m_Name: Boulder
   m_TagString: Untagged
@@ -189,3 +190,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 9.2305155
   m_Center: {x: -0.14637184, y: 0.15100193, z: -0.14784718}
+--- !u!208 &8427322522674606709
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346928988572843762}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 9.155001, y: 9.231001, z: 9.166}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.14600001, y: 0.15100001, z: -0.148}
+  m_TimeToStationary: 0.5
