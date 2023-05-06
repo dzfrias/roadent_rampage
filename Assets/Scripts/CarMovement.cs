@@ -10,12 +10,10 @@ public class CarMovement : MonoBehaviour
 
     private NavMeshAgent agent;
     private Rigidbody targetRb;
-    private float minSpeed;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        minSpeed = agent.speed;
         agent.destination = waypoints[waypointIndex].position;
     }
 
