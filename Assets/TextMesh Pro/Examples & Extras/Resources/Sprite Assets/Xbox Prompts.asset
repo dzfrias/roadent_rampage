@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Xbox Prompts
   m_EditorClassIdentifier: 
   hashCode: -1754254715
-  material: {fileID: 5987907904169640036}
+  material: {fileID: 6625433830357788761}
   materialHashCode: 0
   m_Version: 1.1.0
   m_FaceInfo:
@@ -43,14 +43,14 @@ MonoBehaviour:
     m_Unicode: 65534
     m_GlyphIndex: 0
     m_Scale: 1
-    m_Name: South
-    m_HashCode: 99848885
+    m_Name: North
+    m_HashCode: 95607407
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 1
     m_Scale: 1
-    m_Name: Right Stick
-    m_HashCode: -2087580698
+    m_Name: South
+    m_HashCode: 99848885
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 2
@@ -60,6 +60,12 @@ MonoBehaviour:
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 3
+    m_Scale: 1
+    m_Name: Right Stick
+    m_HashCode: -2087580698
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 4
     m_Scale: 1
     m_Name: Right Trigger
     m_HashCode: 1509291160
@@ -93,7 +99,7 @@ MonoBehaviour:
       m_Height: 100
     m_Scale: 1
     m_AtlasIndex: 0
-    sprite: {fileID: -109237126, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
+    sprite: {fileID: -2066414178, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
   - m_Index: 2
     m_Metrics:
       m_Width: 100
@@ -108,7 +114,7 @@ MonoBehaviour:
       m_Height: 100
     m_Scale: 1
     m_AtlasIndex: 0
-    sprite: {fileID: -257923992, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
+    sprite: {fileID: 1420949193, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
   - m_Index: 3
     m_Metrics:
       m_Width: 100
@@ -123,10 +129,25 @@ MonoBehaviour:
       m_Height: 100
     m_Scale: 1
     m_AtlasIndex: 0
-    sprite: {fileID: 2038195313, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
+    sprite: {fileID: 2023621435, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
+  - m_Index: 4
+    m_Metrics:
+      m_Width: 100
+      m_Height: 100
+      m_HorizontalBearingX: -50
+      m_HorizontalBearingY: 50
+      m_HorizontalAdvance: 100
+    m_GlyphRect:
+      m_X: 400
+      m_Y: 0
+      m_Width: 100
+      m_Height: 100
+    m_Scale: 1
+    m_AtlasIndex: 0
+    sprite: {fileID: 1246855431, guid: 3216cb1002c624cc2af27dffa67550c9, type: 3}
   spriteInfoList: []
   fallbackSpriteAssets: []
---- !u!21 &5987907904169640036
+--- !u!21 &6625433830357788761
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 1

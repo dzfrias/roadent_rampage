@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae1ae1f08ca974b19bb5ed1ea01a2c9e
-      internalID: 1075039317
+      spriteID: 61305fa5d47364cb681222eb9301d105
+      internalID: 1997043396
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e487b62fca55144dbb61a25d7493af37
-      internalID: -465393454
+      spriteID: 3e2c451ae541448c1b60353486fa7712
+      internalID: -927700404
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb59869425dd14c009123a9c60b8e0be
-      internalID: -1072685985
+      spriteID: 466af1eda36bb45c2aeeb7a034adb854
+      internalID: -1065606105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ps5_prompts_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cc574bc459842fa9d523d33982380c
+      internalID: 1279103622
       vertices: []
       indices: 
       edges: []
@@ -199,10 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ps5_prompts_3: -1072685985
+      ps5_prompts_4: 1279103622
+      ps5_prompts_3: -1065606105
       ps5_prompts_0: 1164051766
-      ps5_prompts_2: -465393454
-      ps5_prompts_1: 1075039317
+      ps5_prompts_2: -927700404
+      ps5_prompts_1: 1997043396
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

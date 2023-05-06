@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad56e7ec00fdb485c91a4e374cf1522b
-      internalID: -305976518
+      spriteID: db668752bbd344e9ab3c09bd5ce20c9b
+      internalID: 816438853
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345eaae504ef74111989686ff8c1f006
-      internalID: 1702838509
+      spriteID: d3c62345fe6474a23ac7f7aa5e136779
+      internalID: 1466820572
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 725c14402881143fbaab9bac51b23e09
-      internalID: 941181475
+      spriteID: 7d422dfc3efa9459d9d994b231964e9b
+      internalID: -1891520670
       vertices: []
       indices: 
       edges: []
@@ -203,8 +203,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ab7b768cc9749f5a42bceb1009c9fe
-      internalID: -753260335
+      spriteID: 9a699b5e6217846e99c8029fc7050a5b
+      internalID: -792901558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kbm_prompts_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71840ece4480842edb6f7e749a2d34be
+      internalID: 1980875567
       vertices: []
       indices: 
       edges: []
@@ -220,11 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kbm_prompts_4: -753260335
+      kbm_prompts_4: -792901558
       kbm_prompts_0: -2146670647
-      kbm_prompts_1: -305976518
-      kbm_prompts_3: 941181475
-      kbm_prompts_2: 1702838509
+      kbm_prompts_1: 816438853
+      kbm_prompts_3: -1891520670
+      kbm_prompts_5: 1980875567
+      kbm_prompts_2: 1466820572
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
