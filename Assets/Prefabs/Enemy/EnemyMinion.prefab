@@ -135,10 +135,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 30
-  m_Acceleration: 30
+  m_Acceleration: 100
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 100
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -205,11 +205,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c80d089793104c31a2539cf802f655a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 7
   particles: {fileID: 5693018047500776064, guid: ebc120e2ba36047d8a977db85335effc, type: 3}
   explosionRadius: 6
   explosionOffset: {x: 0, y: 3.62, z: 0}
-  stunDuration: 0.5
+  force: 3000
+  upForce: 40
 --- !u!23 &-4097867693348550197
 MeshRenderer:
   m_ObjectHideFlags: 0

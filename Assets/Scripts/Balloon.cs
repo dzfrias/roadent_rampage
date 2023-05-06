@@ -11,7 +11,8 @@ public class Balloon : MonoBehaviour, IHittable
     [SerializeField] private GameObject particles;
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private Vector3 explosionOffset;
-    [SerializeField] private float stunDuration = 0.5f;
+    [SerializeField] private float force = 10f;
+    [SerializeField] private float upForce = 3f;
 
     IEnumerator Start()
     {
@@ -21,11 +22,12 @@ public class Balloon : MonoBehaviour, IHittable
     public void Pop()
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
-        PlayerController player = Array
+        Rigidbody player = Array
                                     .Find(hits, collider => collider.CompareTag("Player"))?
                                     .gameObject
-                                    .GetComponent<PlayerController>();
-        player?.Stun(stunDuration);
+                                    .GetComponent<Rigidbody>();
+        player?.AddExplosionForce(force, transform.position, explosionRadius * 10f, upForce, ForceMode.Impulse);
+        // player?.Stun(stunDuration);
         Instantiate(particles, transform.position + explosionOffset, transform.rotation);
         Destroy(gameObject);
     }

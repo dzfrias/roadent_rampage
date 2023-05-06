@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
         }
 
         agent.speed = Mathf.Max(targetRb.velocity.magnitude * speedDecrease, minSpeed);
-        agent.destination = target.position - target.forward;
+        agent.destination = target.position;
     }
 
     void OnCollisionEnter(Collision collision)

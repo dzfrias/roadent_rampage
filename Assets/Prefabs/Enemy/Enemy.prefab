@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxDistance: 80
-  warpOffset: 15
+  warpOffset: 30
   speedDecrease: 0.97
   onTargetReached:
     m_PersistentCalls:
