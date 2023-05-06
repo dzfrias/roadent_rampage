@@ -161,7 +161,7 @@ MonoBehaviour:
   target: {fileID: 0}
   maxDistance: Infinity
   warpOffset: 15
-  speedDecrease: 0.97
+  speedDecrease: 0
   onTargetReached:
     m_PersistentCalls:
       m_Calls: []
