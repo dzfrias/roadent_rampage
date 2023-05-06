@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class CarMovement : MonoBehaviour
 {
+    [SerializeField] private bool loop = false;
     [SerializeField] private Transform[] waypoints;
     private int waypointIndex = 0;
 
@@ -22,7 +23,11 @@ public class CarMovement : MonoBehaviour
         if (other.transform == waypoints[waypointIndex])
         {
             waypointIndex++;
-            if (waypointIndex == waypoints.Length)
+            if (waypointIndex == waypoints.Length && loop)
+            {
+                waypointIndex = 0;
+            }
+            else if (waypointIndex == waypoints.Length)
             {
                 Destroy(gameObject);
                 return;
