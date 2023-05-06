@@ -33,8 +33,6 @@ public class AudioManager : MonoBehaviour
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
         }
-
-        Play("music");
     }
 
     public void Play(String name)
@@ -49,6 +47,13 @@ public class AudioManager : MonoBehaviour
         Sound sound = Array.Find(sounds, sound => sound.name == name);
         if (!DoesSoundExist(sound)) { return; }
         sound.source.Stop();
+    }
+
+    public bool IsPlaying(String name)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        if (!DoesSoundExist(sound)) { return false; }
+        return sound.source.isPlaying;
     }
 
     public void SetPitch(string name, float newPitch)
