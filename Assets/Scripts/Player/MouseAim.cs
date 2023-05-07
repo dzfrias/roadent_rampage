@@ -15,7 +15,6 @@ public class MouseAim : MonoBehaviour
     private Vector3 targetAngles;
     private Vector3 followAngles;
     private Vector3 followVelocity;
-    private Outline outlinedObject;
     private Quaternion origionalRotation;
 
     public void ReadInput(Vector2 newInput)
@@ -78,29 +77,6 @@ public class MouseAim : MonoBehaviour
         followAngles = Vector3.SmoothDamp(followAngles, targetAngles, ref followVelocity, dampingTime);
 
         transform.localRotation = origionalRotation * Quaternion.Euler(-followAngles.x, followAngles.y, 0);
-        
-        OutlineObject();
-    }
-
-    void OutlineObject()
-    {
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit))
-        {
-            if (outlinedObject != null && hit.collider.gameObject != outlinedObject.gameObject)
-            {
-                outlinedObject.enabled = false;
-            }
-
-            if (hit.collider.gameObject.TryGetComponent(out Outline outlineObject))
-            {
-                outlinedObject = outlineObject;
-                outlinedObject.enabled = true;
-            }
-        }
-        else if (outlinedObject != null)
-        {
-            outlinedObject.enabled = false;
-        }
     }
 
     public void Recoil()
