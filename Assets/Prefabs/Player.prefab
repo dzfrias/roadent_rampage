@@ -645,6 +645,9 @@ MonoBehaviour:
   airTimeMultiplier: 14
   airTimeThreshold: 2
   max: 20
+  resetMask:
+    serializedVersion: 2
+    m_Bits: 72
 --- !u!114 &2141510634
 MonoBehaviour:
   m_ObjectHideFlags: 0

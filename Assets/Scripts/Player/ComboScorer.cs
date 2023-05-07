@@ -10,6 +10,7 @@ public class ComboScorer : MonoBehaviour
     [SerializeField] private float airTimeMultiplier;
     [SerializeField] private float airTimeThreshold = 3f;
     [SerializeField] private float max = Mathf.Infinity;
+    [SerializeField] private LayerMask resetMask;
 
     private IMover mover;
 
@@ -51,7 +52,8 @@ public class ComboScorer : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 3 && !mover.IsGrounded())
+        // Check if resetMask contains the GameObject's layer
+        if (resetMask == (resetMask | (1 << collision.gameObject.layer)) && !mover.IsGrounded())
         {
             Reset();
         }
