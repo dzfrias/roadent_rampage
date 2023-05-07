@@ -4934,6 +4934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toColor: {r: 0.47058824, g: 0.3882353, b: 0.34901962, a: 0.62352943}
+  fadeTime: 0.3
 --- !u!1 &6917739659716256977
 GameObject:
   m_ObjectHideFlags: 0
