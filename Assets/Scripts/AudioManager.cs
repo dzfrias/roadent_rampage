@@ -1,7 +1,10 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
 using UnityEngine.Audio;
 using UnityEngine;
-using System.Collections.Generic;
-using System;
+using DG.Tweening;
 
 public class AudioManager : MonoBehaviour
 {
@@ -42,11 +45,13 @@ public class AudioManager : MonoBehaviour
         sound.source.Play();
     }
 
-    public void Stop(String name)
+    public void Stop(String name, float fadeDuration = 0f)
     {
         Sound sound = Array.Find(sounds, sound => sound.name == name);
         if (!DoesSoundExist(sound)) { return; }
-        sound.source.Stop();
+        float original = sound.source.volume;
+        sound.source.DOFade(0f, fadeDuration);
+        StartCoroutine(StopSound(sound, fadeDuration, original));
     }
 
     public bool IsPlaying(String name)
@@ -87,5 +92,13 @@ public class AudioManager : MonoBehaviour
         {
             sound.source.UnPause();
         }
+    }
+
+    IEnumerator StopSound(Sound sound, float after, float original)
+    {
+        yield return new WaitForSeconds(after);
+
+        sound.source.Stop();
+        sound.source.volume = original;
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MusicPlayer : MonoBehaviour
 {
     [SerializeField] private string track;
+    [SerializeField] private float fadeDuration = 1f;
 
     private string startLevel;
 
@@ -27,7 +28,7 @@ public class MusicPlayer : MonoBehaviour
     void SceneChanged(Scene s1, Scene s2)
     {
         if (startLevel == s2.name) return;
-        AudioManager.instance.Stop(track);
+        AudioManager.instance.Stop(track, fadeDuration);
         Destroy(gameObject);
     }
 }
