@@ -73,6 +73,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+--- !u!23 &2578334607500735598 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8564626398420810316, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
+  m_PrefabInstance: {fileID: 6130454618777538082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4368102692084096396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7605772452605121454, guid: ce2c523652a0e794786dbd3db7b8040b, type: 3}
@@ -110,3 +115,20 @@ MonoBehaviour:
   dampingRatio: 0.5
   onCollide: 0
   hitStrength: 1
+--- !u!114 &7351060858143609428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4368102692084096396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 1
+  switchTo: {r: 0.8784314, g: 0.03529412, b: 0.03529412, a: 1}
+  colorProperty: _BaseColor
+  fadeTime: 0.5
+  render: {fileID: 2578334607500735598}

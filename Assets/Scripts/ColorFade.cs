@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-[RequireComponent(typeof(Renderer))]
 public class ColorFade : MonoBehaviour
 {
     [SerializeField] private int materialIndex;
@@ -11,11 +10,18 @@ public class ColorFade : MonoBehaviour
     [SerializeField] private string colorProperty;
     [SerializeField] private float fadeTime = 0.5f;
 
+    [SerializeField] private Renderer render;
+
     private Material mat;
 
     void Start()
     {
-        mat = GetComponent<Renderer>().materials[materialIndex];
+        if (render == null)
+        {
+            render = GetComponent<Renderer>();
+        }
+
+        mat = render.materials[materialIndex];
     }
 
     public void FadeColor()

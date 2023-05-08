@@ -82,7 +82,7 @@ MonoBehaviour:
   switchTo: {r: 0.8113208, g: 0.27171594, b: 0.27171594, a: 1}
   colorProperty: _BaseColor
   fadeTime: 0.5
-  onStart: 0
+  render: {fileID: 0}
 --- !u!114 &2367621615639777090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   switchTo: {r: 0.6117647, g: 0.34901962, b: 0.34901962, a: 1}
   colorProperty: _BaseColor
   fadeTime: 1.5
-  onStart: 0
+  render: {fileID: 0}
 --- !u!114 &8782909071000991290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   hitParticles: {fileID: 0}
   destroyParticles: {fileID: 0}
   velocityAdd: 3
-  health: 7
+  health: 5
 --- !u!114 &9097817493655532428
 MonoBehaviour:
   m_ObjectHideFlags: 0

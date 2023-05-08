@@ -210,7 +210,7 @@ MonoBehaviour:
   particles: {fileID: 5693018047500776064, guid: ebc120e2ba36047d8a977db85335effc, type: 3}
   explosionRadius: 6
   explosionOffset: {x: 0, y: 3.62, z: 0}
-  force: 3000
+  force: 2500
   upForce: 40
 --- !u!23 &-4097867693348550197
 MeshRenderer:
@@ -271,4 +271,4 @@ MonoBehaviour:
   switchTo: {r: 0.9137255, g: 0.29803923, b: 0.30588236, a: 1}
   colorProperty: _BaseColor
   fadeTime: 0.15
-  onStart: 0
+  render: {fileID: 0}
