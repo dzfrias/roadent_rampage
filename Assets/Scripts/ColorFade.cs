@@ -10,14 +10,12 @@ public class ColorFade : MonoBehaviour
     [SerializeField] private Color switchTo;
     [SerializeField] private string colorProperty;
     [SerializeField] private float fadeTime = 0.5f;
-    [SerializeField] private bool onStart;
 
     private Material mat;
 
     void Start()
     {
         mat = GetComponent<Renderer>().materials[materialIndex];
-        if (onStart) FadeColor();
     }
 
     public void FadeColor()
