@@ -21,6 +21,7 @@ public class Wheel : MonoBehaviour, IMover
     private float grip;
     [SerializeField] private float mass;
     [SerializeField] private float forwardsGrip;
+    [SerializeField] private float terrainGripModifier;
     [Range(0, 90), SerializeField, Tooltip("Angle wheel can climb up to")] private float maxClimbAngle = 45f;
     [SerializeField, Tooltip("Higher steerTime means a slower time to turn the wheels of the car")]
     private float steerTime;
@@ -51,9 +52,13 @@ public class Wheel : MonoBehaviour, IMover
             {
                 target.AddForceAtPosition(transform.forward * acceleration, transform.position);
             }
-            if (acceleration == 0 || hit.collider.gameObject.CompareTag("Terrain")) 
+            if (acceleration == 0)
             {
                 target.AddForceAtPosition(-target.GetPointVelocity(transform.position) * forwardsGrip, transform.position);
+            }
+            if (hit.collider.gameObject.CompareTag("Terrain")) 
+            {
+                target.AddForceAtPosition(-target.GetPointVelocity(transform.position) * terrainGripModifier, transform.position);
             }
             // PERF: It would be nice to have a game manager script that keeps
             // a dictionary of all objects containing SpeedModifier, but does

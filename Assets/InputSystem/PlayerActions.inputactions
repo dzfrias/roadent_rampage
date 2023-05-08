@@ -128,7 +128,7 @@
                 {
                     "name": "negative",
                     "id": "52ffe512-d66d-4453-bad4-64b1de413ecb",
-                    "path": "<Gamepad>/leftStick/down",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "TwoGamepads",
@@ -139,7 +139,7 @@
                 {
                     "name": "positive",
                     "id": "40eb23d8-3ebd-46ca-a7c6-3ff585590cee",
-                    "path": "<Gamepad>/leftStick/up",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "TwoGamepads",
@@ -238,7 +238,7 @@
                 {
                     "name": "",
                     "id": "e667e2a7-f4a4-472f-82ad-51cdc1213612",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "TwoGamepads",

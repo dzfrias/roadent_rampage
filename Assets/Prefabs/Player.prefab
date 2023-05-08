@@ -251,6 +251,7 @@ MonoBehaviour:
   grip: 0.55
   mass: 20
   forwardsGrip: 200
+  terrainGripModifier: 200
   maxClimbAngle: 45
   steerTime: 18
 --- !u!1 &602739622106151325
@@ -305,6 +306,7 @@ MonoBehaviour:
   grip: 0.55
   mass: 20
   forwardsGrip: 200
+  terrainGripModifier: 200
   maxClimbAngle: 45
   steerTime: 18
 --- !u!1 &602739622672329289
@@ -359,6 +361,7 @@ MonoBehaviour:
   grip: 0.55
   mass: 20
   forwardsGrip: 200
+  terrainGripModifier: 200
   maxClimbAngle: 45
   steerTime: 18
 --- !u!1 &602739623024861862
@@ -420,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 34a0033de29924ac286ac4b3fec06d47, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -431,7 +434,159 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: Accelerate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1d74f2f9-0bf6-42d2-aaa9-71312e366ecf
+    m_ActionName: Player/Accelerate[/Keyboard/w,/Keyboard/s,/XboxOneGampadMacOSWireless1/leftStick/down,/XboxOneGampadMacOSWireless/leftStick/down,/XboxOneGampadMacOSWireless1/leftStick/up,/XboxOneGampadMacOSWireless/leftStick/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: Turn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2da65318-5d36-408e-990f-e6504fbd3fad
+    m_ActionName: Player/Turn[/Keyboard/rightArrow,/Keyboard/leftArrow,/XboxOneGampadMacOSWireless1/leftStick/left,/XboxOneGampadMacOSWireless/leftStick/left,/XboxOneGampadMacOSWireless1/leftStick/right,/XboxOneGampadMacOSWireless/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: Flip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8463cd2b-6d55-4148-89d3-35fdd0a31f3c
+    m_ActionName: Player/Flip[/Keyboard/f,/XboxOneGampadMacOSWireless1/buttonSouth,/XboxOneGampadMacOSWireless/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 20ddfe68-cb4f-47a1-b0f5-eb06378bdfbc
+    m_ActionName: Player/Pause[/Keyboard/escape,/XboxOneGampadMacOSWireless1/start,/XboxOneGampadMacOSWireless/start]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dcff42a6-c2cc-46cd-9097-3d3d6d1a08ef
+    m_ActionName: Player/Click[/Mouse/leftButton,/Keyboard/enter,/Keyboard/space,/XboxOneGampadMacOSWireless1/rightTrigger,/XboxOneGampadMacOSWireless/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: Aim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 38ac403f-ec59-49e9-aa6a-0170f36733b8
+    m_ActionName: Player/Aim[/XboxOneGampadMacOSWireless1/rightStick,/XboxOneGampadMacOSWireless/rightStick,/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2141510633}
+        m_TargetAssemblyTypeName: PlayerInputBroadcast, Assembly-CSharp
+        m_MethodName: RearCamera
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1b66473e-0d07-4970-9c57-9539fdd3ad15
+    m_ActionName: Player/RearCamera[/Keyboard/r,/XboxOneGampadMacOSWireless1/buttonNorth,/XboxOneGampadMacOSWireless/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6e4d3c08-8d64-4168-8605-eddc3343f554
+    m_ActionName: UI/Navigate[/XboxOneGampadMacOSWireless1/leftStick/up,/XboxOneGampadMacOSWireless/leftStick/up,/XboxOneGampadMacOSWireless1/rightStick/up,/XboxOneGampadMacOSWireless/rightStick/up,/XboxOneGampadMacOSWireless1/leftStick/down,/XboxOneGampadMacOSWireless/leftStick/down,/XboxOneGampadMacOSWireless1/rightStick/down,/XboxOneGampadMacOSWireless/rightStick/down,/XboxOneGampadMacOSWireless1/leftStick/left,/XboxOneGampadMacOSWireless/leftStick/left,/XboxOneGampadMacOSWireless1/rightStick/left,/XboxOneGampadMacOSWireless/rightStick/left,/XboxOneGampadMacOSWireless1/leftStick/right,/XboxOneGampadMacOSWireless/leftStick/right,/XboxOneGampadMacOSWireless1/rightStick/right,/XboxOneGampadMacOSWireless/rightStick/right,/XboxOneGampadMacOSWireless1/dpad,/XboxOneGampadMacOSWireless/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6b18a24d-a2d5-448d-b0c8-8d276aebaca3
+    m_ActionName: UI/Submit[/Keyboard/enter,/XboxOneGampadMacOSWireless1/buttonSouth,/XboxOneGampadMacOSWireless/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2683f343-93d6-4009-ab50-32e9298e9cf3
+    m_ActionName: UI/Cancel[/Keyboard/escape,/XboxOneGampadMacOSWireless1/buttonEast,/XboxOneGampadMacOSWireless/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e1f313fc-603e-4d59-9c82-b9ad0397b2c6
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 506c41b2-dab4-4189-acb9-7242b06a21b3
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 726115c8-92fa-467f-90cf-e5c6c2ea1e48
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b52592fc-e099-448f-82e3-e9f2c16aaf73
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d252e909-71dc-4ef2-8340-d00cf6f64a98
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: af74d33b-e895-4bc0-9b58-5ac0225bdb49
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8eb95ce1-be06-4304-bde1-7d78fa172702
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: TwoGamepads
   m_DefaultActionMap: Player
@@ -665,7 +820,7 @@ MonoBehaviour:
   topLeft: {fileID: 602739622106151395}
   bottomRight: {fileID: 602739621693275186}
   bottomLeft: {fileID: 602739623324744272}
-  turnRadius: 8
+  turnRadius: 10
   rearTrack: 1
   wheelBase: 3.5
 --- !u!114 &1999985456
@@ -737,6 +892,7 @@ MonoBehaviour:
   grip: 0.55
   mass: 20
   forwardsGrip: 200
+  terrainGripModifier: 200
   maxClimbAngle: 45
   steerTime: 18
 --- !u!1 &2453790402987522046
@@ -900,7 +1056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRange: {x: 20, y: 90}
-  rotationSpeed: 0.15
+  rotationSpeed: 0.9
   dampingTime: 0.1
   relative: 1
 --- !u!114 &1226332544

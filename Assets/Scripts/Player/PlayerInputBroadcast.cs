@@ -30,53 +30,53 @@ public class PlayerInputBroadcast : MonoBehaviour
         }
     }
 
-    void OnAccelerate(InputValue value)
+    public void Accelerate(InputAction.CallbackContext context)
     {
-        if (input.currentControlScheme == "TwoGamepads" && Gamepad.current != p1)
+        if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p1)
         {
             return;
         }
-        accelerate.Invoke(value.Get<float>());
+        accelerate.Invoke(context.ReadValue<float>());
     }
 
-    void OnTurn(InputValue value)
+    public void Turn(InputAction.CallbackContext context)
     {
-        if (input.currentControlScheme == "TwoGamepads" && Gamepad.current != p2)
+        if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p2)
         {
             return;
         }
-        rotate.Invoke(value.Get<float>());
+        rotate.Invoke(context.ReadValue<float>());
     }
 
-    void OnFlip(InputValue value)
+    public void Flip(InputAction.CallbackContext context)
     {
         flip.Invoke();
     }
 
-    void OnClick(InputValue value)
+    public void Click(InputAction.CallbackContext context)
     {
-        if (input.currentControlScheme == "TwoGamepads" && Gamepad.current != p2)
+        if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p2)
         {
             return;
         }
-        click.Invoke(value.Get<float>());
+        click.Invoke(context.ReadValue<float>());
     }
 
-    void OnPause(InputValue value)
+    public void Pause(InputAction.CallbackContext context)
     {
         pause.Invoke();
     }
 
-    void OnAim(InputValue value)
+    public void Aim(InputAction.CallbackContext context)
     {
-        if (input.currentControlScheme == "TwoGamepads" && Gamepad.current != p1)
+        if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p1)
         {
             return;
         }
-        aim.Invoke(value.Get<Vector2>());
+        aim.Invoke(context.ReadValue<Vector2>());
     }
 
-    void OnRearCamera(InputValue value)
+    public void RearCamera(InputAction.CallbackContext context)
     {
         isReversed = !isReversed;
         reverseCamera.Invoke(isReversed);
