@@ -68,10 +68,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!onGround)
-        {
-            AirSteer();
-        }
         if (Mathf.Abs(Vector3.Dot(transform.right, rb.velocity)) > skidThreshold)
         {
             // TODO: Add sound here
@@ -92,12 +88,6 @@ public class PlayerController : MonoBehaviour
     void AdjustAcceleratePitch()
     {
         AudioManager.instance.SetPitch("accelerate", rb.velocity.magnitude / 25);
-    }
-
-    void AirSteer()
-    {
-        rb.AddTorque(transform.right * accelerationInput * airSteer, ForceMode.VelocityChange);
-        rb.AddTorque(transform.up * rotationInput * airSteer, ForceMode.VelocityChange);
     }
 
     public void SpeedBoost(float amount)
