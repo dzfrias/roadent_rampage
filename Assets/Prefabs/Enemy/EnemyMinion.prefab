@@ -270,5 +270,5 @@ MonoBehaviour:
   materialIndex: 0
   switchTo: {r: 0.9137255, g: 0.29803923, b: 0.30588236, a: 1}
   colorProperty: _BaseColor
-  fadeTime: 0.5
+  fadeTime: 0.15
   onStart: 0
