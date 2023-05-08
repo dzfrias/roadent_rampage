@@ -15400,10 +15400,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2096365521871375569, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
-      propertyPath: m_VolumeLayerMask.m_Bits
-      value: 129
-      objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_RootOrder
       value: 6
