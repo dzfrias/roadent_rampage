@@ -325,6 +325,23 @@ MonoBehaviour:
   particlesAlt: {fileID: 0}
   minVelocity: 12
   velocityThreshold: 12
+--- !u!114 &8015708991149385838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578771990433566241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 1
+  switchTo: {r: 1, g: 1, b: 1, a: 1}
+  colorProperty: _BaseColor
+  fadeTime: 0.5
+  onStart: 0
 --- !u!4 &2207674686250243227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf336bc8ab39e4ffeb3670bd7f748ab4, type: 3}

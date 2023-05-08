@@ -66,6 +66,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1346928988572843762, guid: 0e75a0b46dd9e4183afb8e831ba267df, type: 3}
   m_PrefabInstance: {fileID: 4794214563461553704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &980541324510118524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5780713693304987866}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchTo: {r: 0.8113208, g: 0.27171594, b: 0.27171594, a: 1}
+  colorProperty: _BaseColor
+  fadeTime: 0.2
+  onStart: 0
 --- !u!114 &2367621615639777090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0510beb309f41afa7dea3d665728b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchTo: {r: 0.6117647, g: 0.34901962, b: 0.34901962, a: 0}
+  switchTo: {r: 0.6117647, g: 0.34901962, b: 0.34901962, a: 1}
   colorProperty: _BaseColor
   fadeTime: 1.5
   onStart: 0

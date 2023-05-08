@@ -6,7 +6,9 @@ using UnityEngine;
 public class ForwardLineDraw : MonoBehaviour
 {
     [SerializeField] private float defaultDistance = 100f;
+
     private LineRenderer lineRenderer;
+    private GameObject hovered;
 
     void Start()
     {
@@ -22,9 +24,38 @@ public class ForwardLineDraw : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, Mathf.Infinity, mask))
         {
             lineRenderer.SetPosition(1, transform.forward * hit.distance + transform.position);
+
+            if (hit.transform.gameObject == hovered)
+            {
+                return;
+            }
+            IHoverable[] hoverables = hit.transform.gameObject.GetComponents<IHoverable>();
+
+            if (hovered != null)
+            {
+                foreach (var oldHovered in hovered.GetComponents<IHoverable>())
+                {
+                    oldHovered.HoverActivate(false);
+                }
+                hovered = null;
+            }
+
+            foreach (var hoverable in hoverables)
+            {
+                hoverable.HoverActivate(true);
+                hovered = hit.transform.gameObject;
+            }
         }
         else
         {
+            if (hovered != null)
+            {
+                foreach (var hoverable in hovered.GetComponents<IHoverable>())
+                {
+                    hoverable.HoverActivate(false);
+                }
+                hovered = null;
+            }
             lineRenderer.SetPosition(1, transform.forward * defaultDistance + transform.position);
         }
     }

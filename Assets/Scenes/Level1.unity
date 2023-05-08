@@ -8019,6 +8019,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &439911686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 732359129515974846, guid: d61c06b6887094416a0361514a2405c2, type: 3}
+  m_PrefabInstance: {fileID: 6917739659800514941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &442358387
 GameObject:
   m_ObjectHideFlags: 0
@@ -8876,6 +8881,18 @@ PrefabInstance:
     - target: {fileID: 34652518, guid: 8977f79fee56545eaaa1f6d3db86ef83, type: 3}
       propertyPath: m_LocalPosition.y
       value: 10.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015708991149385838, guid: 8977f79fee56545eaaa1f6d3db86ef83, type: 3}
+      propertyPath: switchTo.b
+      value: 0.18823424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015708991149385838, guid: 8977f79fee56545eaaa1f6d3db86ef83, type: 3}
+      propertyPath: switchTo.g
+      value: 0.18823424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015708991149385838, guid: 8977f79fee56545eaaa1f6d3db86ef83, type: 3}
+      propertyPath: switchTo.r
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 8118818949036754472, guid: 8977f79fee56545eaaa1f6d3db86ef83, type: 3}
       propertyPath: m_RootOrder
@@ -11347,15 +11364,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734378
+      value: 0.010734358
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017222188
+      value: 0.000000017196989
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.8488015e-10
+      value: -1.846093e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14945,17 +14962,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &818147376 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4950527150144112768, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-  m_PrefabInstance: {fileID: 6917739659800514941}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6a15747433842e99706a4410a8ef39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!134 &819568478
 PhysicMaterial:
   m_ObjectHideFlags: 0
@@ -15394,6 +15400,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2096365521871375569, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 129
+      objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -15416,15 +15426,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734378
+      value: 0.010734358
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017222188
+      value: 0.000000017196989
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.8488015e-10
+      value: -1.846093e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39245,57 +39255,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4141598662788693329, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7337
+    - target: {fileID: 1633549975, guid: d61c06b6887094416a0361514a2405c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4141598662788693329, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.1
+    - target: {fileID: 2993800165449053526, guid: d61c06b6887094416a0361514a2405c2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4141598662788693329, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -38.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141598662788693329, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -34.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414792855239027454, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 5532244280670177222, guid: d61c06b6887094416a0361514a2405c2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
       propertyPath: triggered.m_PersistentCalls.m_Calls.Array.size
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_Mode
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[12].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[12].m_Target
       value: 
-      objectReference: {fileID: 818147376}
+      objectReference: {fileID: 439911686}
     - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_CallState
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[12].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
-      value: Activate
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[12].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_TargetAssemblyTypeName
-      value: FadeParticles, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_Arguments.m_BoolArgument
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[12].m_Arguments.m_BoolArgument
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6917739659716256979, guid: d61c06b6887094416a0361514a2405c2, type: 3}
-      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[8].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6917739660042688617, guid: d61c06b6887094416a0361514a2405c2, type: 3}
       propertyPath: m_RootOrder

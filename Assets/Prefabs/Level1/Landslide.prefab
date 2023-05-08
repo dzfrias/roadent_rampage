@@ -135,8 +135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5414792855239027454}
   m_LocalRotation: {x: -0.6724996, y: -0.21850492, z: -0.21850489, w: 0.67249954}
-  m_LocalPosition: {x: -18.6, y: -44.3, z: -44.7}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -26.1, y: -38.2, z: -34.2}
+  m_LocalScale: {x: 0.5, y: 0.7337, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6917739660042688617}
@@ -5094,6 +5094,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4950527150144112768}
+        m_TargetAssemblyTypeName: FadeParticles, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6308260934787400216}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2993800165449053526}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5532244280670177222}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   stopTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -5431,6 +5479,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6917739660609882368}
     m_Modifications:
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5780713693304987866, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
       propertyPath: m_Name
       value: DestructableBoulder (1)
@@ -5502,6 +5570,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b0510beb309f41afa7dea3d665728b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2993800165449053526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+  m_PrefabInstance: {fileID: 2600697121663153962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &9179849611450420554 stripped
@@ -5594,6 +5673,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6917739660609882368}
     m_Modifications:
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+      propertyPath: switchTo.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5780713693304987866, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
       propertyPath: m_Name
       value: DestructableBoulder (2)
@@ -5661,6 +5760,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6589585208052185696, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
   m_PrefabInstance: {fileID: 4710184664047551930}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5532244280670177222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+  m_PrefabInstance: {fileID: 4710184664047551930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7027467751081036536 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2367621615639777090, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
@@ -5796,6 +5906,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6589585208052185696, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
   m_PrefabInstance: {fileID: 6489938604234522724}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6308260934787400216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 980541324510118524, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}
+  m_PrefabInstance: {fileID: 6489938604234522724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8848341362945330982 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2367621615639777090, guid: 9aabf77d30c4b4c7dbc226fce2363017, type: 3}

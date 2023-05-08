@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4891524281543746532}
   - component: {fileID: 8536710239538589606}
   - component: {fileID: -4097867693348550197}
+  - component: {fileID: 8744716454399458639}
   m_Layer: 0
   m_Name: EnemyMinion
   m_TagString: Untagged
@@ -254,3 +255,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8744716454399458639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500934993889582943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c42f9e8b8a94af8a1f3b9545825bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 0
+  switchTo: {r: 0.9137255, g: 0.29803923, b: 0.30588236, a: 1}
+  colorProperty: _BaseColor
+  fadeTime: 0.5
+  onStart: 0

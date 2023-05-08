@@ -6,26 +6,37 @@ using DG.Tweening;
 [RequireComponent(typeof(Renderer))]
 public class ColorFade : MonoBehaviour
 {
+    [SerializeField] private int materialIndex;
     [SerializeField] private Color switchTo;
     [SerializeField] private string colorProperty;
-    [SerializeField] private float fadeTime = 1f;
+    [SerializeField] private float fadeTime = 0.5f;
     [SerializeField] private bool onStart;
 
     private Material mat;
 
     void Start()
     {
-        mat = GetComponent<Renderer>().material;
+        mat = GetComponent<Renderer>().materials[materialIndex];
         if (onStart) FadeColor();
     }
 
     public void FadeColor()
     {
+        Switch(switchTo);
+    }
+
+    public void Switch(Color color)
+    {
         if (colorProperty.Length > 0)
         {
-            mat.DOColor(switchTo, colorProperty, fadeTime);
+            mat.DOColor(color, colorProperty, fadeTime).SetId(this);
             return;
         }
-        mat.DOColor(switchTo, fadeTime);
+        mat.DOColor(color, fadeTime).SetId(this);
+    }
+
+    public Color GetColor()
+    {
+        return mat.GetColor(colorProperty.Length == 0 ? "_Color" : colorProperty);
     }
 }
