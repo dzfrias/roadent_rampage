@@ -31,9 +31,9 @@ public class TextBroadcast : MonoBehaviour
                 scheme = "?";
             }
             
-            sb.Replace("\\Forward", $"<sprite=\"{scheme}\" name=\"Left Stick\">");
+            sb.Replace("\\Forward", $"<sprite=\"{scheme}\" name=\"Right Trigger\">");
             sb.Replace("\\Turn", $"<sprite=\"{scheme}\" name=\"Left Stick\">");
-            sb.Replace("\\Shoot", $"<sprite=\"{scheme}\" name=\"Right Trigger\">");
+            sb.Replace("\\Shoot", $"<sprite=\"{scheme}\" name=\"West\">");
             sb.Replace("\\Flip", $"<sprite=\"{scheme}\" name=\"South\">");
             sb.Replace("\\Aim", $"<sprite=\"{scheme}\" name=\"Right Stick\">");
         }
