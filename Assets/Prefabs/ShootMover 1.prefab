@@ -260,6 +260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarrierBox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf336bc8ab39e4ffeb3670bd7f748ab4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf336bc8ab39e4ffeb3670bd7f748ab4, type: 3}
 --- !u!1 &1578771990433566241 stripped
@@ -309,22 +313,6 @@ MonoBehaviour:
   moveTo: {fileID: 34652518}
   moveDuration: 2
   inactiveColor: {r: 0.5294118, g: 0.49411765, b: 0.49411765, a: 0}
---- !u!114 &8283934160965260494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578771990433566241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
-  particlesAlt: {fileID: 0}
-  minVelocity: 12
-  velocityThreshold: 12
 --- !u!114 &8015708991149385838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +329,23 @@ MonoBehaviour:
   switchTo: {r: 1, g: 1, b: 1, a: 1}
   colorProperty: _BaseColor
   fadeTime: 0.5
-  onStart: 0
+  render: {fileID: 0}
+--- !u!114 &8283934160965260494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578771990433566241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
+  particlesAlt: {fileID: 0}
+  minVelocity: 12
+  velocityThreshold: 12
 --- !u!4 &2207674686250243227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf336bc8ab39e4ffeb3670bd7f748ab4, type: 3}
