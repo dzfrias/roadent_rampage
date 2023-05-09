@@ -36,6 +36,7 @@ public class TextBroadcast : MonoBehaviour
             sb.Replace("\\Shoot", $"<sprite=\"{scheme}\" name=\"West\">");
             sb.Replace("\\Flip", $"<sprite=\"{scheme}\" name=\"South\">");
             sb.Replace("\\Aim", $"<sprite=\"{scheme}\" name=\"Right Stick\">");
+            sb.Replace("\\Rear", $"<sprite=\"{scheme}\" name=\"North\">");
         }
         else
         {
@@ -44,6 +45,7 @@ public class TextBroadcast : MonoBehaviour
             sb.Replace("\\Flip", "<sprite=\"KBM Prompts\" name=\"F\">");
             sb.Replace("\\Aim", "mouse");
             sb.Replace("\\Turn", "<sprite=\"KBM Prompts\" name=\"Left\"><sprite=\"KBM Prompts\" name=\"Right\">");
+            sb.Replace("\\Rear", "<sprite=\"KBM Prompts\" name=\"R\">");
         }
 
         return sb.ToString();

@@ -209,6 +209,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: xbox_prompts_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b827cf3d3a1416882ca8c945ccf58b
+      internalID: 1777657693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -223,6 +244,7 @@ TextureImporter:
       xbox_prompts_3: 2023621435
       xbox_prompts_4: 1246855431
       xbox_prompts_0: 438150353
+      xbox_prompts_5: 1777657693
       xbox_prompts_2: 1420949193
       xbox_prompts_1: -2066414178
   spritePackingTag: 
