@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyCamera : MonoBehaviour
 {
     [SerializeField] private float deactivateAfter = 2f;
+    [SerializeField] private UnityEvent onComplete;
 
     void Start()
     {
@@ -16,7 +18,7 @@ public class EnemyCamera : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(deactivateAfter);
 
-        gameObject.SetActive(false);
         GameManager.instance.ClearBroadcast();
+        onComplete?.Invoke();
     }
 }
