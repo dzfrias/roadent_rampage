@@ -210,7 +210,7 @@ MonoBehaviour:
   particles: {fileID: 5693018047500776064, guid: ebc120e2ba36047d8a977db85335effc, type: 3}
   explosionRadius: 6
   explosionOffset: {x: 0, y: 3.62, z: 0}
-  force: 2500
+  force: 2750
   upForce: 40
 --- !u!23 &-4097867693348550197
 MeshRenderer:
