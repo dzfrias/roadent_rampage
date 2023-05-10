@@ -29,6 +29,7 @@ public class MusicPlayer : MonoBehaviour
     {
         if (startLevel == s2.name) return;
         AudioManager.instance.Stop(track, fadeDuration);
+        startLevel = SceneManager.GetActiveScene().name;
         Destroy(gameObject);
     }
 }
