@@ -1,43 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
-public class SpringHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+[RequireComponent(typeof(Button))]
+public class SpringHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler
 {
-    [SerializeField] private float angularFrequency = 15f;
-    [SerializeField, Range(0, 1)] private float dampingRatio = 0.3f;
-    [SerializeField] private float distanceAdd = 5f;
-
-    private float velocity;
-    private float distance;
-    private Vector3 startPos;
-    private float targetAdd;
+    private Button button;
 
     void Start()
     {
-        startPos = transform.position;
-    }
-
-    void Update()
-    {
-        float deltaTime = Time.deltaTime;
-        SpringMotion.CalcDampedSimpleHarmonicMotion(ref distance,
-                ref velocity,
-                targetAdd,
-                deltaTime,
-                angularFrequency,
-                dampingRatio);
-        transform.position = new Vector3(startPos.x, startPos.y + distance, startPos.z);
+        button = GetComponent<Button>();
     }
 
     public void OnPointerEnter(PointerEventData _)
     {
-        targetAdd = distanceAdd;
+        button.Select();
     }
 
     public void OnPointerExit(PointerEventData _)
     {
-        targetAdd = 0f;
+        var current = EventSystem.current;
+        if (current == null) return;
+
+        if (EventSystem.current.currentSelectedGameObject != gameObject)
+        {
+            return;
+        }
+        // Deselect
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void OnSelect(BaseEventData _)
+    {
+        DOTween.Complete(gameObject);
+        transform.DOPunchScale(new Vector3(1f, 1f, 0f), 0.5f, 6, 0.2f).SetId(gameObject);
+    }
+
+    void OnDestroy()
+    {
+        DOTween.Kill(gameObject);
     }
 }
