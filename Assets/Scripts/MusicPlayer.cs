@@ -5,31 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour
 {
+
     [SerializeField] private string track;
     [SerializeField] private float fadeDuration = 1f;
 
+    private static MusicPlayer instance;
     private string startLevel;
 
-    void Start()
+    void Awake()
     {
-        if (AudioManager.instance.IsPlaying(track))
+        if (instance == null)
         {
+            AudioManager.instance.Play(track);
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            
+            AudioManager.instance.Stop(instance.track, fadeDuration);
+            instance.track = track;
+            AudioManager.instance.Play(instance.track);
             return;
         }
 
-        startLevel = SceneManager.GetActiveScene().name;
-
         DontDestroyOnLoad(gameObject);
-
-        AudioManager.instance.Play(track);
-        SceneManager.activeSceneChanged += SceneChanged;
-    }
-
-    void SceneChanged(Scene s1, Scene s2)
-    {
-        if (startLevel == s2.name) return;
-        AudioManager.instance.Stop(track, fadeDuration);
-        startLevel = SceneManager.GetActiveScene().name;
-        Destroy(gameObject);
     }
 }
