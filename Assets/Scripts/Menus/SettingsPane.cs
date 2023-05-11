@@ -44,13 +44,4 @@ public class SettingsPane : MonoBehaviour
         Resolution res = resolutions[resolutionIndex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
-
-    void Update()
-    {
-        // TODO: Use new input system? New input system seems a bit overkill...
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            gameObject.SetActive(false);
-        }
-    }
 }
