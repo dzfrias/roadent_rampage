@@ -7,11 +7,12 @@ public class KeyText : MonoBehaviour
 {
     [SerializeField] private string prompt;
     [SerializeField] private float removeAfter = 2.5f;
+    [SerializeField] private float timeSlowDown = 0.5f;
 
     public void Activate()
     {
         GameManager.instance.BroadcastText(prompt);
-        Time.timeScale = 0.5f;
+        Time.timeScale = timeSlowDown;
         GameManager.instance.Darken();
         StartCoroutine(Remove());
     }
@@ -25,7 +26,7 @@ public class KeyText : MonoBehaviour
 
     IEnumerator Remove()
     {
-        yield return new WaitForSecondsRealtime(removeAfter);
+        yield return new WaitForSeconds(removeAfter / (1 / timeSlowDown));
         Deactivate();
     }
 }

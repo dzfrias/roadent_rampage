@@ -3691,18 +3691,6 @@ PrefabInstance:
       propertyPath: scene
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1159763253428582564, guid: e47c9c92ead3c4319aae30e013c801fe, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.3972944
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159763253428582564, guid: e47c9c92ead3c4319aae30e013c801fe, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.3972944
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159763253428582564, guid: e47c9c92ead3c4319aae30e013c801fe, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.9056604
-      objectReference: {fileID: 0}
     - target: {fileID: 1159763253428582566, guid: e47c9c92ead3c4319aae30e013c801fe, type: 3}
       propertyPath: m_Name
       value: Level0

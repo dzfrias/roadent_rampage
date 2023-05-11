@@ -32,6 +32,7 @@ public class PlayerInputBroadcast : MonoBehaviour
 
     public void Accelerate(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.isPaused) return;
         if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p1)
         {
             return;
@@ -41,6 +42,7 @@ public class PlayerInputBroadcast : MonoBehaviour
 
     public void Turn(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.isPaused) return;
         if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p2)
         {
             return;
@@ -50,11 +52,13 @@ public class PlayerInputBroadcast : MonoBehaviour
 
     public void Flip(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.isPaused) return;
         flip.Invoke();
     }
 
     public void Click(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.isPaused) return;
         if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p2)
         {
             return;
@@ -69,6 +73,7 @@ public class PlayerInputBroadcast : MonoBehaviour
 
     public void Aim(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.isPaused) return;
         if (input.currentControlScheme == "TwoGamepads" && (context.control.device as Gamepad) != p1)
         {
             return;
@@ -78,6 +83,7 @@ public class PlayerInputBroadcast : MonoBehaviour
 
     public void RearCamera(InputAction.CallbackContext context)
     {
+        if (GameManager.instance.isPaused) return;
         isReversed = !isReversed;
         reverseCamera.Invoke(isReversed);
     }

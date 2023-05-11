@@ -424,8 +424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49de6dafad874e0ba7ab8e225cabe6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: w
-  prompt: Press w
+  prompt: \Forward to go forward
+  removeAfter: 2.5
+  timeSlowDown: 0.5
 --- !u!1 &2944449317111672889
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +591,7 @@ GameObject:
   - component: {fileID: 2944449317255686311}
   - component: {fileID: 2944449317255686309}
   - component: {fileID: 2944449317255686310}
+  - component: {fileID: 1441929352}
   m_Layer: 2
   m_Name: ShootRed
   m_TagString: Untagged
@@ -653,6 +655,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1441929352}
+        m_TargetAssemblyTypeName: KeyText, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   stopTriggered:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1441929352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944449317255686360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49de6dafad874e0ba7ab8e225cabe6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prompt: Hold \Shoot to shoot
+  removeAfter: 2.5
+  timeSlowDown: 0

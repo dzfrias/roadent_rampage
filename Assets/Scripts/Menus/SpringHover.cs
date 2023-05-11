@@ -28,7 +28,10 @@ public class SpringHover : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     public void OnSelect(BaseEventData _)
     {
         DOTween.Complete(gameObject);
-        transform.DOPunchScale(punch, punchDuration, punchElasticity, punchDampening).SetId(gameObject);
+        transform
+            .DOPunchScale(punch, punchDuration, punchElasticity, punchDampening)
+            .SetId(gameObject)
+            .SetUpdate(true);
     }
 
     void OnDestroy()

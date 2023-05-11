@@ -18,7 +18,9 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
-        GameManager.instance.Finish();
+        GameManager.instance.Unpause();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void TogglePause()
