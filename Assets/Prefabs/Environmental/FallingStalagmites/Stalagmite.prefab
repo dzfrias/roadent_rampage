@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468755766341768556}
-  - component: {fileID: 8289338700411431653}
   - component: {fileID: 7735000930893525349}
   - component: {fileID: 2621332152927834538}
+  - component: {fileID: 3108221961709059601}
   m_Layer: 0
   m_Name: Stalagmite
   m_TagString: Untagged
@@ -35,22 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8289338700411431653
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8477185596808221121}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &7735000930893525349
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60,7 +44,7 @@ MeshCollider:
   m_GameObject: {fileID: 8477185596808221121}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -96,6 +80,20 @@ MonoBehaviour:
   stopTriggered:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3108221961709059601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477185596808221121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9738304f7c35941d6a52dff2bceec768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 16
+  time: 1
 --- !u!1001 &5936112392111734245
 PrefabInstance:
   m_ObjectHideFlags: 0
