@@ -684,4 +684,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: Hold \Shoot to shoot
   removeAfter: 2.5
-  timeSlowDown: 0
+  timeSlowDown: 0.5
