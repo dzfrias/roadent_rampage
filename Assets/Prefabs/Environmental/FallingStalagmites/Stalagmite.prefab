@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 16
-  time: 1
+  time: 2
 --- !u!1001 &5936112392111734245
 PrefabInstance:
   m_ObjectHideFlags: 0
