@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1845256000564629962}
   - component: {fileID: 8861348881621703093}
   - component: {fileID: 8887531820088384507}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StalagmiteTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
