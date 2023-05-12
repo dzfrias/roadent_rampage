@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7185726686024066076
 Transform:
   m_ObjectHideFlags: 0
@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 206381846540206849}
   - component: {fileID: 2682386690828318667}
   - component: {fileID: 7529245733012458230}
+  - component: {fileID: 1966007717}
   m_Layer: 0
   m_Name: cave_light
   m_TagString: Untagged
@@ -214,3 +215,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5803318, y: 3.4168043, z: 2}
   m_Center: {x: 0.03469634, y: 1.7084022, z: 0}
+--- !u!114 &1966007717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483680926120875550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6de9ff0a00e44b6d99c5e000eb3dae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLight: {fileID: 262031501615560453}
+  lightOnTimer: 10
