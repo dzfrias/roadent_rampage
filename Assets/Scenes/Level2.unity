@@ -425,6 +425,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
       value: Stalagmite (3)
@@ -1328,6 +1336,14 @@ PrefabInstance:
     - target: {fileID: 468755766341768556, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
@@ -2405,6 +2421,14 @@ PrefabInstance:
     - target: {fileID: 468755766341768556, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
@@ -3685,6 +3709,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
       value: Stalagmite (2)
@@ -4447,6 +4479,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
       value: Stalagmite (2)
@@ -4793,6 +4833,14 @@ PrefabInstance:
     - target: {fileID: 468755766341768556, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
@@ -6422,6 +6470,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
       value: Stalagmite (1)
@@ -7622,6 +7678,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
       value: Stalagmite (5)
@@ -7698,6 +7762,10 @@ PrefabInstance:
       propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1456024578}
+    - target: {fileID: 2621332152927834538, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
+      propertyPath: triggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     - target: {fileID: 8477185596808221121, guid: c2f8bd66ee3bfdf4da7a087be0ce3e13, type: 3}
       propertyPath: m_Name
       value: Stalagmite
