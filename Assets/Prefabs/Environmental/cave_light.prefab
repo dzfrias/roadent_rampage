@@ -229,3 +229,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spotLight: {fileID: 262031501615560453}
   lightOnTimer: 10
+  transitionDuration: 0.75
