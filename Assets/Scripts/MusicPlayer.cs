@@ -21,8 +21,9 @@ public class MusicPlayer : MonoBehaviour
         {
             Destroy(gameObject);
             
+            if (instance.track == this.track) return;
             AudioManager.instance.Stop(instance.track, fadeDuration);
-            instance.track = track;
+            instance.track = this.track;
             AudioManager.instance.Play(instance.track);
             return;
         }
