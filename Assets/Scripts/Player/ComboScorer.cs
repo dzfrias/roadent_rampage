@@ -43,8 +43,6 @@ public class ComboScorer : MonoBehaviour
             totalScore = Mathf.Min(totalScore, max);
             comboFinished.Invoke(totalScore);
             AudioManager.instance.Play("landcombo");
-            GameManager.instance.BroadcastText(totalScore.ToString());
-            StartCoroutine(RemoveText());
             Debug.Log($"Finished combo with {totalScore}!");
             Reset();
         }
@@ -62,11 +60,5 @@ public class ComboScorer : MonoBehaviour
     void Reset()
     {
         airTime = 0f;
-    }
-
-    IEnumerator RemoveText()
-    {
-        yield return new WaitForSeconds(1.5f);
-        GameManager.instance.ClearBroadcast();
     }
 }
