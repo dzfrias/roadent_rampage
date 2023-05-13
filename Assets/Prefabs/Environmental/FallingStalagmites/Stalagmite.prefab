@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 468755766341768556}
   - component: {fileID: 7735000930893525349}
-  - component: {fileID: 2621332152927834538}
   - component: {fileID: 3108221961709059601}
   m_Layer: 0
   m_Name: Stalagmite
@@ -49,37 +48,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4711208715938537054, guid: 445317ee2b566b54787a0fdb959afaa9, type: 3}
---- !u!114 &2621332152927834538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8477185596808221121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b91cd6a4baa74753b98735dd306e3d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateOnce: 1
-  triggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  stopTriggered:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3108221961709059601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +61,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 16
-  time: 2
+  time: 1
+  onFallingHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5936112392111734245
 PrefabInstance:
   m_ObjectHideFlags: 0
