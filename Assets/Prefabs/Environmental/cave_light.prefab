@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 2682386690828318667}
   - component: {fileID: 7529245733012458230}
   - component: {fileID: 1966007717}
+  - component: {fileID: 2113114990709129131}
   m_Layer: 0
   m_Name: cave_light
   m_TagString: Untagged
@@ -230,3 +231,16 @@ MonoBehaviour:
   spotLight: {fileID: 262031501615560453}
   lightOnTimer: 10
   transitionDuration: 0.75
+--- !u!114 &2113114990709129131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483680926120875550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 6891844732924746815, guid: 7d35081ec028e4624913a448d2022d4c, type: 3}
