@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6804120539863690587}
   - component: {fileID: 8757778190754339217}
   - component: {fileID: 7946730722011759915}
+  - component: {fileID: 1064157080926640566}
   m_Layer: 0
   m_Name: cave
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 23187f7e727250f4697b50a80fdac44f, type: 3}
+--- !u!114 &1064157080926640566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7100237817271089220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
