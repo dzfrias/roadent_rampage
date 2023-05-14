@@ -174,8 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0527b7eea87dc447596234c0492fb207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: {fileID: 11400000, guid: fc12837a3b235414ebaf23f89ddb858d, type: 2}
-  text: {fileID: 248423944}
 --- !u!114 &248423944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,9 +418,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a980304b86271407a91b9f8f5feed126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angularFrequency: 15
-  dampingRatio: 0.3
-  distanceAdd: 5
+  punch: {x: 1, y: 1, z: 0}
+  punchDuration: 0.5
+  punchElasticity: 6
+  punchDampening: 0.2
 --- !u!1 &667654236
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,8 +451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0527b7eea87dc447596234c0492fb207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: {fileID: 11400000, guid: fc12837a3b235414ebaf23f89ddb858d, type: 2}
-  text: {fileID: 0}
 --- !u!4 &667654238
 Transform:
   m_ObjectHideFlags: 0
@@ -992,7 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
