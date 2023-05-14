@@ -222,6 +222,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive (9)
@@ -377,6 +385,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
@@ -1164,6 +1180,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive (4)
@@ -1391,6 +1415,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive (6)
@@ -1549,6 +1581,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
@@ -1885,6 +1925,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
@@ -2343,6 +2391,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive
@@ -2436,6 +2492,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
@@ -3041,6 +3105,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
@@ -4435,6 +4507,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive (10)
@@ -5007,6 +5087,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
@@ -5648,6 +5736,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive (2)
@@ -5753,6 +5849,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
       objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
       value: Explosive (3)
@@ -5846,6 +5950,14 @@ PrefabInstance:
     - target: {fileID: 2175922979009312224, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 92.983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: explosionForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175922979009312228, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
+      propertyPath: upwardsModifier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2175922979009312229, guid: 1ccb231eaeb0c4b1aac43b7d3dbf5414, type: 3}
       propertyPath: m_Name
