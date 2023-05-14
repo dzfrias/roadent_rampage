@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 183427718}
   - component: {fileID: 183427717}
   - component: {fileID: 183427716}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Zone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2696,6 +2696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WindParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 8404651105763544163, guid: 1d50e76a4aff92c4f85b86b0c30c9f5b, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d50e76a4aff92c4f85b86b0c30c9f5b, type: 3}
 --- !u!4 &1222598066 stripped
@@ -3357,7 +3361,7 @@ GameObject:
   - component: {fileID: 1424081417}
   - component: {fileID: 1424081419}
   - component: {fileID: 1424081418}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4394,7 +4398,7 @@ GameObject:
   - component: {fileID: 1778574542}
   - component: {fileID: 1778574541}
   - component: {fileID: 1778574540}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Zone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4727,7 +4731,7 @@ GameObject:
   - component: {fileID: 1879353360}
   - component: {fileID: 1879353362}
   - component: {fileID: 1879353361}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
