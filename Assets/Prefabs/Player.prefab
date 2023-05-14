@@ -770,6 +770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showMessageTime: 0.5
+  ignoreTag:
+  - Explosive
 --- !u!114 &2141510639
 MonoBehaviour:
   m_ObjectHideFlags: 0

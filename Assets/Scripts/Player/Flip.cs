@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider), typeof(IMover))]
 public class Flip : MonoBehaviour
 {
     [SerializeField] private float showMessageTime = 1f;
+    [SerializeField] private string[] ignoreTag;
 
     private IMover mover;
     private bool isTouching;
@@ -17,8 +19,12 @@ public class Flip : MonoBehaviour
         mover = GetComponent<IMover>();
     }
 
-    void OnCollisionEnter(Collision _)
+    void OnCollisionEnter(Collision collision)
     {
+        if (ignoreTag.Any((tag) => collision.gameObject.CompareTag(tag)))
+        {
+            return;
+        }
         isTouching = true;
     }
 
