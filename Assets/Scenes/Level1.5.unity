@@ -605,7 +605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {fileID: 41669699}
   effectedObject: {fileID: 521798971}
-  forceAmount: 1000000
+  forceAmount: 1500000
 --- !u!114 &183427717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4431,7 +4431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {fileID: 1392288088}
   effectedObject: {fileID: 521798971}
-  forceAmount: 1000000
+  forceAmount: 1500000
 --- !u!114 &1778574541
 MonoBehaviour:
   m_ObjectHideFlags: 0
