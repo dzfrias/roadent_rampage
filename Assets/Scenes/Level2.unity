@@ -8401,6 +8401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cave_light (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8743278098659538155, guid: a192c4829d82348108e137c454425553, type: 3}
+      propertyPath: m_Intensity
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a192c4829d82348108e137c454425553, type: 3}
 --- !u!1001 &1961975189
