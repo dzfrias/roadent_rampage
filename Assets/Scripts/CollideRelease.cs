@@ -20,6 +20,7 @@ public class CollideRelease : MonoBehaviour
         float vel = collision.relativeVelocity.magnitude;
         if (vel > minVelocity)
         {
+            AudioManager.instance.Play("bonk");
             Vector3 point = collision.contacts[0].point;
             GameObject finalParticles = particles;
             if (vel >= velocityThreshold && particlesAlt != null)
