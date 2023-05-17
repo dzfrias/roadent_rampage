@@ -94,3 +94,21 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: bonk
+    clip: {fileID: 8300000, guid: 7317e2890507c438f88388cb1c17ff0b, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: crash
+    clip: {fileID: 8300000, guid: 4e2ab5d345df3403a97613b9a12c10c7, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: rumble
+    clip: {fileID: 8300000, guid: f91c35cbbe752491abf9c14fc0685d9a, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
