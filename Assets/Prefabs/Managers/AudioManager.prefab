@@ -47,13 +47,13 @@ MonoBehaviour:
   audioMixer: {fileID: 24300002, guid: b4f31713da59641d1914dedc958777eb, type: 2}
   sounds:
   - name: shoot
-    clip: {fileID: 8300000, guid: d33cf083bfc67824d9903d9f5f365402, type: 3}
+    clip: {fileID: 8300000, guid: 907d5b94a2c264484b5a4c4375589365, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: speedup
-    clip: {fileID: 8300000, guid: 9fc896261df9e8b4bb77d07a94473913, type: 3}
+    clip: {fileID: 8300000, guid: 9300df6281b824ff2b24168fb9d0a742, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -65,9 +65,9 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: accelerate
-    clip: {fileID: 8300000, guid: 04ac30fcad684e643bb934ae430f1c11, type: 3}
+    clip: {fileID: 8300000, guid: 51421abb025b0453d96a52e436064f50, type: 3}
     volume: 1
-    pitch: 0.1
+    pitch: 0.5
     loop: 1
     source: {fileID: 0}
   - name: level1_music
