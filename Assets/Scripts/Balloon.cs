@@ -21,6 +21,7 @@ public class Balloon : MonoBehaviour, IHittable
 
     public void Pop()
     {
+        AudioManager.instance.Play("pop");
         Collider[] hits = Physics.OverlapSphere(transform.position, explosionRadius);
         Rigidbody player = Array
                                     .Find(hits, collider => collider.CompareTag("Player"))?

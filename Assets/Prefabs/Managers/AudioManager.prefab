@@ -112,3 +112,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: pop
+    clip: {fileID: 8300000, guid: 9f9caff5855794fcc8448e06a57379d8, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
