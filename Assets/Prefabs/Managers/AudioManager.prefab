@@ -71,7 +71,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: level1_music
-    clip: {fileID: 8300000, guid: 9dbd01ac44bad420b8b1f73edc33147f, type: 3}
+    clip: {fileID: 8300000, guid: e60bedfab5c5c4a049a0045da328b4dd, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
@@ -83,13 +83,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: tutorial_music
-    clip: {fileID: 8300000, guid: e9a9c77fa6fd1494fa3e111d364e3c7f, type: 3}
+    clip: {fileID: 8300000, guid: fdf298fb6dbca4b34a6e8bff76204cb4, type: 3}
     volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: menu_music
-    clip: {fileID: 8300000, guid: 15743897195084035950d987390badf5, type: 3}
+    clip: {fileID: 8300000, guid: a7a55fb79765c4e53bbc154595f41e15, type: 3}
     volume: 0.7
     pitch: 1
     loop: 1
