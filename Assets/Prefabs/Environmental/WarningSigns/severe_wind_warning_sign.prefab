@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7690018381090103993}
   - component: {fileID: 3188549921555495720}
   - component: {fileID: 6030846061961489245}
+  - component: {fileID: 893120789389309654}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -98,6 +99,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19999999, y: 2.828427, z: 2.828427}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &893120789389309654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552598392390506793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
 --- !u!1 &5420379341482173544
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +157,8 @@ GameObject:
   - component: {fileID: 1008289429245727529}
   - component: {fileID: 8716756726552285174}
   - component: {fileID: 7254500761804929486}
+  - component: {fileID: 5834369260821981983}
+  - component: {fileID: 7522500306828159645}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -228,3 +244,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19999999, y: 3, z: 0.19999999}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &5834369260821981983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509032741236517725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58e3e10486b1405ab493ab5d4c78f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 5646137567559894302, guid: b7ba1f05155654f698b80f1b52d08ad7, type: 3}
+--- !u!114 &7522500306828159645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509032741236517725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e7a1709c3bc48b6bf91832f8aa9fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 883492293396620731, guid: 09c20fcd0f3f146208364d1168dfed84, type: 3}
+  particlesAlt: {fileID: 816587591850759248, guid: 69d725e8f88fa490a82b690a8b7d5ed7, type: 3}
+  minVelocity: 8
+  velocityThreshold: 18
