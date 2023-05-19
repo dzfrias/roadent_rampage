@@ -42,7 +42,6 @@ public class ComboScorer : MonoBehaviour
             }
             totalScore = Mathf.Min(totalScore, max);
             comboFinished.Invoke(totalScore);
-            AudioManager.instance.Play("landcombo");
             Debug.Log($"Finished combo with {totalScore}!");
             Reset();
         }
