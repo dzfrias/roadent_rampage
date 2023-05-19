@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 5968702175532770076}
   - component: {fileID: 7312381881162689721}
   - component: {fileID: 4800340076999776371}
+  - component: {fileID: 3718022107620218516}
   - component: {fileID: -8766100110662662064}
   - component: {fileID: -899931291402094907}
   - component: {fileID: 5620667421809767506}
   - component: {fileID: 5133473484415806179}
   - component: {fileID: -5887928770316917455}
-  - component: {fileID: 5570781588391411898}
   m_Layer: 0
   m_Name: rock2
   m_TagString: Untagged
@@ -89,6 +89,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3718022107620218516
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457818465096645030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 289301614986012343, guid: 803d9f16c950b47659d146730474d220, type: 3}
 --- !u!114 &-8766100110662662064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,16 +213,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe90b40476a24f2999d40bf9b463714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &5570781588391411898
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6457818465096645030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.8372009, y: 1.4975619, z: 2.0569577}
-  m_Center: {x: 0.007071018, y: 0.04496759, z: -0.03395766}
