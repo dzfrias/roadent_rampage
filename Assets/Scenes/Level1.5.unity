@@ -779,7 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {fileID: 41669699}
   effectedObject: {fileID: 521798971}
-  forceAmount: 500000
+  forceAmount: 600000
 --- !u!114 &183427717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2086,15 +2086,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734351
+      value: 0.010734372
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017205387
+      value: -0.000000017205391
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.8469937e-10
+      value: 1.8469974e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3243,15 +3243,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734351
+      value: 0.010734372
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000017205387
+      value: -0.000000017205391
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.8469937e-10
+      value: 1.8469974e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7019,7 +7019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {fileID: 1392288088}
   effectedObject: {fileID: 521798971}
-  forceAmount: 500000
+  forceAmount: 600000
 --- !u!114 &1778574541
 MonoBehaviour:
   m_ObjectHideFlags: 0
