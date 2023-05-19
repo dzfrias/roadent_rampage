@@ -47,7 +47,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24300002, guid: b4f31713da59641d1914dedc958777eb, type: 2}
   sounds:
   - name: shoot
-    clip: {fileID: 8300000, guid: 907d5b94a2c264484b5a4c4375589365, type: 3}
+    clip: {fileID: 8300000, guid: d33cf083bfc67824d9903d9f5f365402, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -72,19 +72,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: level1_music
     clip: {fileID: 8300000, guid: e60bedfab5c5c4a049a0045da328b4dd, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: landcombo
-    clip: {fileID: 8300000, guid: 40ba3a6d2472cbf4f905efd5fda8f896, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: tutorial_music
-    clip: {fileID: 8300000, guid: fdf298fb6dbca4b34a6e8bff76204cb4, type: 3}
-    volume: 0.1
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -108,12 +96,6 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: rumble
     clip: {fileID: 8300000, guid: f91c35cbbe752491abf9c14fc0685d9a, type: 3}
-    volume: 0.7
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: pop
-    clip: {fileID: 8300000, guid: 9f9caff5855794fcc8448e06a57379d8, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0

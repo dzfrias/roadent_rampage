@@ -87,8 +87,9 @@ public class PlayerController : MonoBehaviour
 
     void AdjustAcceleratePitch()
     {
-        AudioManager.instance.SetVolume("accelerate", rb.velocity.magnitude / 25);
-        AudioManager.instance.SetPitch("accelerate", rb.velocity.magnitude / 25);
+        float strength = (rb.velocity.magnitude / mover.MaxSpeed) / 4;
+        AudioManager.instance.SetVolume("accelerate", strength);
+        AudioManager.instance.SetPitch("accelerate", strength);
     }
 
     public void SpeedBoost(float amount)
