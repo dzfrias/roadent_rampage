@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 882881227186416156}
   - component: {fileID: 4318745717305877945}
   - component: {fileID: 2020905742484197747}
-  - component: {fileID: 7990247082179540949}
   - component: {fileID: -7728982019732469715}
   - component: {fileID: 7081042266000817357}
   - component: {fileID: -4038234093722644176}
   - component: {fileID: -3503262008519645222}
   - component: {fileID: -2590846005309061435}
+  - component: {fileID: 534368044915822208}
   m_Layer: 0
   m_Name: rock3
   m_TagString: Untagged
@@ -89,20 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7990247082179540949
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507586661039665318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 289301614986012343, guid: b083c220607d243bb9110eef4e519274, type: 3}
 --- !u!114 &-7728982019732469715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe90b40476a24f2999d40bf9b463714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &534368044915822208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507586661039665318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9469194, y: 1.4198287, z: 2.1221323}
+  m_Center: {x: 0.017659396, y: 0.020831138, z: -0.063533634}
