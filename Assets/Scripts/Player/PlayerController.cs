@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour
 
     void AdjustAcceleratePitch()
     {
+        AudioManager.instance.SetVolume("accelerate", rb.velocity.magnitude / 25);
         AudioManager.instance.SetPitch("accelerate", rb.velocity.magnitude / 25);
     }
 
