@@ -624,7 +624,7 @@ MonoBehaviour:
   maxSpeed: 45
   centerOfMass: {x: 0, y: -0.4, z: 0}
   airSteer: 0.06
-  directionChangeFactor: 0.4
+  directionChangeFactor: 0.2
   skidThreshold: 20
   camera: {fileID: 0}
 --- !u!65 &2141510636
