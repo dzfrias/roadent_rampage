@@ -58,12 +58,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: explosion
-    clip: {fileID: 8300000, guid: dd91ce28f289df44e82f7592179fc716, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: accelerate
     clip: {fileID: 8300000, guid: 51421abb025b0453d96a52e436064f50, type: 3}
     volume: 1
@@ -82,12 +76,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: bonk
-    clip: {fileID: 8300000, guid: 7317e2890507c438f88388cb1c17ff0b, type: 3}
-    volume: 0.7
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: crash
     clip: {fileID: 8300000, guid: 4e2ab5d345df3403a97613b9a12c10c7, type: 3}
     volume: 0.7
@@ -97,6 +85,12 @@ MonoBehaviour:
   - name: rumble
     clip: {fileID: 8300000, guid: f91c35cbbe752491abf9c14fc0685d9a, type: 3}
     volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: tutorial_music
+    clip: {fileID: 8300000, guid: fdf298fb6dbca4b34a6e8bff76204cb4, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
