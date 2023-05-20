@@ -1795,7 +1795,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3350081592289570957, guid: 5b66e73f2438546b48c982241474dd2d, type: 3}
       propertyPath: scene
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7244062026686071867, guid: 5b66e73f2438546b48c982241474dd2d, type: 3}
       propertyPath: m_Pivot.x
@@ -3140,7 +3140,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3350081592289570957, guid: 5b66e73f2438546b48c982241474dd2d, type: 3}
       propertyPath: scene
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7244062026686071867, guid: 5b66e73f2438546b48c982241474dd2d, type: 3}
       propertyPath: m_Pivot.x
