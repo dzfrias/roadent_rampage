@@ -60,9 +60,6 @@ public class Wheel : MonoBehaviour, IMover
             {
                 target.AddForceAtPosition(-target.GetPointVelocity(transform.position) * terrainGripModifier, transform.position);
             }
-            // PERF: It would be nice to have a game manager script that keeps
-            // a dictionary of all objects containing SpeedModifier, but does
-            // so lazily. See https://stackoverflow.com/questions/57383739/how-to-avoid-calling-getcomponent-in-ontriggerenter
             if (hit.collider.gameObject.TryGetComponent(out IDriveSurface driveSurface))
             {
                 driveSurface.WheelHit(this);
