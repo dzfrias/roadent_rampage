@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3667,6 +3667,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
+    - target: {fileID: -2021002405673433705, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1145959235, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -8464,7 +8468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &411362199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12898,15 +12902,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734366
+      value: 0.010734358
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.000000017196992
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -1.8460934e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1596788334239994171, guid: b7e413f6db15e4b9cbb413a69733bb9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17725,31 +17729,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132.64
+      value: 133.55318
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1400003
+      value: 4.19
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.199999
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999424
+      value: -0.0069033573
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010734366
+      value: 0.0006364246
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.99575347
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.09179907
       objectReference: {fileID: 0}
     - target: {fileID: 8950282360797311877, guid: 66084bbe80e484b57bf20d72979a1a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22521,6 +22525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
+    - target: {fileID: -2021002405673433705, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1145959235, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -22632,6 +22640,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447994405}
     m_Modifications:
+    - target: {fileID: -2021002405673433705, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1145959235, guid: dd890731774ba8e47bf530b103f9ed44, type: 3}
       propertyPath: waypoints.Array.size
       value: 10
