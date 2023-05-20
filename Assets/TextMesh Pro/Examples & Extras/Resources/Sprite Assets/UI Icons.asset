@@ -130,7 +130,7 @@ MonoBehaviour:
     m_Metrics:
       m_Width: 210
       m_Height: 210
-      m_HorizontalBearingX: -50
+      m_HorizontalBearingX: 0
       m_HorizontalBearingY: 175
       m_HorizontalAdvance: 210
     m_GlyphRect:
