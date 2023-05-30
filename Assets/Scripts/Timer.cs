@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         GameManager.onFinishLineReached += Stop;
-        levelIndex = SceneManager.GetActiveScene().buildIndex - 2;
+        levelIndex = SceneManager.GetActiveScene().buildIndex - 3;
     }
 
     void OnDestroy()
