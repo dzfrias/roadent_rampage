@@ -3060,6 +3060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a536460ba30cbe458c13f79235911cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastLevelIndex: 6
 --- !u!4 &1154092611
 Transform:
   m_ObjectHideFlags: 0

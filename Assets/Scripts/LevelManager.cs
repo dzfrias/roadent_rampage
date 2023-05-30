@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private int lastLevelIndex;
     public static LevelManager instance;
     private int highestUnlockedLevel = 0;
     private List<Scene> completedLevels = new();
@@ -33,11 +34,10 @@ public class LevelManager : MonoBehaviour, IDataPersistence
 
     void UnlockLevel()
     {
-        if (!completedLevels.Contains(SceneManager.GetActiveScene()))
+        if (!completedLevels.Contains(SceneManager.GetActiveScene()) || SceneManager.GetActiveScene().buildIndex == lastLevelIndex)
         {
             highestUnlockedLevel++;
             completedLevels.Add(SceneManager.GetActiveScene());
-            Debug.Log("INCREASED HIGHEST LEVEL" + highestUnlockedLevel);
         }
     }
 
