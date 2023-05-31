@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour, IDataPersistence
     [SerializeField] private int lastLevelIndex;
     public static LevelManager instance;
     private int highestUnlockedLevel = 0;
-    private List<Scene> completedLevels = new();
+    private List<int> completedLevels = new();
 
     private void Awake() 
     {
@@ -34,16 +34,17 @@ public class LevelManager : MonoBehaviour, IDataPersistence
 
     void UnlockLevel()
     {
-        if (!completedLevels.Contains(SceneManager.GetActiveScene()) || SceneManager.GetActiveScene().buildIndex == lastLevelIndex)
+        if (!completedLevels.Contains(SceneManager.GetActiveScene().buildIndex) && SceneManager.GetActiveScene().buildIndex != lastLevelIndex)
         {
             highestUnlockedLevel++;
-            completedLevels.Add(SceneManager.GetActiveScene());
+            completedLevels.Add(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
     public void LoadData(GameData data)
     {
         this.highestUnlockedLevel = data.highestUnlockedLevel;
+        this.completedLevels = data.completedLevels;
     }
 
     public void SaveData(ref GameData data)
