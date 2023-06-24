@@ -2,6 +2,8 @@
 
 [![Watch the video](https://img.youtube.com/vi/IUsXynf4xBE/0.jpg)](https://youtu.be/IUsXynf4xBE)
 
+<p><sub>Watch the official trailer above.</sub></p>
+
 Buckle up for **Roadent Rampage**, a groundbreaking 3-D driving adventure that
 breaks consumer conventions and challenges manipulative marketing! Teamwork is
 paramount as the audacious squirrels, **Bertram** and **Russel**, work in tandem to
